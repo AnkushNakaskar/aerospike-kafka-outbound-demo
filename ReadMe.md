@@ -15,3 +15,11 @@
     * install aerospike <> kafka outbound docker image
     * install aerospike DB
     * install aerospike AQL
+
+
+
+#### Example like below :  
+  * if you try to insert like below :
+  * ``` aql> insert into test.demo (PK, tval) values (123, 'test-value-ankush-first') ```
+    * Output in kafka topic is like below :
+    * ``` {"metadata":{"namespace":"test","set":"demo","userKey":123,"digest":"WVp7Y+sYXb69hCVTpEgCsaMOwVk=","msg":"write","gen":1,"lut":1698586936461,"exp":1701178936},"tval":"test-value-ankush-first"}  ```
