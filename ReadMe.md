@@ -9,9 +9,14 @@
   * Aerospike DB install
   * Aerospike <> Kafka connector
 * Refer to config file and terminal outputs folder
-  * **Only point to note here is that : when you provide the node-address-port or kafka address , just make sure,** 
-    * **you dont give localhost/127.0.0.1 , because that is local to docker container , which it will not be able to find,** 
-    * **you need to have ip-address of machine there, you can refer, actual config files mentioned in this project.**  
+  * ```
+    1. Only point to note here is that : when you provide the node-address-port or kafka address , just make sure
+    you dont give localhost/127.0.0.1 , because that is local to docker container , which it will not be able to find 
+    you need to have ip-address of machine there, you can refer, actual config files mentioned in this project.
+    2. Sometime port : 8080 is already binding , so you can change the apache <> kafka port mapping like 
+       -> docker run -p 8090:8080 -v /var/tmp/aerospike/kafka-connect/aerospike-kafka-outbound.yml:/etc/aerospike-kafka-outbound/aerospike-kafka-outbound.yml aerospike/aerospike-kafka-outbound:5.1.2
+       -> use the same port 8090 in xdr config of aerospike DB  
+    ```  
       * Steps to follow
         * First install zookeeper
           * ``` 
