@@ -1,0 +1,1689 @@
+Last login: Sun Oct 29 16:31:12 on ttys003
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ docker ps
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS          PORTS                              NAMES
+dd7e5439f28b   aerospike/aerospike-kafka-outbound:5.1.2   "/usr/bin/as-tini-st…"   23 seconds ago   Up 19 seconds   0.0.0.0:8080->8080/tcp, 8443/tcp   affectionate_darwin
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ docker exec -it dd7e5439f28b bash
+bash: /home/jboss/.bashrc: Permission denied
+bash-4.4$ ls
+assets	bin  doc  etc  grafana	lib  manifest.json  usr-lib
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ cd etc/
+bash-4.4$ ls
+aerospike-kafka-outbound.yml
+bash-4.4$ vi vi aerospike.conf
+bash: vi: command not found
+bash-4.4$ vi aerospike.conf
+bash: vi: command not found
+bash-4.4$ vim  aerospike.conf
+bash: vim: command not found
+bash-4.4$ touch aerospike-kafka-outbound.yml ^C
+bash-4.4$ touch aerospike.conf
+bash-4.4$ ls
+aerospike-kafka-outbound.yml  aerospike.conf
+bash-4.4$ vi aerospike.conf 
+bash: vi: command not found
+bash-4.4$ apt-get update
+bash: apt-get: command not found
+bash-4.4$ apt-get install vim
+bash: apt-get: command not found
+bash-4.4$ apk -U add vim
+bash: apk: command not found
+bash-4.4$ yum install -y vim
+bash: yum: command not found
+bash-4.4$ apt-get update && apt-get install -y vim
+bash: apt-get: command not found
+bash-4.4$ apt-get update
+bash: apt-get: command not found
+bash-4.4$ apt-get install vim
+bash: apt-get: command not found
+bash-4.4$ RUN apt-get update && apt-get install -y vim
+bash: RUN: command not found
+bash-4.4$ exit
+exit
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ docker exec -ti --user root dd7e5439f28b /bin/bash
+[root@dd7e5439f28b aerospike-kafka-outbound]# ls
+assets	bin  doc  etc  grafana	lib  manifest.json  usr-lib
+[root@dd7e5439f28b aerospike-kafka-outbound]# cd etc/
+[root@dd7e5439f28b etc]# ls
+aerospike-kafka-outbound.yml  aerospike.conf
+[root@dd7e5439f28b etc]# vi aerospike
+bash: vi: command not found
+[root@dd7e5439f28b etc]# vi aerospike.conf 
+bash: vi: command not found
+[root@dd7e5439f28b etc]# apt-get update
+bash: apt-get: command not found
+[root@dd7e5439f28b etc]# apt-get install vim
+bash: apt-get: command not found
+[root@dd7e5439f28b etc]# apt-get install vim-tiny
+bash: apt-get: command not found
+[root@dd7e5439f28b etc]# yum install -y vim-enhanced 
+bash: yum: command not found
+[root@dd7e5439f28b etc]# sudo apt update
+bash: sudo: command not found
+[root@dd7e5439f28b etc]# sudo apt install vim
+bash: sudo: command not found
+[root@dd7e5439f28b etc]# RUN apt-get install -y busybox && ln -s /bin/busybox /bin/vi
+bash: RUN: command not found
+[root@dd7e5439f28b etc]# microdnf install -y vim
+
+(microdnf:115): librhsm-WARNING **: 11:06:54.800: Found 0 entitlement certificates
+
+(microdnf:115): librhsm-WARNING **: 11:06:54.801: Found 0 entitlement certificates
+Downloading metadata...
+Downloading metadata...
+Downloading metadata...
+Package                                                                                                           Repository                                  Size
+Installing:                                                                                                                                                       
+ gpm-libs-1.20.7-17.el8.x86_64                                                                                    ubi-8-appstream-rpms                     39.9 kB
+ vim-common-2:8.0.1763-19.el8_6.4.x86_64                                                                          ubi-8-appstream-rpms                      6.6 MB
+ vim-enhanced-2:8.0.1763-19.el8_6.4.x86_64                                                                        ubi-8-appstream-rpms                      1.4 MB
+ vim-filesystem-2:8.0.1763-19.el8_6.4.noarch                                                                      ubi-8-appstream-rpms                     51.7 kB
+ which-2.21-18.el8.x86_64                                                                                         ubi-8-baseos-rpms                        50.7 kB
+Transaction Summary:
+ Installing:        5 packages
+ Reinstalling:      0 packages
+ Upgrading:         0 packages
+ Obsoleting:        0 packages
+ Removing:          0 packages
+ Downgrading:       0 packages
+Downloading packages...
+Running transaction test...
+Installing: vim-filesystem;2:8.0.1763-19.el8_6.4;noarch;ubi-8-appstream-rpms
+Installing: vim-common;2:8.0.1763-19.el8_6.4;x86_64;ubi-8-appstream-rpms
+Installing: gpm-libs;1.20.7-17.el8;x86_64;ubi-8-appstream-rpms
+Installing: which;2.21-18.el8;x86_64;ubi-8-baseos-rpms
+Installing: vim-enhanced;2:8.0.1763-19.el8_6.4;x86_64;ubi-8-appstream-rpms
+Complete.
+[root@dd7e5439f28b etc]# vim aerospike.conf 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# pwd
+/opt/aerospike-kafka-outbound/etc
+[root@dd7e5439f28b etc]# docker run  -v /opt/aerospike-kafka-outbound/etc/:/opt/aerospike/etc/  -p 3000-3002:3000-3002 aerospike/aerospike-server-enterprise --config-file /opt/aerospike/etc/aerospike.conf
+bash: docker: command not found
+[root@dd7e5439f28b etc]# sudo apt get install docker
+bash: sudo: command not found
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# dnf install dnf-plugins-core
+bash: dnf: command not found
+[root@dd7e5439f28b etc]# systemctl --user start docker-desktop
+bash: systemctl: command not found
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# microdnf install -y wget https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.10-3.2.el7.x86_64.rpm
+
+(microdnf:198): librhsm-WARNING **: 11:16:50.438: Found 0 entitlement certificates
+
+(microdnf:198): librhsm-WARNING **: 11:16:50.439: Found 0 entitlement certificates
+error: No package matches 'https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.10-3.2.el7.x86_64.rpm'
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# cat /etc/os-release
+NAME="Red Hat Enterprise Linux"
+VERSION="8.8 (Ootpa)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="8.8"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Red Hat Enterprise Linux 8.8 (Ootpa)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:8::baseos"
+HOME_URL="https://www.redhat.com/"
+DOCUMENTATION_URL="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 8"
+REDHAT_BUGZILLA_PRODUCT_VERSION=8.8
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.8"
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# yum remove docker \
+>                   docker-client \
+>                   docker-client-latest \
+>                   docker-common \
+>                   docker-latest \
+>                   docker-latest-logrotate \
+>                   docker-logrotate \
+>                   docker-engine \
+>                   podman \
+>                   runc
+bash: yum: command not found
+[root@dd7e5439f28b etc]# sudo dnf install yum
+bash: sudo: command not found
+[root@dd7e5439f28b etc]# dnf install yum
+bash: dnf: command not found
+[root@dd7e5439f28b etc]# which yum
+which: no yum in (/home/jboss/.local/bin:/home/jboss/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin)
+[root@dd7e5439f28b etc]# rpm -q yum
+package yum is not installed
+[root@dd7e5439f28b etc]# rpm
+RPM version 4.14.3
+Copyright (C) 1998-2002 - Red Hat, Inc.
+This program may be freely redistributed under the terms of the GNU GPL
+
+Usage: rpm [-afgpcdLAlsiv?] [-a|--all] [-f|--file] [--path] [-g|--group] [-p|--package] [--pkgid] [--hdrid] [--triggeredby] [--whatconflicts]
+        [--whatrequires] [--whatobsoletes] [--whatprovides] [--whatrecommends] [--whatsuggests] [--whatsupplements] [--whatenhances] [--nomanifest]
+        [-c|--configfiles] [-d|--docfiles] [-L|--licensefiles] [-A|--artifactfiles] [--dump] [-l|--list] [--queryformat=QUERYFORMAT] [-s|--state]
+        [--nofiledigest] [--nofiles] [--nodeps] [--noscript] [--allfiles] [--allmatches] [--badreloc] [-e|--erase=<package>+] [--excludedocs]
+        [--excludepath=<path>] [--force] [-F|--freshen=<packagefile>+] [-h|--hash] [--ignorearch] [--ignoreos] [--ignoresize] [--noverify] [-i|--install]
+        [--justdb] [--nodeps] [--nofiledigest] [--nocontexts] [--nocaps] [--noorder] [--noscripts] [--notriggers] [--oldpackage] [--percent]
+        [--prefix=<dir>] [--relocate=<old>=<new>] [--replacefiles] [--replacepkgs] [--test] [-U|--upgrade=<packagefile>+] [--reinstall=<packagefile>+]
+        [-D|--define='MACRO EXPR'] [--undefine=MACRO] [-E|--eval='EXPR'] [--target=CPU-VENDOR-OS] [--macros=<FILE:...>] [--noplugins] [--nodigest]
+        [--nosignature] [--rcfile=<FILE:...>] [-r|--root=ROOT] [--dbpath=DIRECTORY] [--querytags] [--showrc] [--quiet] [-v|--verbose] [--version]
+        [-?|--help] [--usage] [--scripts] [--setperms] [--setugids] [--setcaps] [--restore] [--conflicts] [--obsoletes] [--provides] [--requires]
+        [--recommends] [--suggests] [--supplements] [--enhances] [--info] [--changelog] [--changes] [--xml] [--triggers] [--filetriggers] [--last]
+        [--dupes] [--filesbypkg] [--fileclass] [--filecolor] [--fileprovide] [--filerequire] [--filecaps]
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# 
+[root@dd7e5439f28b etc]# cd ..
+[root@dd7e5439f28b aerospike-kafka-outbound]# 
+[root@dd7e5439f28b aerospike-kafka-outbound]# 
+[root@dd7e5439f28b aerospike-kafka-outbound]# 
+[root@dd7e5439f28b aerospike-kafka-outbound]# 
+[root@dd7e5439f28b aerospike-kafka-outbound]# cd ..
+[root@dd7e5439f28b opt]# ls -lrt
+total 16
+drwxrwxr-x 3 jboss     root 4096 Jul 20 20:08 jboss
+drwxr-xr-x 2 jboss     root 4096 Jul 20 20:12 run-java
+drwxrwxr-x 1 aerospike root 4096 Aug  8 13:53 aerospike-kafka-outbound
+[root@dd7e5439f28b opt]# 
+[root@dd7e5439f28b opt]# 
+[root@dd7e5439f28b opt]# 
+[root@dd7e5439f28b opt]# 
+[root@dd7e5439f28b opt]# mkdir aerospike-server
+[root@dd7e5439f28b opt]# cd aerospike-server/
+[root@dd7e5439f28b aerospike-server]# 
+[root@dd7e5439f28b aerospike-server]# 
+[root@dd7e5439f28b aerospike-server]# wget -O aerospike.tgz https://download.aerospike.com/artifacts/aerospike-server-enterprise/6.2.0.0/aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64.tgz
+--2023-10-29 11:29:00--  https://download.aerospike.com/artifacts/aerospike-server-enterprise/6.2.0.0/aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64.tgz
+Resolving download.aerospike.com (download.aerospike.com)... 54.187.171.64, 54.149.233.98, 52.25.212.189
+Connecting to download.aerospike.com (download.aerospike.com)|54.187.171.64|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 58919205 (56M) [application/x-gzip]
+Saving to: ‘aerospike.tgz’
+
+aerospike.tgz                            100%[================================================================================>]  56.19M   286KB/s    in 2m 5s   
+
+2023-10-29 11:31:07 (460 KB/s) - ‘aerospike.tgz’ saved [58919205/58919205]
+
+[root@dd7e5439f28b aerospike-server]# ls
+aerospike.tgz
+[root@dd7e5439f28b aerospike-server]# tar -xvf aerospike.tgz
+bash: tar: command not found
+[root@dd7e5439f28b aerospike-server]# 
+[root@dd7e5439f28b aerospike-server]# sudo yum search tar
+bash: sudo: command not found
+[root@dd7e5439f28b aerospike-server]# yum update
+bash: yum: command not found
+[root@dd7e5439f28b aerospike-server]# 
+[root@dd7e5439f28b aerospike-server]# 
+[root@dd7e5439f28b aerospike-server]# 
+[root@dd7e5439f28b aerospike-server]# microdnf --enablerepo=rhel-7-server-rpms --enablerepo=rhel-7-server-optional-rpms \
+>     install --nodocs tar gzip
+
+(microdnf:214): librhsm-WARNING **: 11:34:13.692: Found 0 entitlement certificates
+
+(microdnf:214): librhsm-WARNING **: 11:34:13.693: Found 0 entitlement certificates
+error: repo rhel-7-server-rpms not found
+[root@dd7e5439f28b aerospike-server]# microdnf --enablerepo=rhel-7-server-rpms --enablerepo=rhel-7-server-optional-rpms
+
+(microdnf:216): librhsm-WARNING **: 11:34:26.004: Found 0 entitlement certificates
+
+(microdnf:216): librhsm-WARNING **: 11:34:26.005: Found 0 entitlement certificates
+error: repo rhel-7-server-rpms not found
+[root@dd7e5439f28b aerospike-server]# microdnf install --nodocs tar gzip
+
+(microdnf:218): librhsm-WARNING **: 11:34:48.363: Found 0 entitlement certificates
+
+(microdnf:218): librhsm-WARNING **: 11:34:48.364: Found 0 entitlement certificates
+Package                                                                                                           Repository                                  Size
+Installing:                                                                                                                                                       
+ gzip-1.9-13.el8_5.x86_64                                                                                         ubi-8-baseos-rpms                       170.8 kB
+ tar-2:1.30-9.el8.x86_64                                                                                          ubi-8-baseos-rpms                       858.8 kB
+Transaction Summary:
+ Installing:        2 packages
+ Reinstalling:      0 packages
+ Upgrading:         0 packages
+ Obsoleting:        0 packages
+ Removing:          0 packages
+ Downgrading:       0 packages
+Downloading packages...
+Running transaction test...
+Installing: tar;2:1.30-9.el8;x86_64;ubi-8-baseos-rpms
+Installing: gzip;1.9-13.el8_5;x86_64;ubi-8-baseos-rpms
+Complete.
+[root@dd7e5439f28b aerospike-server]# tar -xvf aerospike.tgz
+aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64/
+aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64/aerospike-tools-8.0.2-1.el8.x86_64.rpm
+aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64/aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm
+aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64/SHA256SUMS
+aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64/LICENSE
+aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64/asinstall
+aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64/dep-check
+[root@dd7e5439f28b aerospike-server]# cd aerospike-server-enterprise-*
+bash: cd: aerospike-server-enterprise-*: No such file or directory
+[root@dd7e5439f28b aerospike-server]# cd aerospike
+aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64/ aerospike.tgz
+[root@dd7e5439f28b aerospike-server]# cd aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64/
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# ls
+LICENSE  SHA256SUMS  aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm  aerospike-tools-8.0.2-1.el8.x86_64.rpm  asinstall  dep-check
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# cd ./asinstall 
+bash: cd: ./asinstall: Not a directory
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# ./asinstall
+Checking dependencies
+WARN: Could not find python3. Asloglatency may fail.
+WARN: Could not find python 3.6, 3.7, 3.8, or 3.9. Asloglatency may fail.
+Installing tools
+rpm -Uvh aerospike-tools-8.0.2-1.el8.x86_64.rpm
+Verifying...                          ################################# [100%]
+Preparing...                          ################################# [100%]
+Installing /opt/aerospike
+Updating / installing...
+   1:aerospike-tools-8.0.2-1.el8      ################################# [100%]
+env: ‘python3’: No such file or directory
+warning: %post(aerospike-tools-8.0.2-1.el8.x86_64) scriptlet failed, exit status 127
+Installing server
+rpm -Uvh aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm
+Verifying...                          ################################# [100%]
+Preparing...                          ################################# [100%]
+usermod: no changes
+Updating / installing...
+   1:aerospike-server-enterprise-6.2.0################################# [100%]
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# ls
+LICENSE  SHA256SUMS  aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm  aerospike-tools-8.0.2-1.el8.x86_64.rpm  asinstall  dep-check
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# ls
+LICENSE  SHA256SUMS  aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm  aerospike-tools-8.0.2-1.el8.x86_64.rpm  asinstall  dep-check
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# ls -lrt
+total 57652
+-rw-rw-r-- 1 1000 1000  8764384 Nov 23  2022 aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm
+-rw-rw-r-- 1 1000 1000    26949 Nov 23  2022 LICENSE
+-rwxrwxr-x 1 1000 1000      894 Nov 23  2022 dep-check
+-rwxrwxr-x 1 1000 1000     1410 Nov 23  2022 asinstall
+-rw-rw-r-- 1 1000 1000 50225724 Nov 23  2022 aerospike-tools-8.0.2-1.el8.x86_64.rpm
+-rw-rw-r-- 1 1000 1000      460 Nov 23  2022 SHA256SUMS
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# rpm aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm 
+RPM version 4.14.3
+Copyright (C) 1998-2002 - Red Hat, Inc.
+This program may be freely redistributed under the terms of the GNU GPL
+
+Usage: rpm [-afgpcdLAlsiv?] [-a|--all] [-f|--file] [--path] [-g|--group] [-p|--package] [--pkgid] [--hdrid] [--triggeredby] [--whatconflicts]
+        [--whatrequires] [--whatobsoletes] [--whatprovides] [--whatrecommends] [--whatsuggests] [--whatsupplements] [--whatenhances] [--nomanifest]
+        [-c|--configfiles] [-d|--docfiles] [-L|--licensefiles] [-A|--artifactfiles] [--dump] [-l|--list] [--queryformat=QUERYFORMAT] [-s|--state]
+        [--nofiledigest] [--nofiles] [--nodeps] [--noscript] [--allfiles] [--allmatches] [--badreloc] [-e|--erase=<package>+] [--excludedocs]
+        [--excludepath=<path>] [--force] [-F|--freshen=<packagefile>+] [-h|--hash] [--ignorearch] [--ignoreos] [--ignoresize] [--noverify] [-i|--install]
+        [--justdb] [--nodeps] [--nofiledigest] [--nocontexts] [--nocaps] [--noorder] [--noscripts] [--notriggers] [--oldpackage] [--percent]
+        [--prefix=<dir>] [--relocate=<old>=<new>] [--replacefiles] [--replacepkgs] [--test] [-U|--upgrade=<packagefile>+] [--reinstall=<packagefile>+]
+        [-D|--define='MACRO EXPR'] [--undefine=MACRO] [-E|--eval='EXPR'] [--target=CPU-VENDOR-OS] [--macros=<FILE:...>] [--noplugins] [--nodigest]
+        [--nosignature] [--rcfile=<FILE:...>] [-r|--root=ROOT] [--dbpath=DIRECTORY] [--querytags] [--showrc] [--quiet] [-v|--verbose] [--version]
+        [-?|--help] [--usage] [--scripts] [--setperms] [--setugids] [--setcaps] [--restore] [--conflicts] [--obsoletes] [--provides] [--requires]
+        [--recommends] [--suggests] [--supplements] [--enhances] [--info] [--changelog] [--changes] [--xml] [--triggers] [--filetriggers] [--last]
+        [--dupes] [--filesbypkg] [--fileclass] [--filecolor] [--fileprovide] [--filerequire] [--filecaps]
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# rpm aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm 
+LICENSE                                               aerospike-tools-8.0.2-1.el8.x86_64.rpm
+SHA256SUMS                                            asinstall
+aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm  dep-check
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# rpm aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm 
+RPM version 4.14.3
+Copyright (C) 1998-2002 - Red Hat, Inc.
+This program may be freely redistributed under the terms of the GNU GPL
+
+Usage: rpm [-afgpcdLAlsiv?] [-a|--all] [-f|--file] [--path] [-g|--group] [-p|--package] [--pkgid] [--hdrid] [--triggeredby] [--whatconflicts]
+        [--whatrequires] [--whatobsoletes] [--whatprovides] [--whatrecommends] [--whatsuggests] [--whatsupplements] [--whatenhances] [--nomanifest]
+        [-c|--configfiles] [-d|--docfiles] [-L|--licensefiles] [-A|--artifactfiles] [--dump] [-l|--list] [--queryformat=QUERYFORMAT] [-s|--state]
+        [--nofiledigest] [--nofiles] [--nodeps] [--noscript] [--allfiles] [--allmatches] [--badreloc] [-e|--erase=<package>+] [--excludedocs]
+        [--excludepath=<path>] [--force] [-F|--freshen=<packagefile>+] [-h|--hash] [--ignorearch] [--ignoreos] [--ignoresize] [--noverify] [-i|--install]
+        [--justdb] [--nodeps] [--nofiledigest] [--nocontexts] [--nocaps] [--noorder] [--noscripts] [--notriggers] [--oldpackage] [--percent]
+        [--prefix=<dir>] [--relocate=<old>=<new>] [--replacefiles] [--replacepkgs] [--test] [-U|--upgrade=<packagefile>+] [--reinstall=<packagefile>+]
+        [-D|--define='MACRO EXPR'] [--undefine=MACRO] [-E|--eval='EXPR'] [--target=CPU-VENDOR-OS] [--macros=<FILE:...>] [--noplugins] [--nodigest]
+        [--nosignature] [--rcfile=<FILE:...>] [-r|--root=ROOT] [--dbpath=DIRECTORY] [--querytags] [--showrc] [--quiet] [-v|--verbose] [--version]
+        [-?|--help] [--usage] [--scripts] [--setperms] [--setugids] [--setcaps] [--restore] [--conflicts] [--obsoletes] [--provides] [--requires]
+        [--recommends] [--suggests] [--supplements] [--enhances] [--info] [--changelog] [--changes] [--xml] [--triggers] [--filetriggers] [--last]
+        [--dupes] [--filesbypkg] [--fileclass] [--filecolor] [--fileprovide] [--filerequire] [--filecaps]
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# microdnf install python3
+
+(microdnf:255): librhsm-WARNING **: 11:37:53.377: Found 0 entitlement certificates
+
+(microdnf:255): librhsm-WARNING **: 11:37:53.378: Found 0 entitlement certificates
+Package                                                                                                           Repository                                  Size
+Installing:                                                                                                                                                       
+ platform-python-pip-9.0.3-22.el8.noarch                                                                          ubi-8-baseos-rpms                         1.7 MB
+ python3-pip-9.0.3-22.el8.noarch                                                                                  ubi-8-appstream-rpms                     20.6 kB
+ python3-setuptools-39.2.0-7.el8.noarch                                                                           ubi-8-baseos-rpms                       166.7 kB
+ python36-3.6.8-38.module+el8.5.0+12207+5c5719bc.x86_64                                                           ubi-8-appstream-rpms                     19.9 kB
+Transaction Summary:
+ Installing:        4 packages
+ Reinstalling:      0 packages
+ Upgrading:         0 packages
+ Obsoleting:        0 packages
+ Removing:          0 packages
+ Downgrading:       0 packages
+Enabling module streams:
+    python36:3.6
+
+
+Downloading packages...
+Running transaction test...
+Installing: python3-setuptools;39.2.0-7.el8;noarch;ubi-8-baseos-rpms
+Installing: platform-python-pip;9.0.3-22.el8;noarch;ubi-8-baseos-rpms
+Installing: python36;3.6.8-38.module+el8.5.0+12207+5c5719bc;x86_64;ubi-8-appstream-rpms
+Installing: python3-pip;9.0.3-22.el8;noarch;ubi-8-appstream-rpms
+Complete.
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# ./asinstall
+Checking dependencies
+Installing tools
+rpm -Uvh aerospike-tools-8.0.2-1.el8.x86_64.rpm
+Verifying...                          ################################# [100%]
+Preparing...                          ################################# [100%]
+	package aerospike-tools-8.0.2-1.el8.x86_64 is already installed
+Installing server
+rpm -Uvh aerospike-server-enterprise-6.2.0.0-1.el8.x86_64.rpm
+Verifying...                          ################################# [100%]
+Preparing...                          ################################# [100%]
+	package aerospike-server-enterprise-6.2.0.0-1.el8.x86_64 is already installed
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# systemctl start aerospike
+bash: systemctl: command not found
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# microdnf install systemctl
+
+(microdnf:276): librhsm-WARNING **: 11:39:24.075: Found 0 entitlement certificates
+
+(microdnf:276): librhsm-WARNING **: 11:39:24.076: Found 0 entitlement certificates
+error: No package matches 'systemctl'
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# microdnf install yum
+
+(microdnf:278): librhsm-WARNING **: 11:40:31.109: Found 0 entitlement certificates
+
+(microdnf:278): librhsm-WARNING **: 11:40:31.110: Found 0 entitlement certificates
+Package                                                                                                           Repository                                  Size
+Installing:                                                                                                                                                       
+ dnf-4.7.0-16.el8_8.noarch                                                                                        ubi-8-baseos-rpms                       555.1 kB
+ dnf-data-4.7.0-16.el8_8.noarch                                                                                   ubi-8-baseos-rpms                       160.2 kB
+ elfutils-debuginfod-client-0.188-3.el8.x86_64                                                                    ubi-8-baseos-rpms                        76.4 kB
+ elfutils-default-yama-scope-0.188-3.el8.noarch                                                                   ubi-8-baseos-rpms                        53.1 kB
+ elfutils-libs-0.188-3.el8.x86_64                                                                                 ubi-8-baseos-rpms                       305.7 kB
+ ima-evm-utils-1.3.2-12.el8.x86_64                                                                                ubi-8-baseos-rpms                        65.5 kB
+ libcomps-0.1.18-1.el8.x86_64                                                                                     ubi-8-baseos-rpms                        84.1 kB
+ libreport-filesystem-2.9.5-15.el8.x86_64                                                                         ubi-8-baseos-rpms                        21.5 kB
+ python3-dnf-4.7.0-16.el8_8.noarch                                                                                ubi-8-baseos-rpms                       562.8 kB
+ python3-gpg-1.13.1-11.el8.x86_64                                                                                 ubi-8-baseos-rpms                       250.2 kB
+ python3-hawkey-0.63.0-14.el8_8.x86_64                                                                            ubi-8-baseos-rpms                       120.4 kB
+ python3-libcomps-0.1.18-1.el8.x86_64                                                                             ubi-8-baseos-rpms                        53.2 kB
+ python3-libdnf-0.63.0-14.el8_8.x86_64                                                                            ubi-8-baseos-rpms                       798.2 kB
+ python3-rpm-4.14.3-26.el8.x86_64                                                                                 ubi-8-baseos-rpms                       158.6 kB
+ rpm-build-libs-4.14.3-26.el8.x86_64                                                                              ubi-8-baseos-rpms                       160.9 kB
+ tpm2-tss-2.3.2-4.el8.x86_64                                                                                      ubi-8-baseos-rpms                       281.8 kB
+ yum-4.7.0-16.el8_8.noarch                                                                                        ubi-8-baseos-rpms                       206.1 kB
+Transaction Summary:
+ Installing:       17 packages
+ Reinstalling:      0 packages
+ Upgrading:         0 packages
+ Obsoleting:        0 packages
+ Removing:          0 packages
+ Downgrading:       0 packages
+Downloading packages...
+Running transaction test...
+Installing: python3-libdnf;0.63.0-14.el8_8;x86_64;ubi-8-baseos-rpms
+Installing: python3-hawkey;0.63.0-14.el8_8;x86_64;ubi-8-baseos-rpms
+Installing: tpm2-tss;2.3.2-4.el8;x86_64;ubi-8-baseos-rpms
+Installing: ima-evm-utils;1.3.2-12.el8;x86_64;ubi-8-baseos-rpms
+Installing: python3-gpg;1.13.1-11.el8;x86_64;ubi-8-baseos-rpms
+Installing: libreport-filesystem;2.9.5-15.el8;x86_64;ubi-8-baseos-rpms
+Installing: dnf-data;4.7.0-16.el8_8;noarch;ubi-8-baseos-rpms
+Installing: libcomps;0.1.18-1.el8;x86_64;ubi-8-baseos-rpms
+Installing: python3-libcomps;0.1.18-1.el8;x86_64;ubi-8-baseos-rpms
+Installing: elfutils-default-yama-scope;0.188-3.el8;noarch;ubi-8-baseos-rpms
+Installing: elfutils-libs;0.188-3.el8;x86_64;ubi-8-baseos-rpms
+Installing: elfutils-debuginfod-client;0.188-3.el8;x86_64;ubi-8-baseos-rpms
+Installing: rpm-build-libs;4.14.3-26.el8;x86_64;ubi-8-baseos-rpms
+Installing: python3-rpm;4.14.3-26.el8;x86_64;ubi-8-baseos-rpms
+Installing: python3-dnf;4.7.0-16.el8_8;noarch;ubi-8-baseos-rpms
+Installing: dnf;4.7.0-16.el8_8;noarch;ubi-8-baseos-rpms
+Installing: yum;4.7.0-16.el8_8;noarch;ubi-8-baseos-rpms
+Complete.
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# yum install -y yum-utils
+Red Hat Universal Base Image 8 (RPMs) - BaseOS                                                                                    2.9 MB/s | 716 kB     00:00    
+Red Hat Universal Base Image 8 (RPMs) - AppStream                                                                                 5.5 MB/s | 2.9 MB     00:00    
+Red Hat Universal Base Image 8 (RPMs) - CodeReady Builder                                                                         566 kB/s |  99 kB     00:00    
+Dependencies resolved.
+==================================================================================================================================================================
+ Package                                        Architecture                 Version                                Repository                               Size
+==================================================================================================================================================================
+Installing:
+ yum-utils                                      noarch                       4.0.21-19.el8_8                        ubi-8-baseos-rpms                        75 k
+Installing dependencies:
+ dbus-glib                                      x86_64                       0.110-2.el8                            ubi-8-baseos-rpms                       127 k
+ dnf-plugins-core                               noarch                       4.0.21-19.el8_8                        ubi-8-baseos-rpms                        75 k
+ python3-dateutil                               noarch                       1:2.6.1-6.el8                          ubi-8-baseos-rpms                       251 k
+ python3-dbus                                   x86_64                       1.2.4-15.el8                           ubi-8-baseos-rpms                       134 k
+ python3-dnf-plugins-core                       noarch                       4.0.21-19.el8_8                        ubi-8-baseos-rpms                       261 k
+ python3-six                                    noarch                       1.11.0-8.el8                           ubi-8-baseos-rpms                        38 k
+ python3-systemd                                x86_64                       234-8.el8                              ubi-8-baseos-rpms                        81 k
+
+Transaction Summary
+==================================================================================================================================================================
+Install  8 Packages
+
+Total download size: 1.0 M
+Installed size: 2.7 M
+Downloading Packages:
+(1/8): dbus-glib-0.110-2.el8.x86_64.rpm                                                                                           1.2 MB/s | 127 kB     00:00    
+(2/8): dnf-plugins-core-4.0.21-19.el8_8.noarch.rpm                                                                                619 kB/s |  75 kB     00:00    
+(3/8): python3-dbus-1.2.4-15.el8.x86_64.rpm                                                                                       4.8 MB/s | 134 kB     00:00    
+(4/8): python3-dateutil-2.6.1-6.el8.noarch.rpm                                                                                    1.7 MB/s | 251 kB     00:00    
+(5/8): python3-six-1.11.0-8.el8.noarch.rpm                                                                                        1.4 MB/s |  38 kB     00:00    
+(6/8): python3-systemd-234-8.el8.x86_64.rpm                                                                                       3.0 MB/s |  81 kB     00:00    
+(7/8): python3-dnf-plugins-core-4.0.21-19.el8_8.noarch.rpm                                                                        4.5 MB/s | 261 kB     00:00    
+(8/8): yum-utils-4.0.21-19.el8_8.noarch.rpm                                                                                       3.8 MB/s |  75 kB     00:00    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                             5.4 MB/s | 1.0 MB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                          1/1 
+  Installing       : python3-systemd-234-8.el8.x86_64                                                                                                         1/8 
+  Installing       : python3-six-1.11.0-8.el8.noarch                                                                                                          2/8 
+  Installing       : python3-dateutil-1:2.6.1-6.el8.noarch                                                                                                    3/8 
+  Installing       : dbus-glib-0.110-2.el8.x86_64                                                                                                             4/8 
+  Running scriptlet: dbus-glib-0.110-2.el8.x86_64                                                                                                             4/8 
+  Installing       : python3-dbus-1.2.4-15.el8.x86_64                                                                                                         5/8 
+  Installing       : python3-dnf-plugins-core-4.0.21-19.el8_8.noarch                                                                                          6/8 
+  Installing       : dnf-plugins-core-4.0.21-19.el8_8.noarch                                                                                                  7/8 
+  Installing       : yum-utils-4.0.21-19.el8_8.noarch                                                                                                         8/8 
+  Running scriptlet: yum-utils-4.0.21-19.el8_8.noarch                                                                                                         8/8 
+  Verifying        : dbus-glib-0.110-2.el8.x86_64                                                                                                             1/8 
+  Verifying        : dnf-plugins-core-4.0.21-19.el8_8.noarch                                                                                                  2/8 
+  Verifying        : python3-dateutil-1:2.6.1-6.el8.noarch                                                                                                    3/8 
+  Verifying        : python3-dbus-1.2.4-15.el8.x86_64                                                                                                         4/8 
+  Verifying        : python3-dnf-plugins-core-4.0.21-19.el8_8.noarch                                                                                          5/8 
+  Verifying        : python3-six-1.11.0-8.el8.noarch                                                                                                          6/8 
+  Verifying        : python3-systemd-234-8.el8.x86_64                                                                                                         7/8 
+  Verifying        : yum-utils-4.0.21-19.el8_8.noarch                                                                                                         8/8 
+
+Installed:
+  dbus-glib-0.110-2.el8.x86_64                    dnf-plugins-core-4.0.21-19.el8_8.noarch python3-dateutil-1:2.6.1-6.el8.noarch python3-dbus-1.2.4-15.el8.x86_64
+  python3-dnf-plugins-core-4.0.21-19.el8_8.noarch python3-six-1.11.0-8.el8.noarch         python3-systemd-234-8.el8.x86_64      yum-utils-4.0.21-19.el8_8.noarch
+
+Complete!
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+Adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+Docker CE Stable - x86_64                                                                                                         337 kB/s |  51 kB     00:00    
+Dependencies resolved.
+==================================================================================================================================================================
+ Package                                    Architecture         Version                                                 Repository                          Size
+==================================================================================================================================================================
+Installing:
+ containerd.io                              x86_64               1.6.24-3.1.el8                                          docker-ce-stable                    34 M
+ docker-buildx-plugin                       x86_64               0.11.2-1.el8                                            docker-ce-stable                    13 M
+ docker-ce                                  x86_64               3:24.0.7-1.el8                                          docker-ce-stable                    24 M
+ docker-ce-cli                              x86_64               1:24.0.7-1.el8                                          docker-ce-stable                   7.2 M
+ docker-compose-plugin                      x86_64               2.21.0-1.el8                                            docker-ce-stable                    13 M
+Upgrading:
+ systemd-libs                               x86_64               239-74.el8_8.5                                          ubi-8-baseos-rpms                  1.1 M
+Installing dependencies:
+ acl                                        x86_64               2.2.53-1.el8                                            ubi-8-baseos-rpms                   81 k
+ checkpolicy                                x86_64               2.9-1.el8                                               ubi-8-baseos-rpms                  346 k
+ container-selinux                          noarch               2:2.205.0-2.module+el8.8.0+19993+47c8ef84               ubi-8-appstream-rpms                64 k
+ cracklib                                   x86_64               2.9.6-15.el8                                            ubi-8-baseos-rpms                   93 k
+ cracklib-dicts                             x86_64               2.9.6-15.el8                                            ubi-8-baseos-rpms                  4.0 M
+ cryptsetup-libs                            x86_64               2.3.7-5.el8                                             ubi-8-baseos-rpms                  488 k
+ dbus                                       x86_64               1:1.12.8-24.el8_8.1                                     ubi-8-baseos-rpms                   42 k
+ dbus-common                                noarch               1:1.12.8-24.el8_8.1                                     ubi-8-baseos-rpms                   47 k
+ dbus-daemon                                x86_64               1:1.12.8-24.el8_8.1                                     ubi-8-baseos-rpms                  241 k
+ dbus-tools                                 x86_64               1:1.12.8-24.el8_8.1                                     ubi-8-baseos-rpms                   86 k
+ device-mapper                              x86_64               8:1.02.181-9.el8                                        ubi-8-baseos-rpms                  378 k
+ device-mapper-libs                         x86_64               8:1.02.181-9.el8                                        ubi-8-baseos-rpms                  410 k
+ diffutils                                  x86_64               3.6-6.el8                                               ubi-8-baseos-rpms                  359 k
+ fuse-common                                x86_64               3.3.0-16.el8                                            ubi-8-baseos-rpms                   22 k
+ fuse-overlayfs                             x86_64               1.11-1.module+el8.8.0+19993+47c8ef84                    ubi-8-appstream-rpms                75 k
+ fuse3                                      x86_64               3.3.0-16.el8                                            ubi-8-baseos-rpms                   54 k
+ fuse3-libs                                 x86_64               3.3.0-16.el8                                            ubi-8-baseos-rpms                   95 k
+ iptables                                   x86_64               1.8.4-24.el8_8.2                                        ubi-8-baseos-rpms                  586 k
+ iptables-libs                              x86_64               1.8.4-24.el8_8.2                                        ubi-8-baseos-rpms                  109 k
+ kmod                                       x86_64               25-19.el8                                               ubi-8-baseos-rpms                  126 k
+ kmod-libs                                  x86_64               25-19.el8                                               ubi-8-baseos-rpms                   68 k
+ libcgroup                                  x86_64               0.41-19.el8                                             ubi-8-baseos-rpms                   70 k
+ libfdisk                                   x86_64               2.32.1-42.el8_8                                         ubi-8-baseos-rpms                  253 k
+ libibverbs                                 x86_64               44.0-2.el8.1                                            ubi-8-baseos-rpms                  390 k
+ libmnl                                     x86_64               1.0.4-6.el8                                             ubi-8-baseos-rpms                   30 k
+ libnetfilter_conntrack                     x86_64               1.0.6-5.el8                                             ubi-8-baseos-rpms                   65 k
+ libnfnetlink                               x86_64               1.0.1-13.el8                                            ubi-8-baseos-rpms                   33 k
+ libnftnl                                   x86_64               1.1.5-5.el8                                             ubi-8-baseos-rpms                   83 k
+ libnl3                                     x86_64               3.7.0-1.el8                                             ubi-8-baseos-rpms                  337 k
+ libpcap                                    x86_64               14:1.9.1-5.el8                                          ubi-8-baseos-rpms                  169 k
+ libpwquality                               x86_64               1.4.4-6.el8                                             ubi-8-baseos-rpms                  107 k
+ libseccomp                                 x86_64               2.5.2-1.el8                                             ubi-8-baseos-rpms                   71 k
+ libselinux-utils                           x86_64               2.9-8.el8                                               ubi-8-baseos-rpms                  243 k
+ libslirp                                   x86_64               4.4.0-1.module+el8.8.0+19993+47c8ef84                   ubi-8-appstream-rpms                70 k
+ libutempter                                x86_64               1.1.6-14.el8                                            ubi-8-baseos-rpms                   32 k
+ pam                                        x86_64               1.3.1-25.el8                                            ubi-8-baseos-rpms                  746 k
+ policycoreutils                            x86_64               2.9-24.el8                                              ubi-8-baseos-rpms                  377 k
+ policycoreutils-python-utils               noarch               2.9-24.el8                                              ubi-8-baseos-rpms                  254 k
+ python3-audit                              x86_64               3.0.7-4.el8                                             ubi-8-baseos-rpms                   87 k
+ python3-libselinux                         x86_64               2.9-8.el8                                               ubi-8-baseos-rpms                  283 k
+ python3-libsemanage                        x86_64               2.9-9.el8_6                                             ubi-8-baseos-rpms                  128 k
+ python3-policycoreutils                    noarch               2.9-24.el8                                              ubi-8-baseos-rpms                  2.3 M
+ python3-setools                            x86_64               4.3.0-3.el8                                             ubi-8-baseos-rpms                  624 k
+ rpm-plugin-selinux                         x86_64               4.14.3-26.el8                                           ubi-8-baseos-rpms                   78 k
+ selinux-policy                             noarch               3.14.3-117.el8_8.3                                      ubi-8-baseos-rpms                  661 k
+ selinux-policy-targeted                    noarch               3.14.3-117.el8_8.3                                      ubi-8-baseos-rpms                   15 M
+ slirp4netns                                x86_64               1.2.0-2.module+el8.8.0+19993+47c8ef84                   ubi-8-appstream-rpms                54 k
+ systemd                                    x86_64               239-74.el8_8.5                                          ubi-8-baseos-rpms                  3.6 M
+ systemd-pam                                x86_64               239-74.el8_8.5                                          ubi-8-baseos-rpms                  505 k
+ util-linux                                 x86_64               2.32.1-42.el8_8                                         ubi-8-baseos-rpms                  2.5 M
+ xkeyboard-config                           noarch               2.28-1.el8                                              ubi-8-appstream-rpms               782 k
+ xz                                         x86_64               5.2.4-4.el8_6                                           ubi-8-baseos-rpms                  153 k
+Installing weak dependencies:
+ docker-ce-rootless-extras                  x86_64               24.0.7-1.el8                                            docker-ce-stable                   4.9 M
+ libxkbcommon                               x86_64               0.9.1-1.el8                                             ubi-8-appstream-rpms               116 k
+Enabling module streams:
+ container-tools                                                 rhel8                                                                                           
+
+Transaction Summary
+==================================================================================================================================================================
+Install  59 Packages
+Upgrade   1 Package
+
+Total download size: 135 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/60): docker-buildx-plugin-0.11.2-1.el8.x86_64.rpm                                                                              2.0 MB/s |  13 MB     00:06    
+(2/60): docker-ce-cli-24.0.7-1.el8.x86_64.rpm                                                                                     1.6 MB/s | 7.2 MB     00:04    
+(3/60): docker-ce-rootless-extras-24.0.7-1.el8.x86_64.rpm                                                                         2.1 MB/s | 4.9 MB     00:02    
+(4/60): containerd.io-1.6.24-3.1.el8.x86_64.rpm                                                                                   2.3 MB/s |  34 MB     00:14    
+(5/60): acl-2.2.53-1.el8.x86_64.rpm                                                                                               123 kB/s |  81 kB     00:00    
+(6/60): checkpolicy-2.9-1.el8.x86_64.rpm                                                                                          1.1 MB/s | 346 kB     00:00    
+(7/60): docker-ce-24.0.7-1.el8.x86_64.rpm                                                                                         1.6 MB/s |  24 MB     00:15    
+(8/60): cracklib-2.9.6-15.el8.x86_64.rpm                                                                                          552 kB/s |  93 kB     00:00    
+(9/60): cryptsetup-libs-2.3.7-5.el8.x86_64.rpm                                                                                    987 kB/s | 488 kB     00:00    
+(10/60): dbus-1.12.8-24.el8_8.1.x86_64.rpm                                                                                        461 kB/s |  42 kB     00:00    
+(11/60): dbus-common-1.12.8-24.el8_8.1.noarch.rpm                                                                                 383 kB/s |  47 kB     00:00    
+(12/60): dbus-daemon-1.12.8-24.el8_8.1.x86_64.rpm                                                                                 933 kB/s | 241 kB     00:00    
+(13/60): dbus-tools-1.12.8-24.el8_8.1.x86_64.rpm                                                                                  818 kB/s |  86 kB     00:00    
+(14/60): docker-compose-plugin-2.21.0-1.el8.x86_64.rpm                                                                            3.4 MB/s |  13 MB     00:03    
+(15/60): device-mapper-1.02.181-9.el8.x86_64.rpm                                                                                  564 kB/s | 378 kB     00:00    
+(16/60): device-mapper-libs-1.02.181-9.el8.x86_64.rpm                                                                             1.8 MB/s | 410 kB     00:00    
+(17/60): diffutils-3.6-6.el8.x86_64.rpm                                                                                           1.0 MB/s | 359 kB     00:00    
+(18/60): fuse3-3.3.0-16.el8.x86_64.rpm                                                                                            458 kB/s |  54 kB     00:00    
+(19/60): cracklib-dicts-2.9.6-15.el8.x86_64.rpm                                                                                   1.6 MB/s | 4.0 MB     00:02    
+(20/60): iptables-1.8.4-24.el8_8.2.x86_64.rpm                                                                                     2.5 MB/s | 586 kB     00:00    
+(21/60): iptables-libs-1.8.4-24.el8_8.2.x86_64.rpm                                                                                2.1 MB/s | 109 kB     00:00    
+(22/60): kmod-25-19.el8.x86_64.rpm                                                                                                1.7 MB/s | 126 kB     00:00    
+(23/60): kmod-libs-25-19.el8.x86_64.rpm                                                                                           1.5 MB/s |  68 kB     00:00    
+(24/60): libcgroup-0.41-19.el8.x86_64.rpm                                                                                         1.0 MB/s |  70 kB     00:00    
+(25/60): libfdisk-2.32.1-42.el8_8.x86_64.rpm                                                                                      3.2 MB/s | 253 kB     00:00    
+(26/60): libibverbs-44.0-2.el8.1.x86_64.rpm                                                                                       3.8 MB/s | 390 kB     00:00    
+(27/60): libmnl-1.0.4-6.el8.x86_64.rpm                                                                                            689 kB/s |  30 kB     00:00    
+(28/60): libnetfilter_conntrack-1.0.6-5.el8.x86_64.rpm                                                                            1.5 MB/s |  65 kB     00:00    
+(29/60): libnfnetlink-1.0.1-13.el8.x86_64.rpm                                                                                     925 kB/s |  33 kB     00:00    
+(30/60): fuse-common-3.3.0-16.el8.x86_64.rpm                                                                                      6.6 kB/s |  22 kB     00:03    
+(31/60): libnl3-3.7.0-1.el8.x86_64.rpm                                                                                            6.9 MB/s | 337 kB     00:00    
+(32/60): libpcap-1.9.1-5.el8.x86_64.rpm                                                                                           4.3 MB/s | 169 kB     00:00    
+(33/60): libpwquality-1.4.4-6.el8.x86_64.rpm                                                                                      2.9 MB/s | 107 kB     00:00    
+(34/60): libseccomp-2.5.2-1.el8.x86_64.rpm                                                                                        2.1 MB/s |  71 kB     00:00    
+(35/60): libselinux-utils-2.9-8.el8.x86_64.rpm                                                                                    5.3 MB/s | 243 kB     00:00    
+(36/60): libutempter-1.1.6-14.el8.x86_64.rpm                                                                                      1.0 MB/s |  32 kB     00:00    
+(37/60): pam-1.3.1-25.el8.x86_64.rpm                                                                                               11 MB/s | 746 kB     00:00    
+(38/60): policycoreutils-2.9-24.el8.x86_64.rpm                                                                                    6.5 MB/s | 377 kB     00:00    
+(39/60): policycoreutils-python-utils-2.9-24.el8.noarch.rpm                                                                       2.5 MB/s | 254 kB     00:00    
+(40/60): python3-audit-3.0.7-4.el8.x86_64.rpm                                                                                     1.0 MB/s |  87 kB     00:00    
+(41/60): python3-libselinux-2.9-8.el8.x86_64.rpm                                                                                  6.3 MB/s | 283 kB     00:00    
+(42/60): python3-libsemanage-2.9-9.el8_6.x86_64.rpm                                                                               3.3 MB/s | 128 kB     00:00    
+(43/60): fuse3-libs-3.3.0-16.el8.x86_64.rpm                                                                                        24 kB/s |  95 kB     00:03    
+(44/60): python3-policycoreutils-2.9-24.el8.noarch.rpm                                                                            3.9 MB/s | 2.3 MB     00:00    
+(45/60): python3-setools-4.3.0-3.el8.x86_64.rpm                                                                                   1.5 MB/s | 624 kB     00:00    
+(46/60): libnftnl-1.1.5-5.el8.x86_64.rpm                                                                                           15 kB/s |  83 kB     00:05    
+(47/60): selinux-policy-3.14.3-117.el8_8.3.noarch.rpm                                                                             102 kB/s | 661 kB     00:06    
+(48/60): systemd-239-74.el8_8.5.x86_64.rpm                                                                                        5.6 MB/s | 3.6 MB     00:00    
+(49/60): systemd-pam-239-74.el8_8.5.x86_64.rpm                                                                                    3.1 MB/s | 505 kB     00:00    
+(50/60): rpm-plugin-selinux-4.14.3-26.el8.x86_64.rpm                                                                               10 kB/s |  78 kB     00:07    
+(51/60): util-linux-2.32.1-42.el8_8.x86_64.rpm                                                                                    2.8 MB/s | 2.5 MB     00:00    
+(52/60): libxkbcommon-0.9.1-1.el8.x86_64.rpm                                                                                      1.7 MB/s | 116 kB     00:00    
+(53/60): xkeyboard-config-2.28-1.el8.noarch.rpm                                                                                   2.2 MB/s | 782 kB     00:00    
+(54/60): xz-5.2.4-4.el8_6.x86_64.rpm                                                                                              106 kB/s | 153 kB     00:01    
+(55/60): selinux-policy-targeted-3.14.3-117.el8_8.3.noarch.rpm                                                                    1.6 MB/s |  15 MB     00:09    
+(56/60): container-selinux-2.205.0-2.module+el8.8.0+19993+47c8ef84.noarch.rpm                                                      23 kB/s |  64 kB     00:02    
+(57/60): libslirp-4.4.0-1.module+el8.8.0+19993+47c8ef84.x86_64.rpm                                                                637 kB/s |  70 kB     00:00    
+(58/60): systemd-libs-239-74.el8_8.5.x86_64.rpm                                                                                   2.7 MB/s | 1.1 MB     00:00    
+(59/60): fuse-overlayfs-1.11-1.module+el8.8.0+19993+47c8ef84.x86_64.rpm                                                            22 kB/s |  75 kB     00:03    
+(60/60): slirp4netns-1.2.0-2.module+el8.8.0+19993+47c8ef84.x86_64.rpm                                                              21 kB/s |  54 kB     00:02    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                             3.7 MB/s | 135 MB     00:36     
+Docker CE Stable - x86_64                                                                                                          18 kB/s | 1.6 kB     00:00    
+Importing GPG key 0x621E9F35:
+ Userid     : "Docker Release (CE rpm) <docker@docker.com>"
+ Fingerprint: 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35
+ From       : https://download.docker.com/linux/centos/gpg
+Is this ok [y/N]: y
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                          1/1 
+  Upgrading        : systemd-libs-239-74.el8_8.5.x86_64                                                                                                      1/61 
+  Running scriptlet: systemd-libs-239-74.el8_8.5.x86_64                                                                                                      1/61 
+  Installing       : libseccomp-2.5.2-1.el8.x86_64                                                                                                           2/61 
+  Running scriptlet: libseccomp-2.5.2-1.el8.x86_64                                                                                                           2/61 
+  Installing       : python3-libselinux-2.9-8.el8.x86_64                                                                                                     3/61 
+  Installing       : libmnl-1.0.4-6.el8.x86_64                                                                                                               4/61 
+  Running scriptlet: libmnl-1.0.4-6.el8.x86_64                                                                                                               4/61 
+  Installing       : cracklib-2.9.6-15.el8.x86_64                                                                                                            5/61 
+  Installing       : cracklib-dicts-2.9.6-15.el8.x86_64                                                                                                      6/61 
+  Installing       : libselinux-utils-2.9-8.el8.x86_64                                                                                                       7/61 
+  Installing       : libnfnetlink-1.0.1-13.el8.x86_64                                                                                                        8/61 
+  Running scriptlet: libnfnetlink-1.0.1-13.el8.x86_64                                                                                                        8/61 
+  Installing       : fuse3-libs-3.3.0-16.el8.x86_64                                                                                                          9/61 
+  Running scriptlet: fuse3-libs-3.3.0-16.el8.x86_64                                                                                                          9/61 
+  Installing       : diffutils-3.6-6.el8.x86_64                                                                                                             10/61 
+  Running scriptlet: diffutils-3.6-6.el8.x86_64                                                                                                             10/61 
+  Installing       : docker-compose-plugin-2.21.0-1.el8.x86_64                                                                                              11/61 
+  Running scriptlet: docker-compose-plugin-2.21.0-1.el8.x86_64                                                                                              11/61 
+  Installing       : libnetfilter_conntrack-1.0.6-5.el8.x86_64                                                                                              12/61 
+  Running scriptlet: libnetfilter_conntrack-1.0.6-5.el8.x86_64                                                                                              12/61 
+  Installing       : libpwquality-1.4.4-6.el8.x86_64                                                                                                        13/61 
+  Installing       : pam-1.3.1-25.el8.x86_64                                                                                                                14/61 
+  Running scriptlet: pam-1.3.1-25.el8.x86_64                                                                                                                14/61 
+  Installing       : libnftnl-1.1.5-5.el8.x86_64                                                                                                            15/61 
+  Running scriptlet: libnftnl-1.1.5-5.el8.x86_64                                                                                                            15/61 
+  Installing       : python3-libsemanage-2.9-9.el8_6.x86_64                                                                                                 16/61 
+  Installing       : python3-setools-4.3.0-3.el8.x86_64                                                                                                     17/61 
+  Installing       : dbus-tools-1:1.12.8-24.el8_8.1.x86_64                                                                                                  18/61 
+  Installing       : libslirp-4.4.0-1.module+el8.8.0+19993+47c8ef84.x86_64                                                                                  19/61 
+  Installing       : slirp4netns-1.2.0-2.module+el8.8.0+19993+47c8ef84.x86_64                                                                               20/61 
+  Installing       : xkeyboard-config-2.28-1.el8.noarch                                                                                                     21/61 
+  Installing       : libxkbcommon-0.9.1-1.el8.x86_64                                                                                                        22/61 
+  Installing       : xz-5.2.4-4.el8_6.x86_64                                                                                                                23/61 
+  Installing       : python3-audit-3.0.7-4.el8.x86_64                                                                                                       24/61 
+  Running scriptlet: libutempter-1.1.6-14.el8.x86_64                                                                                                        25/61 
+  Installing       : libutempter-1.1.6-14.el8.x86_64                                                                                                        25/61 
+  Installing       : libnl3-3.7.0-1.el8.x86_64                                                                                                              26/61 
+  Running scriptlet: libnl3-3.7.0-1.el8.x86_64                                                                                                              26/61 
+  Installing       : libibverbs-44.0-2.el8.1.x86_64                                                                                                         27/61 
+  Installing       : libpcap-14:1.9.1-5.el8.x86_64                                                                                                          28/61 
+  Installing       : iptables-libs-1.8.4-24.el8_8.2.x86_64                                                                                                  29/61 
+  Running scriptlet: iptables-1.8.4-24.el8_8.2.x86_64                                                                                                       30/61 
+  Installing       : iptables-1.8.4-24.el8_8.2.x86_64                                                                                                       30/61 
+  Running scriptlet: iptables-1.8.4-24.el8_8.2.x86_64                                                                                                       30/61 
+  Installing       : libfdisk-2.32.1-42.el8_8.x86_64                                                                                                        31/61 
+  Running scriptlet: libfdisk-2.32.1-42.el8_8.x86_64                                                                                                        31/61 
+  Installing       : util-linux-2.32.1-42.el8_8.x86_64                                                                                                      32/61 
+warning: /etc/adjtime created as /etc/adjtime.rpmnew
+
+  Running scriptlet: util-linux-2.32.1-42.el8_8.x86_64                                                                                                      32/61 
+  Installing       : policycoreutils-2.9-24.el8.x86_64                                                                                                      33/61 
+  Running scriptlet: policycoreutils-2.9-24.el8.x86_64                                                                                                      33/61 
+  Installing       : rpm-plugin-selinux-4.14.3-26.el8.x86_64                                                                                                34/61 
+  Installing       : selinux-policy-3.14.3-117.el8_8.3.noarch                                                                                               35/61 
+  Running scriptlet: selinux-policy-3.14.3-117.el8_8.3.noarch                                                                                               35/61 
+  Running scriptlet: selinux-policy-targeted-3.14.3-117.el8_8.3.noarch                                                                                      36/61 
+  Installing       : selinux-policy-targeted-3.14.3-117.el8_8.3.noarch                                                                                      36/61 
+  Running scriptlet: selinux-policy-targeted-3.14.3-117.el8_8.3.noarch                                                                                      36/61 
+  Installing       : kmod-libs-25-19.el8.x86_64                                                                                                             37/61 
+  Running scriptlet: kmod-libs-25-19.el8.x86_64                                                                                                             37/61 
+  Installing       : kmod-25-19.el8.x86_64                                                                                                                  38/61 
+  Installing       : fuse-common-3.3.0-16.el8.x86_64                                                                                                        39/61 
+  Installing       : fuse3-3.3.0-16.el8.x86_64                                                                                                              40/61 
+  Installing       : fuse-overlayfs-1.11-1.module+el8.8.0+19993+47c8ef84.x86_64                                                                             41/61 
+  Running scriptlet: fuse-overlayfs-1.11-1.module+el8.8.0+19993+47c8ef84.x86_64                                                                             41/61 
+  Installing       : checkpolicy-2.9-1.el8.x86_64                                                                                                           42/61 
+  Installing       : python3-policycoreutils-2.9-24.el8.noarch                                                                                              43/61 
+  Installing       : policycoreutils-python-utils-2.9-24.el8.noarch                                                                                         44/61 
+  Running scriptlet: container-selinux-2:2.205.0-2.module+el8.8.0+19993+47c8ef84.noarch                                                                     45/61 
+  Installing       : container-selinux-2:2.205.0-2.module+el8.8.0+19993+47c8ef84.noarch                                                                     45/61 
+  Running scriptlet: container-selinux-2:2.205.0-2.module+el8.8.0+19993+47c8ef84.noarch                                                                     45/61 
+  Installing       : acl-2.2.53-1.el8.x86_64                                                                                                                46/61 
+  Installing       : device-mapper-8:1.02.181-9.el8.x86_64                                                                                                  47/61 
+  Installing       : device-mapper-libs-8:1.02.181-9.el8.x86_64                                                                                             48/61 
+  Installing       : cryptsetup-libs-2.3.7-5.el8.x86_64                                                                                                     49/61 
+  Running scriptlet: cryptsetup-libs-2.3.7-5.el8.x86_64                                                                                                     49/61 
+  Installing       : dbus-common-1:1.12.8-24.el8_8.1.noarch                                                                                                 50/61 
+  Running scriptlet: dbus-daemon-1:1.12.8-24.el8_8.1.x86_64                                                                                                 51/61 
+  Installing       : dbus-daemon-1:1.12.8-24.el8_8.1.x86_64                                                                                                 51/61 
+  Running scriptlet: dbus-daemon-1:1.12.8-24.el8_8.1.x86_64                                                                                                 51/61 
+  Installing       : systemd-pam-239-74.el8_8.5.x86_64                                                                                                      52/61 
+  Running scriptlet: systemd-239-74.el8_8.5.x86_64                                                                                                          53/61 
+  Installing       : systemd-239-74.el8_8.5.x86_64                                                                                                          53/61 
+  Running scriptlet: systemd-239-74.el8_8.5.x86_64                                                                                                          53/61 
+  Installing       : dbus-1:1.12.8-24.el8_8.1.x86_64                                                                                                        54/61 
+  Installing       : containerd.io-1.6.24-3.1.el8.x86_64                                                                                                    55/61 
+  Running scriptlet: containerd.io-1.6.24-3.1.el8.x86_64                                                                                                    55/61 
+  Running scriptlet: libcgroup-0.41-19.el8.x86_64                                                                                                           56/61 
+  Installing       : libcgroup-0.41-19.el8.x86_64                                                                                                           56/61 
+  Running scriptlet: libcgroup-0.41-19.el8.x86_64                                                                                                           56/61 
+  Installing       : docker-buildx-plugin-0.11.2-1.el8.x86_64                                                                                               57/61 
+  Running scriptlet: docker-buildx-plugin-0.11.2-1.el8.x86_64                                                                                               57/61 
+  Installing       : docker-ce-cli-1:24.0.7-1.el8.x86_64                                                                                                    58/61 
+  Running scriptlet: docker-ce-cli-1:24.0.7-1.el8.x86_64                                                                                                    58/61 
+  Installing       : docker-ce-rootless-extras-24.0.7-1.el8.x86_64                                                                                          59/61 
+  Running scriptlet: docker-ce-rootless-extras-24.0.7-1.el8.x86_64                                                                                          59/61 
+  Installing       : docker-ce-3:24.0.7-1.el8.x86_64                                                                                                        60/61 
+  Running scriptlet: docker-ce-3:24.0.7-1.el8.x86_64                                                                                                        60/61 
+  Cleanup          : systemd-libs-239-74.el8_8.3.x86_64                                                                                                     61/61 
+  Running scriptlet: container-selinux-2:2.205.0-2.module+el8.8.0+19993+47c8ef84.noarch                                                                     61/61 
+  Running scriptlet: systemd-libs-239-74.el8_8.3.x86_64                                                                                                     61/61 
+  Running scriptlet: systemd-239-74.el8_8.5.x86_64                                                                                                          61/61 
+  Verifying        : containerd.io-1.6.24-3.1.el8.x86_64                                                                                                     1/61 
+  Verifying        : docker-buildx-plugin-0.11.2-1.el8.x86_64                                                                                                2/61 
+  Verifying        : docker-ce-3:24.0.7-1.el8.x86_64                                                                                                         3/61 
+  Verifying        : docker-ce-cli-1:24.0.7-1.el8.x86_64                                                                                                     4/61 
+  Verifying        : docker-ce-rootless-extras-24.0.7-1.el8.x86_64                                                                                           5/61 
+  Verifying        : docker-compose-plugin-2.21.0-1.el8.x86_64                                                                                               6/61 
+  Verifying        : acl-2.2.53-1.el8.x86_64                                                                                                                 7/61 
+  Verifying        : checkpolicy-2.9-1.el8.x86_64                                                                                                            8/61 
+  Verifying        : cracklib-2.9.6-15.el8.x86_64                                                                                                            9/61 
+  Verifying        : cracklib-dicts-2.9.6-15.el8.x86_64                                                                                                     10/61 
+  Verifying        : cryptsetup-libs-2.3.7-5.el8.x86_64                                                                                                     11/61 
+  Verifying        : dbus-1:1.12.8-24.el8_8.1.x86_64                                                                                                        12/61 
+  Verifying        : dbus-common-1:1.12.8-24.el8_8.1.noarch                                                                                                 13/61 
+  Verifying        : dbus-daemon-1:1.12.8-24.el8_8.1.x86_64                                                                                                 14/61 
+  Verifying        : dbus-tools-1:1.12.8-24.el8_8.1.x86_64                                                                                                  15/61 
+  Verifying        : device-mapper-8:1.02.181-9.el8.x86_64                                                                                                  16/61 
+  Verifying        : device-mapper-libs-8:1.02.181-9.el8.x86_64                                                                                             17/61 
+  Verifying        : diffutils-3.6-6.el8.x86_64                                                                                                             18/61 
+  Verifying        : fuse-common-3.3.0-16.el8.x86_64                                                                                                        19/61 
+  Verifying        : fuse3-3.3.0-16.el8.x86_64                                                                                                              20/61 
+  Verifying        : fuse3-libs-3.3.0-16.el8.x86_64                                                                                                         21/61 
+  Verifying        : iptables-1.8.4-24.el8_8.2.x86_64                                                                                                       22/61 
+  Verifying        : iptables-libs-1.8.4-24.el8_8.2.x86_64                                                                                                  23/61 
+  Verifying        : kmod-25-19.el8.x86_64                                                                                                                  24/61 
+  Verifying        : kmod-libs-25-19.el8.x86_64                                                                                                             25/61 
+  Verifying        : libcgroup-0.41-19.el8.x86_64                                                                                                           26/61 
+  Verifying        : libfdisk-2.32.1-42.el8_8.x86_64                                                                                                        27/61 
+  Verifying        : libibverbs-44.0-2.el8.1.x86_64                                                                                                         28/61 
+  Verifying        : libmnl-1.0.4-6.el8.x86_64                                                                                                              29/61 
+  Verifying        : libnetfilter_conntrack-1.0.6-5.el8.x86_64                                                                                              30/61 
+  Verifying        : libnfnetlink-1.0.1-13.el8.x86_64                                                                                                       31/61 
+  Verifying        : libnftnl-1.1.5-5.el8.x86_64                                                                                                            32/61 
+  Verifying        : libnl3-3.7.0-1.el8.x86_64                                                                                                              33/61 
+  Verifying        : libpcap-14:1.9.1-5.el8.x86_64                                                                                                          34/61 
+  Verifying        : libpwquality-1.4.4-6.el8.x86_64                                                                                                        35/61 
+  Verifying        : libseccomp-2.5.2-1.el8.x86_64                                                                                                          36/61 
+  Verifying        : libselinux-utils-2.9-8.el8.x86_64                                                                                                      37/61 
+  Verifying        : libutempter-1.1.6-14.el8.x86_64                                                                                                        38/61 
+  Verifying        : pam-1.3.1-25.el8.x86_64                                                                                                                39/61 
+  Verifying        : policycoreutils-2.9-24.el8.x86_64                                                                                                      40/61 
+  Verifying        : policycoreutils-python-utils-2.9-24.el8.noarch                                                                                         41/61 
+  Verifying        : python3-audit-3.0.7-4.el8.x86_64                                                                                                       42/61 
+  Verifying        : python3-libselinux-2.9-8.el8.x86_64                                                                                                    43/61 
+  Verifying        : python3-libsemanage-2.9-9.el8_6.x86_64                                                                                                 44/61 
+  Verifying        : python3-policycoreutils-2.9-24.el8.noarch                                                                                              45/61 
+  Verifying        : python3-setools-4.3.0-3.el8.x86_64                                                                                                     46/61 
+  Verifying        : rpm-plugin-selinux-4.14.3-26.el8.x86_64                                                                                                47/61 
+  Verifying        : selinux-policy-3.14.3-117.el8_8.3.noarch                                                                                               48/61 
+  Verifying        : selinux-policy-targeted-3.14.3-117.el8_8.3.noarch                                                                                      49/61 
+  Verifying        : systemd-239-74.el8_8.5.x86_64                                                                                                          50/61 
+  Verifying        : systemd-pam-239-74.el8_8.5.x86_64                                                                                                      51/61 
+  Verifying        : util-linux-2.32.1-42.el8_8.x86_64                                                                                                      52/61 
+  Verifying        : xz-5.2.4-4.el8_6.x86_64                                                                                                                53/61 
+  Verifying        : libxkbcommon-0.9.1-1.el8.x86_64                                                                                                        54/61 
+  Verifying        : xkeyboard-config-2.28-1.el8.noarch                                                                                                     55/61 
+  Verifying        : container-selinux-2:2.205.0-2.module+el8.8.0+19993+47c8ef84.noarch                                                                     56/61 
+  Verifying        : fuse-overlayfs-1.11-1.module+el8.8.0+19993+47c8ef84.x86_64                                                                             57/61 
+  Verifying        : libslirp-4.4.0-1.module+el8.8.0+19993+47c8ef84.x86_64                                                                                  58/61 
+  Verifying        : slirp4netns-1.2.0-2.module+el8.8.0+19993+47c8ef84.x86_64                                                                               59/61 
+  Verifying        : systemd-libs-239-74.el8_8.5.x86_64                                                                                                     60/61 
+  Verifying        : systemd-libs-239-74.el8_8.3.x86_64                                                                                                     61/61 
+
+Upgraded:
+  systemd-libs-239-74.el8_8.5.x86_64                                                                                                                              
+Installed:
+  acl-2.2.53-1.el8.x86_64                                                              checkpolicy-2.9-1.el8.x86_64                                              
+  container-selinux-2:2.205.0-2.module+el8.8.0+19993+47c8ef84.noarch                   containerd.io-1.6.24-3.1.el8.x86_64                                       
+  cracklib-2.9.6-15.el8.x86_64                                                         cracklib-dicts-2.9.6-15.el8.x86_64                                        
+  cryptsetup-libs-2.3.7-5.el8.x86_64                                                   dbus-1:1.12.8-24.el8_8.1.x86_64                                           
+  dbus-common-1:1.12.8-24.el8_8.1.noarch                                               dbus-daemon-1:1.12.8-24.el8_8.1.x86_64                                    
+  dbus-tools-1:1.12.8-24.el8_8.1.x86_64                                                device-mapper-8:1.02.181-9.el8.x86_64                                     
+  device-mapper-libs-8:1.02.181-9.el8.x86_64                                           diffutils-3.6-6.el8.x86_64                                                
+  docker-buildx-plugin-0.11.2-1.el8.x86_64                                             docker-ce-3:24.0.7-1.el8.x86_64                                           
+  docker-ce-cli-1:24.0.7-1.el8.x86_64                                                  docker-ce-rootless-extras-24.0.7-1.el8.x86_64                             
+  docker-compose-plugin-2.21.0-1.el8.x86_64                                            fuse-common-3.3.0-16.el8.x86_64                                           
+  fuse-overlayfs-1.11-1.module+el8.8.0+19993+47c8ef84.x86_64                           fuse3-3.3.0-16.el8.x86_64                                                 
+  fuse3-libs-3.3.0-16.el8.x86_64                                                       iptables-1.8.4-24.el8_8.2.x86_64                                          
+  iptables-libs-1.8.4-24.el8_8.2.x86_64                                                kmod-25-19.el8.x86_64                                                     
+  kmod-libs-25-19.el8.x86_64                                                           libcgroup-0.41-19.el8.x86_64                                              
+  libfdisk-2.32.1-42.el8_8.x86_64                                                      libibverbs-44.0-2.el8.1.x86_64                                            
+  libmnl-1.0.4-6.el8.x86_64                                                            libnetfilter_conntrack-1.0.6-5.el8.x86_64                                 
+  libnfnetlink-1.0.1-13.el8.x86_64                                                     libnftnl-1.1.5-5.el8.x86_64                                               
+  libnl3-3.7.0-1.el8.x86_64                                                            libpcap-14:1.9.1-5.el8.x86_64                                             
+  libpwquality-1.4.4-6.el8.x86_64                                                      libseccomp-2.5.2-1.el8.x86_64                                             
+  libselinux-utils-2.9-8.el8.x86_64                                                    libslirp-4.4.0-1.module+el8.8.0+19993+47c8ef84.x86_64                     
+  libutempter-1.1.6-14.el8.x86_64                                                      libxkbcommon-0.9.1-1.el8.x86_64                                           
+  pam-1.3.1-25.el8.x86_64                                                              policycoreutils-2.9-24.el8.x86_64                                         
+  policycoreutils-python-utils-2.9-24.el8.noarch                                       python3-audit-3.0.7-4.el8.x86_64                                          
+  python3-libselinux-2.9-8.el8.x86_64                                                  python3-libsemanage-2.9-9.el8_6.x86_64                                    
+  python3-policycoreutils-2.9-24.el8.noarch                                            python3-setools-4.3.0-3.el8.x86_64                                        
+  rpm-plugin-selinux-4.14.3-26.el8.x86_64                                              selinux-policy-3.14.3-117.el8_8.3.noarch                                  
+  selinux-policy-targeted-3.14.3-117.el8_8.3.noarch                                    slirp4netns-1.2.0-2.module+el8.8.0+19993+47c8ef84.x86_64                  
+  systemd-239-74.el8_8.5.x86_64                                                        systemd-pam-239-74.el8_8.5.x86_64                                         
+  util-linux-2.32.1-42.el8_8.x86_64                                                    xkeyboard-config-2.28-1.el8.noarch                                        
+  xz-5.2.4-4.el8_6.x86_64                                                             
+
+Complete!
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# systemctl start docker
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+Last metadata expiration check: 0:11:09 ago on Sun Oct 29 11:42:27 2023.
+Package docker-ce-3:24.0.7-1.el8.x86_64 is already installed.
+Package docker-ce-cli-1:24.0.7-1.el8.x86_64 is already installed.
+Package containerd.io-1.6.24-3.1.el8.x86_64 is already installed.
+Package docker-buildx-plugin-0.11.2-1.el8.x86_64 is already installed.
+Package docker-compose-plugin-2.21.0-1.el8.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# systemctl start docker
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# systemctl start aerospike
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# service docker start
+bash: service: command not found
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# git clone https://github.com/DamionGans/ubuntu-wsl2-systemd-script.git
+bash: git: command not found
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# yum install git
+Last metadata expiration check: 0:15:52 ago on Sun Oct 29 11:42:27 2023.
+Dependencies resolved.
+==================================================================================================================================================================
+ Package                                Architecture           Version                                                 Repository                            Size
+==================================================================================================================================================================
+Installing:
+ git                                    x86_64                 2.39.3-1.el8_8                                          ubi-8-appstream-rpms                 104 k
+Upgrading:
+ ncurses-base                           noarch                 6.1-9.20180224.el8_8.1                                  ubi-8-baseos-rpms                     81 k
+ ncurses-libs                           x86_64                 6.1-9.20180224.el8_8.1                                  ubi-8-baseos-rpms                    334 k
+Installing dependencies:
+ emacs-filesystem                       noarch                 1:26.1-10.el8_8.2                                       ubi-8-baseos-rpms                     70 k
+ git-core                               x86_64                 2.39.3-1.el8_8                                          ubi-8-appstream-rpms                  11 M
+ git-core-doc                           noarch                 2.39.3-1.el8_8                                          ubi-8-appstream-rpms                 3.0 M
+ groff-base                             x86_64                 1.22.3-18.el8                                           ubi-8-baseos-rpms                    1.0 M
+ less                                   x86_64                 530-1.el8                                               ubi-8-baseos-rpms                    164 k
+ libedit                                x86_64                 3.1-23.20170329cvs.el8                                  ubi-8-baseos-rpms                    102 k
+ ncurses                                x86_64                 6.1-9.20180224.el8_8.1                                  ubi-8-baseos-rpms                    387 k
+ openssh                                x86_64                 8.0p1-19.el8_8                                          ubi-8-baseos-rpms                    524 k
+ openssh-clients                        x86_64                 8.0p1-19.el8_8                                          ubi-8-baseos-rpms                    669 k
+ openssl                                x86_64                 1:1.1.1k-9.el8_7                                        ubi-8-baseos-rpms                    710 k
+ perl-Carp                              noarch                 1.42-396.el8                                            ubi-8-baseos-rpms                     30 k
+ perl-Data-Dumper                       x86_64                 2.167-399.el8                                           ubi-8-baseos-rpms                     58 k
+ perl-Digest                            noarch                 1.17-395.el8                                            ubi-8-appstream-rpms                  27 k
+ perl-Digest-MD5                        x86_64                 2.55-396.el8                                            ubi-8-appstream-rpms                  37 k
+ perl-Encode                            x86_64                 4:2.97-3.el8                                            ubi-8-baseos-rpms                    1.5 M
+ perl-Errno                             x86_64                 1.28-422.el8                                            ubi-8-baseos-rpms                     77 k
+ perl-Error                             noarch                 1:0.17025-2.el8                                         ubi-8-appstream-rpms                  46 k
+ perl-Exporter                          noarch                 5.72-396.el8                                            ubi-8-baseos-rpms                     34 k
+ perl-File-Path                         noarch                 2.15-2.el8                                              ubi-8-baseos-rpms                     38 k
+ perl-File-Temp                         noarch                 0.230.600-1.el8                                         ubi-8-baseos-rpms                     63 k
+ perl-Getopt-Long                       noarch                 1:2.50-4.el8                                            ubi-8-baseos-rpms                     63 k
+ perl-Git                               noarch                 2.39.3-1.el8_8                                          ubi-8-appstream-rpms                  79 k
+ perl-HTTP-Tiny                         noarch                 0.074-1.el8                                             ubi-8-baseos-rpms                     58 k
+ perl-IO                                x86_64                 1.38-422.el8                                            ubi-8-baseos-rpms                    142 k
+ perl-MIME-Base64                       x86_64                 3.15-396.el8                                            ubi-8-baseos-rpms                     31 k
+ perl-Net-SSLeay                        x86_64                 1.88-2.module+el8.6.0+13392+f0897f98                    ubi-8-appstream-rpms                 379 k
+ perl-PathTools                         x86_64                 3.74-1.el8                                              ubi-8-baseos-rpms                     90 k
+ perl-Pod-Escapes                       noarch                 1:1.07-395.el8                                          ubi-8-baseos-rpms                     20 k
+ perl-Pod-Perldoc                       noarch                 3.28-396.el8                                            ubi-8-baseos-rpms                     88 k
+ perl-Pod-Simple                        noarch                 1:3.35-395.el8                                          ubi-8-baseos-rpms                    213 k
+ perl-Pod-Usage                         noarch                 4:1.69-395.el8                                          ubi-8-baseos-rpms                     34 k
+ perl-Scalar-List-Utils                 x86_64                 3:1.49-2.el8                                            ubi-8-baseos-rpms                     68 k
+ perl-Socket                            x86_64                 4:2.027-3.el8                                           ubi-8-baseos-rpms                     59 k
+ perl-Storable                          x86_64                 1:3.11-3.el8                                            ubi-8-baseos-rpms                     98 k
+ perl-Term-ANSIColor                    noarch                 4.06-396.el8                                            ubi-8-baseos-rpms                     46 k
+ perl-Term-Cap                          noarch                 1.17-395.el8                                            ubi-8-baseos-rpms                     23 k
+ perl-TermReadKey                       x86_64                 2.37-7.el8                                              ubi-8-appstream-rpms                  40 k
+ perl-Text-ParseWords                   noarch                 3.30-395.el8                                            ubi-8-baseos-rpms                     18 k
+ perl-Text-Tabs+Wrap                    noarch                 2013.0523-395.el8                                       ubi-8-baseos-rpms                     24 k
+ perl-Time-Local                        noarch                 1:1.280-1.el8                                           ubi-8-baseos-rpms                     34 k
+ perl-URI                               noarch                 1.73-3.el8                                              ubi-8-appstream-rpms                 116 k
+ perl-Unicode-Normalize                 x86_64                 1.25-396.el8                                            ubi-8-baseos-rpms                     82 k
+ perl-constant                          noarch                 1.33-396.el8                                            ubi-8-baseos-rpms                     25 k
+ perl-interpreter                       x86_64                 4:5.26.3-422.el8                                        ubi-8-baseos-rpms                    6.3 M
+ perl-libnet                            noarch                 3.11-3.el8                                              ubi-8-appstream-rpms                 121 k
+ perl-libs                              x86_64                 4:5.26.3-422.el8                                        ubi-8-baseos-rpms                    1.6 M
+ perl-macros                            x86_64                 4:5.26.3-422.el8                                        ubi-8-baseos-rpms                     73 k
+ perl-parent                            noarch                 1:0.237-1.el8                                           ubi-8-baseos-rpms                     20 k
+ perl-podlators                         noarch                 4.11-1.el8                                              ubi-8-baseos-rpms                    118 k
+ perl-threads                           x86_64                 1:2.21-2.el8                                            ubi-8-baseos-rpms                     61 k
+ perl-threads-shared                    x86_64                 1.58-2.el8                                              ubi-8-baseos-rpms                     48 k
+Installing weak dependencies:
+ perl-IO-Socket-IP                      noarch                 0.39-5.el8                                              ubi-8-appstream-rpms                  47 k
+ perl-IO-Socket-SSL                     noarch                 2.066-4.module+el8.3.0+6446+594cad75                    ubi-8-appstream-rpms                 298 k
+ perl-Mozilla-CA                        noarch                 20160104-7.module+el8.3.0+6498+9eecfe51                 ubi-8-appstream-rpms                  15 k
+Enabling module streams:
+ perl                                                          5.26                                                                                              
+ perl-IO-Socket-SSL                                            2.066                                                                                             
+ perl-libwww-perl                                              6.34                                                                                              
+
+Transaction Summary
+==================================================================================================================================================================
+Install  55 Packages
+Upgrade   2 Packages
+
+Total download size: 30 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/57): emacs-filesystem-26.1-10.el8_8.2.noarch.rpm                                                                               188 kB/s |  70 kB     00:00    
+(2/57): less-530-1.el8.x86_64.rpm                                                                                                 384 kB/s | 164 kB     00:00    
+(3/57): libedit-3.1-23.20170329cvs.el8.x86_64.rpm                                                                                 932 kB/s | 102 kB     00:00    
+(4/57): ncurses-6.1-9.20180224.el8_8.1.x86_64.rpm                                                                                 3.9 MB/s | 387 kB     00:00    
+(5/57): openssh-8.0p1-19.el8_8.x86_64.rpm                                                                                         4.8 MB/s | 524 kB     00:00    
+(6/57): openssl-1.1.1k-9.el8_7.x86_64.rpm                                                                                         3.2 MB/s | 710 kB     00:00    
+(7/57): groff-base-1.22.3-18.el8.x86_64.rpm                                                                                       1.2 MB/s | 1.0 MB     00:00    
+(8/57): perl-Carp-1.42-396.el8.noarch.rpm                                                                                         825 kB/s |  30 kB     00:00    
+(9/57): perl-Data-Dumper-2.167-399.el8.x86_64.rpm                                                                                 570 kB/s |  58 kB     00:00    
+(10/57): perl-Errno-1.28-422.el8.x86_64.rpm                                                                                       648 kB/s |  77 kB     00:00    
+(11/57): perl-Encode-2.97-3.el8.x86_64.rpm                                                                                        5.5 MB/s | 1.5 MB     00:00    
+(12/57): perl-Exporter-5.72-396.el8.noarch.rpm                                                                                    587 kB/s |  34 kB     00:00    
+(13/57): perl-File-Path-2.15-2.el8.noarch.rpm                                                                                     1.1 MB/s |  38 kB     00:00    
+(14/57): perl-Getopt-Long-2.50-4.el8.noarch.rpm                                                                                   1.7 MB/s |  63 kB     00:00    
+(15/57): perl-File-Temp-0.230.600-1.el8.noarch.rpm                                                                                595 kB/s |  63 kB     00:00    
+(16/57): perl-HTTP-Tiny-0.074-1.el8.noarch.rpm                                                                                    1.4 MB/s |  58 kB     00:00    
+(17/57): perl-IO-1.38-422.el8.x86_64.rpm                                                                                          3.2 MB/s | 142 kB     00:00    
+(18/57): perl-MIME-Base64-3.15-396.el8.x86_64.rpm                                                                                 591 kB/s |  31 kB     00:00    
+(19/57): openssh-clients-8.0p1-19.el8_8.x86_64.rpm                                                                                854 kB/s | 669 kB     00:00    
+(20/57): perl-PathTools-3.74-1.el8.x86_64.rpm                                                                                     2.0 MB/s |  90 kB     00:00    
+(21/57): perl-Pod-Escapes-1.07-395.el8.noarch.rpm                                                                                 387 kB/s |  20 kB     00:00    
+(22/57): perl-Pod-Perldoc-3.28-396.el8.noarch.rpm                                                                                 2.1 MB/s |  88 kB     00:00    
+(23/57): perl-Pod-Simple-3.35-395.el8.noarch.rpm                                                                                  4.3 MB/s | 213 kB     00:00    
+(24/57): perl-Scalar-List-Utils-1.49-2.el8.x86_64.rpm                                                                             1.7 MB/s |  68 kB     00:00    
+(25/57): perl-Pod-Usage-1.69-395.el8.noarch.rpm                                                                                   588 kB/s |  34 kB     00:00    
+(26/57): perl-Socket-2.027-3.el8.x86_64.rpm                                                                                       1.5 MB/s |  59 kB     00:00    
+(27/57): perl-Storable-3.11-3.el8.x86_64.rpm                                                                                      2.4 MB/s |  98 kB     00:00    
+(28/57): perl-Term-Cap-1.17-395.el8.noarch.rpm                                                                                    632 kB/s |  23 kB     00:00    
+(29/57): perl-Term-ANSIColor-4.06-396.el8.noarch.rpm                                                                              864 kB/s |  46 kB     00:00    
+(30/57): perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch.rpm                                                                         644 kB/s |  24 kB     00:00    
+(31/57): perl-Text-ParseWords-3.30-395.el8.noarch.rpm                                                                             282 kB/s |  18 kB     00:00    
+(32/57): perl-Time-Local-1.280-1.el8.noarch.rpm                                                                                   643 kB/s |  34 kB     00:00    
+(33/57): perl-Unicode-Normalize-1.25-396.el8.x86_64.rpm                                                                           2.0 MB/s |  82 kB     00:00    
+(34/57): perl-constant-1.33-396.el8.noarch.rpm                                                                                    787 kB/s |  25 kB     00:00    
+(35/57): perl-macros-5.26.3-422.el8.x86_64.rpm                                                                                    237 kB/s |  73 kB     00:00    
+(36/57): perl-parent-0.237-1.el8.noarch.rpm                                                                                       498 kB/s |  20 kB     00:00    
+(37/57): perl-libs-5.26.3-422.el8.x86_64.rpm                                                                                      1.9 MB/s | 1.6 MB     00:00    
+(38/57): perl-threads-2.21-2.el8.x86_64.rpm                                                                                       274 kB/s |  61 kB     00:00    
+(39/57): perl-interpreter-5.26.3-422.el8.x86_64.rpm                                                                               4.7 MB/s | 6.3 MB     00:01    
+(40/57): perl-Digest-1.17-395.el8.noarch.rpm                                                                                      285 kB/s |  27 kB     00:00    
+(41/57): perl-threads-shared-1.58-2.el8.x86_64.rpm                                                                                121 kB/s |  48 kB     00:00    
+(42/57): perl-Error-0.17025-2.el8.noarch.rpm                                                                                      1.2 MB/s |  46 kB     00:00    
+(43/57): perl-Digest-MD5-2.55-396.el8.x86_64.rpm                                                                                  646 kB/s |  37 kB     00:00    
+(44/57): perl-IO-Socket-IP-0.39-5.el8.noarch.rpm                                                                                  1.2 MB/s |  47 kB     00:00    
+(45/57): perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9eecfe51.noarch.rpm                                                       431 kB/s |  15 kB     00:00    
+(46/57): perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594cad75.noarch.rpm                                                       2.5 MB/s | 298 kB     00:00    
+(47/57): perl-Net-SSLeay-1.88-2.module+el8.6.0+13392+f0897f98.x86_64.rpm                                                          6.2 MB/s | 379 kB     00:00    
+(48/57): git-2.39.3-1.el8_8.x86_64.rpm                                                                                            2.2 MB/s | 104 kB     00:00    
+(49/57): perl-TermReadKey-2.37-7.el8.x86_64.rpm                                                                                   682 kB/s |  40 kB     00:00    
+(50/57): perl-podlators-4.11-1.el8.noarch.rpm                                                                                      32 kB/s | 118 kB     00:03    
+(51/57): perl-Git-2.39.3-1.el8_8.noarch.rpm                                                                                       903 kB/s |  79 kB     00:00    
+(52/57): perl-URI-1.73-3.el8.noarch.rpm                                                                                           700 kB/s | 116 kB     00:00    
+(53/57): git-core-2.39.3-1.el8_8.x86_64.rpm                                                                                       4.0 MB/s |  11 MB     00:02    
+(54/57): perl-libnet-3.11-3.el8.noarch.rpm                                                                                        1.7 MB/s | 121 kB     00:00    
+(55/57): ncurses-base-6.1-9.20180224.el8_8.1.noarch.rpm                                                                           1.6 MB/s |  81 kB     00:00    
+(56/57): git-core-doc-2.39.3-1.el8_8.noarch.rpm                                                                                   1.1 MB/s | 3.0 MB     00:02    
+(57/57): ncurses-libs-6.1-9.20180224.el8_8.1.x86_64.rpm                                                                           5.0 MB/s | 334 kB     00:00    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                             5.1 MB/s |  30 MB     00:05     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                          1/1 
+  Upgrading        : ncurses-base-6.1-9.20180224.el8_8.1.noarch                                                                                              1/59 
+  Upgrading        : ncurses-libs-6.1-9.20180224.el8_8.1.x86_64                                                                                              2/59 
+  Installing       : less-530-1.el8.x86_64                                                                                                                   3/59 
+  Installing       : libedit-3.1-23.20170329cvs.el8.x86_64                                                                                                   4/59 
+  Installing       : ncurses-6.1-9.20180224.el8_8.1.x86_64                                                                                                   5/59 
+  Installing       : openssl-1:1.1.1k-9.el8_7.x86_64                                                                                                         6/59 
+  Running scriptlet: openssh-8.0p1-19.el8_8.x86_64                                                                                                           7/59 
+  Installing       : openssh-8.0p1-19.el8_8.x86_64                                                                                                           7/59 
+  Installing       : openssh-clients-8.0p1-19.el8_8.x86_64                                                                                                   8/59 
+  Installing       : git-core-2.39.3-1.el8_8.x86_64                                                                                                          9/59 
+  Installing       : git-core-doc-2.39.3-1.el8_8.noarch                                                                                                     10/59 
+  Installing       : groff-base-1.22.3-18.el8.x86_64                                                                                                        11/59 
+  Installing       : perl-Digest-1.17-395.el8.noarch                                                                                                        12/59 
+  Installing       : perl-Digest-MD5-2.55-396.el8.x86_64                                                                                                    13/59 
+  Installing       : perl-Data-Dumper-2.167-399.el8.x86_64                                                                                                  14/59 
+  Installing       : perl-libnet-3.11-3.el8.noarch                                                                                                          15/59 
+  Installing       : perl-Net-SSLeay-1.88-2.module+el8.6.0+13392+f0897f98.x86_64                                                                            16/59 
+  Installing       : perl-URI-1.73-3.el8.noarch                                                                                                             17/59 
+  Installing       : perl-Pod-Escapes-1:1.07-395.el8.noarch                                                                                                 18/59 
+  Installing       : perl-Time-Local-1:1.280-1.el8.noarch                                                                                                   19/59 
+  Installing       : perl-IO-Socket-IP-0.39-5.el8.noarch                                                                                                    20/59 
+  Installing       : perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9eecfe51.noarch                                                                         21/59 
+  Installing       : perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594cad75.noarch                                                                         22/59 
+  Installing       : perl-Term-ANSIColor-4.06-396.el8.noarch                                                                                                23/59 
+  Installing       : perl-Term-Cap-1.17-395.el8.noarch                                                                                                      24/59 
+  Installing       : perl-File-Temp-0.230.600-1.el8.noarch                                                                                                  25/59 
+  Installing       : perl-HTTP-Tiny-0.074-1.el8.noarch                                                                                                      26/59 
+  Installing       : perl-Pod-Simple-1:3.35-395.el8.noarch                                                                                                  27/59 
+  Installing       : perl-podlators-4.11-1.el8.noarch                                                                                                       28/59 
+  Installing       : perl-Pod-Perldoc-3.28-396.el8.noarch                                                                                                   29/59 
+  Installing       : perl-Text-ParseWords-3.30-395.el8.noarch                                                                                               30/59 
+  Installing       : perl-Pod-Usage-4:1.69-395.el8.noarch                                                                                                   31/59 
+  Installing       : perl-MIME-Base64-3.15-396.el8.x86_64                                                                                                   32/59 
+  Installing       : perl-Storable-1:3.11-3.el8.x86_64                                                                                                      33/59 
+  Installing       : perl-Getopt-Long-1:2.50-4.el8.noarch                                                                                                   34/59 
+  Installing       : perl-Errno-1.28-422.el8.x86_64                                                                                                         35/59 
+  Installing       : perl-Socket-4:2.027-3.el8.x86_64                                                                                                       36/59 
+  Installing       : perl-Encode-4:2.97-3.el8.x86_64                                                                                                        37/59 
+  Installing       : perl-Carp-1.42-396.el8.noarch                                                                                                          38/59 
+  Installing       : perl-Exporter-5.72-396.el8.noarch                                                                                                      39/59 
+  Installing       : perl-libs-4:5.26.3-422.el8.x86_64                                                                                                      40/59 
+  Installing       : perl-Scalar-List-Utils-3:1.49-2.el8.x86_64                                                                                             41/59 
+  Installing       : perl-parent-1:0.237-1.el8.noarch                                                                                                       42/59 
+  Installing       : perl-macros-4:5.26.3-422.el8.x86_64                                                                                                    43/59 
+  Installing       : perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch                                                                                           44/59 
+  Installing       : perl-Unicode-Normalize-1.25-396.el8.x86_64                                                                                             45/59 
+  Installing       : perl-File-Path-2.15-2.el8.noarch                                                                                                       46/59 
+  Installing       : perl-IO-1.38-422.el8.x86_64                                                                                                            47/59 
+  Installing       : perl-PathTools-3.74-1.el8.x86_64                                                                                                       48/59 
+  Installing       : perl-constant-1.33-396.el8.noarch                                                                                                      49/59 
+  Installing       : perl-threads-1:2.21-2.el8.x86_64                                                                                                       50/59 
+  Installing       : perl-threads-shared-1.58-2.el8.x86_64                                                                                                  51/59 
+  Installing       : perl-interpreter-4:5.26.3-422.el8.x86_64                                                                                               52/59 
+  Installing       : perl-Error-1:0.17025-2.el8.noarch                                                                                                      53/59 
+  Installing       : perl-TermReadKey-2.37-7.el8.x86_64                                                                                                     54/59 
+  Installing       : emacs-filesystem-1:26.1-10.el8_8.2.noarch                                                                                              55/59 
+  Installing       : perl-Git-2.39.3-1.el8_8.noarch                                                                                                         56/59 
+  Installing       : git-2.39.3-1.el8_8.x86_64                                                                                                              57/59 
+  Cleanup          : ncurses-libs-6.1-9.20180224.el8.x86_64                                                                                                 58/59 
+  Cleanup          : ncurses-base-6.1-9.20180224.el8.noarch                                                                                                 59/59 
+  Running scriptlet: ncurses-base-6.1-9.20180224.el8.noarch                                                                                                 59/59 
+  Verifying        : emacs-filesystem-1:26.1-10.el8_8.2.noarch                                                                                               1/59 
+  Verifying        : groff-base-1.22.3-18.el8.x86_64                                                                                                         2/59 
+  Verifying        : less-530-1.el8.x86_64                                                                                                                   3/59 
+  Verifying        : libedit-3.1-23.20170329cvs.el8.x86_64                                                                                                   4/59 
+  Verifying        : ncurses-6.1-9.20180224.el8_8.1.x86_64                                                                                                   5/59 
+  Verifying        : openssh-8.0p1-19.el8_8.x86_64                                                                                                           6/59 
+  Verifying        : openssh-clients-8.0p1-19.el8_8.x86_64                                                                                                   7/59 
+  Verifying        : openssl-1:1.1.1k-9.el8_7.x86_64                                                                                                         8/59 
+  Verifying        : perl-Carp-1.42-396.el8.noarch                                                                                                           9/59 
+  Verifying        : perl-Data-Dumper-2.167-399.el8.x86_64                                                                                                  10/59 
+  Verifying        : perl-Encode-4:2.97-3.el8.x86_64                                                                                                        11/59 
+  Verifying        : perl-Errno-1.28-422.el8.x86_64                                                                                                         12/59 
+  Verifying        : perl-Exporter-5.72-396.el8.noarch                                                                                                      13/59 
+  Verifying        : perl-File-Path-2.15-2.el8.noarch                                                                                                       14/59 
+  Verifying        : perl-File-Temp-0.230.600-1.el8.noarch                                                                                                  15/59 
+  Verifying        : perl-Getopt-Long-1:2.50-4.el8.noarch                                                                                                   16/59 
+  Verifying        : perl-HTTP-Tiny-0.074-1.el8.noarch                                                                                                      17/59 
+  Verifying        : perl-IO-1.38-422.el8.x86_64                                                                                                            18/59 
+  Verifying        : perl-MIME-Base64-3.15-396.el8.x86_64                                                                                                   19/59 
+  Verifying        : perl-PathTools-3.74-1.el8.x86_64                                                                                                       20/59 
+  Verifying        : perl-Pod-Escapes-1:1.07-395.el8.noarch                                                                                                 21/59 
+  Verifying        : perl-Pod-Perldoc-3.28-396.el8.noarch                                                                                                   22/59 
+  Verifying        : perl-Pod-Simple-1:3.35-395.el8.noarch                                                                                                  23/59 
+  Verifying        : perl-Pod-Usage-4:1.69-395.el8.noarch                                                                                                   24/59 
+  Verifying        : perl-Scalar-List-Utils-3:1.49-2.el8.x86_64                                                                                             25/59 
+  Verifying        : perl-Socket-4:2.027-3.el8.x86_64                                                                                                       26/59 
+  Verifying        : perl-Storable-1:3.11-3.el8.x86_64                                                                                                      27/59 
+  Verifying        : perl-Term-ANSIColor-4.06-396.el8.noarch                                                                                                28/59 
+  Verifying        : perl-Term-Cap-1.17-395.el8.noarch                                                                                                      29/59 
+  Verifying        : perl-Text-ParseWords-3.30-395.el8.noarch                                                                                               30/59 
+  Verifying        : perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch                                                                                           31/59 
+  Verifying        : perl-Time-Local-1:1.280-1.el8.noarch                                                                                                   32/59 
+  Verifying        : perl-Unicode-Normalize-1.25-396.el8.x86_64                                                                                             33/59 
+  Verifying        : perl-constant-1.33-396.el8.noarch                                                                                                      34/59 
+  Verifying        : perl-interpreter-4:5.26.3-422.el8.x86_64                                                                                               35/59 
+  Verifying        : perl-libs-4:5.26.3-422.el8.x86_64                                                                                                      36/59 
+  Verifying        : perl-macros-4:5.26.3-422.el8.x86_64                                                                                                    37/59 
+  Verifying        : perl-parent-1:0.237-1.el8.noarch                                                                                                       38/59 
+  Verifying        : perl-podlators-4.11-1.el8.noarch                                                                                                       39/59 
+  Verifying        : perl-threads-1:2.21-2.el8.x86_64                                                                                                       40/59 
+  Verifying        : perl-threads-shared-1.58-2.el8.x86_64                                                                                                  41/59 
+  Verifying        : perl-Digest-1.17-395.el8.noarch                                                                                                        42/59 
+  Verifying        : perl-Digest-MD5-2.55-396.el8.x86_64                                                                                                    43/59 
+  Verifying        : perl-Error-1:0.17025-2.el8.noarch                                                                                                      44/59 
+  Verifying        : perl-IO-Socket-IP-0.39-5.el8.noarch                                                                                                    45/59 
+  Verifying        : perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594cad75.noarch                                                                         46/59 
+  Verifying        : perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9eecfe51.noarch                                                                         47/59 
+  Verifying        : perl-Net-SSLeay-1.88-2.module+el8.6.0+13392+f0897f98.x86_64                                                                            48/59 
+  Verifying        : perl-TermReadKey-2.37-7.el8.x86_64                                                                                                     49/59 
+  Verifying        : git-2.39.3-1.el8_8.x86_64                                                                                                              50/59 
+  Verifying        : git-core-2.39.3-1.el8_8.x86_64                                                                                                         51/59 
+  Verifying        : git-core-doc-2.39.3-1.el8_8.noarch                                                                                                     52/59 
+  Verifying        : perl-Git-2.39.3-1.el8_8.noarch                                                                                                         53/59 
+  Verifying        : perl-URI-1.73-3.el8.noarch                                                                                                             54/59 
+  Verifying        : perl-libnet-3.11-3.el8.noarch                                                                                                          55/59 
+  Verifying        : ncurses-base-6.1-9.20180224.el8_8.1.noarch                                                                                             56/59 
+  Verifying        : ncurses-base-6.1-9.20180224.el8.noarch                                                                                                 57/59 
+  Verifying        : ncurses-libs-6.1-9.20180224.el8_8.1.x86_64                                                                                             58/59 
+  Verifying        : ncurses-libs-6.1-9.20180224.el8.x86_64                                                                                                 59/59 
+
+Upgraded:
+  ncurses-base-6.1-9.20180224.el8_8.1.noarch                                      ncurses-libs-6.1-9.20180224.el8_8.1.x86_64                                     
+Installed:
+  emacs-filesystem-1:26.1-10.el8_8.2.noarch                                         git-2.39.3-1.el8_8.x86_64                                                     
+  git-core-2.39.3-1.el8_8.x86_64                                                    git-core-doc-2.39.3-1.el8_8.noarch                                            
+  groff-base-1.22.3-18.el8.x86_64                                                   less-530-1.el8.x86_64                                                         
+  libedit-3.1-23.20170329cvs.el8.x86_64                                             ncurses-6.1-9.20180224.el8_8.1.x86_64                                         
+  openssh-8.0p1-19.el8_8.x86_64                                                     openssh-clients-8.0p1-19.el8_8.x86_64                                         
+  openssl-1:1.1.1k-9.el8_7.x86_64                                                   perl-Carp-1.42-396.el8.noarch                                                 
+  perl-Data-Dumper-2.167-399.el8.x86_64                                             perl-Digest-1.17-395.el8.noarch                                               
+  perl-Digest-MD5-2.55-396.el8.x86_64                                               perl-Encode-4:2.97-3.el8.x86_64                                               
+  perl-Errno-1.28-422.el8.x86_64                                                    perl-Error-1:0.17025-2.el8.noarch                                             
+  perl-Exporter-5.72-396.el8.noarch                                                 perl-File-Path-2.15-2.el8.noarch                                              
+  perl-File-Temp-0.230.600-1.el8.noarch                                             perl-Getopt-Long-1:2.50-4.el8.noarch                                          
+  perl-Git-2.39.3-1.el8_8.noarch                                                    perl-HTTP-Tiny-0.074-1.el8.noarch                                             
+  perl-IO-1.38-422.el8.x86_64                                                       perl-IO-Socket-IP-0.39-5.el8.noarch                                           
+  perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594cad75.noarch                    perl-MIME-Base64-3.15-396.el8.x86_64                                          
+  perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9eecfe51.noarch                    perl-Net-SSLeay-1.88-2.module+el8.6.0+13392+f0897f98.x86_64                   
+  perl-PathTools-3.74-1.el8.x86_64                                                  perl-Pod-Escapes-1:1.07-395.el8.noarch                                        
+  perl-Pod-Perldoc-3.28-396.el8.noarch                                              perl-Pod-Simple-1:3.35-395.el8.noarch                                         
+  perl-Pod-Usage-4:1.69-395.el8.noarch                                              perl-Scalar-List-Utils-3:1.49-2.el8.x86_64                                    
+  perl-Socket-4:2.027-3.el8.x86_64                                                  perl-Storable-1:3.11-3.el8.x86_64                                             
+  perl-Term-ANSIColor-4.06-396.el8.noarch                                           perl-Term-Cap-1.17-395.el8.noarch                                             
+  perl-TermReadKey-2.37-7.el8.x86_64                                                perl-Text-ParseWords-3.30-395.el8.noarch                                      
+  perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch                                      perl-Time-Local-1:1.280-1.el8.noarch                                          
+  perl-URI-1.73-3.el8.noarch                                                        perl-Unicode-Normalize-1.25-396.el8.x86_64                                    
+  perl-constant-1.33-396.el8.noarch                                                 perl-interpreter-4:5.26.3-422.el8.x86_64                                      
+  perl-libnet-3.11-3.el8.noarch                                                     perl-libs-4:5.26.3-422.el8.x86_64                                             
+  perl-macros-4:5.26.3-422.el8.x86_64                                               perl-parent-1:0.237-1.el8.noarch                                              
+  perl-podlators-4.11-1.el8.noarch                                                  perl-threads-1:2.21-2.el8.x86_64                                              
+  perl-threads-shared-1.58-2.el8.x86_64                                            
+
+Complete!
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# 
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# git clone https://github.com/DamionGans/ubuntu-wsl2-systemd-script.git
+Cloning into 'ubuntu-wsl2-systemd-script'...
+remote: Enumerating objects: 121, done.
+remote: Counting objects: 100% (39/39), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 121 (delta 33), reused 29 (delta 28), pack-reused 82
+Receiving objects: 100% (121/121), 33.51 KiB | 3.05 MiB/s, done.
+Resolving deltas: 100% (63/63), done.
+[root@dd7e5439f28b aerospike-server-enterprise_6.2.0.0_tools-8.0.2_el8_x86_64]# cd ubuntu-wsl2-systemd-script
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# bash ubuntu-wsl2-systemd-script.sh
+It appears that you are not running on WSL.
+To forcibly install anyway, run this script with the `--force` parameter.
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# bash ubuntu-wsl2-systemd-script.sh --force
+ubuntu-wsl2-systemd-script.sh: line 53: sudo: command not found
+ubuntu-wsl2-systemd-script.sh: line 54: sudo: command not found
+ubuntu-wsl2-systemd-script.sh: line 56: sudo: command not found
+ubuntu-wsl2-systemd-script.sh: line 57: sudo: command not found
+ubuntu-wsl2-systemd-script.sh: line 58: sudo: command not found
+ubuntu-wsl2-systemd-script.sh: line 60: sudo: command not found
+grep: /etc/bash.bashrc: No such file or directory
+ubuntu-wsl2-systemd-script.sh: line 71: sudo: command not found
+ubuntu-wsl2-systemd-script.sh: line 74: sudo: command not found
+ubuntu-wsl2-systemd-script.sh: line 75: sudo: command not found
+ubuntu-wsl2-systemd-script.sh: line 76: sudo: command not found
+ubuntu-wsl2-systemd-script.sh: line 77: sudo: command not found
+ubuntu-wsl2-systemd-script.sh: line 78: sudo: command not found
+
+You need to manually run the following two commands in Windows' cmd.exe:
+
+  setx WSLENV BASH_ENV/u
+  setx BASH_ENV /etc/bash.bashrc
+
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# systemctl start aerospike
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# wsl --update
+bash: wsl: command not found
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# yum install wsl
+Last metadata expiration check: 0:16:57 ago on Sun Oct 29 11:42:27 2023.
+No match for argument: wsl
+Error: Unable to find a match: wsl
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# docker ps -a
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# docker start
+"docker start" requires at least 1 argument.
+See 'docker start --help'.
+
+Usage:  docker start [OPTIONS] CONTAINER [CONTAINER...]
+
+Start one or more stopped containers
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# docker start
+"docker start" requires at least 1 argument.
+See 'docker start --help'.
+
+Usage:  docker start [OPTIONS] CONTAINER [CONTAINER...]
+
+Start one or more stopped containers
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# docker run --name test -it debian
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# systemctl start docker
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# sudo dockerd
+bash: sudo: command not found
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# dockerd
+INFO[2023-10-29T12:03:35.892469200Z] Starting up                                  
+INFO[2023-10-29T12:03:35.894929100Z] containerd not running, starting managed containerd 
+INFO[2023-10-29T12:03:35.896902500Z] started new containerd process                address=/var/run/docker/containerd/containerd.sock module=libcontainerd pid=802
+INFO[2023-10-29T12:03:35.933529500Z] starting containerd                           revision=61f9fd88f79f081d64d6fa3bb1a0dc71ec870523 version=1.6.24
+INFO[2023-10-29T12:03:35.951733600Z] loading plugin "io.containerd.content.v1.content"...  type=io.containerd.content.v1
+INFO[2023-10-29T12:03:35.952008000Z] loading plugin "io.containerd.snapshotter.v1.aufs"...  type=io.containerd.snapshotter.v1
+INFO[2023-10-29T12:03:35.954894900Z] skip loading plugin "io.containerd.snapshotter.v1.aufs"...  error="aufs is not supported (modprobe aufs failed: exit status 1 \"modprobe: FATAL: Module aufs not found in directory /lib/modules/5.10.25-linuxkit\\n\"): skip plugin" type=io.containerd.snapshotter.v1
+INFO[2023-10-29T12:03:35.955241100Z] loading plugin "io.containerd.snapshotter.v1.devmapper"...  type=io.containerd.snapshotter.v1
+WARN[2023-10-29T12:03:35.955528200Z] failed to load plugin io.containerd.snapshotter.v1.devmapper  error="devmapper not configured"
+INFO[2023-10-29T12:03:35.955629600Z] loading plugin "io.containerd.snapshotter.v1.native"...  type=io.containerd.snapshotter.v1
+INFO[2023-10-29T12:03:35.957401100Z] loading plugin "io.containerd.snapshotter.v1.overlayfs"...  type=io.containerd.snapshotter.v1
+INFO[2023-10-29T12:03:35.960449700Z] loading plugin "io.containerd.snapshotter.v1.zfs"...  type=io.containerd.snapshotter.v1
+INFO[2023-10-29T12:03:35.960970300Z] skip loading plugin "io.containerd.snapshotter.v1.zfs"...  error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.zfs must be a zfs filesystem to be used with the zfs snapshotter: skip plugin" type=io.containerd.snapshotter.v1
+INFO[2023-10-29T12:03:35.961182000Z] loading plugin "io.containerd.metadata.v1.bolt"...  type=io.containerd.metadata.v1
+WARN[2023-10-29T12:03:35.961477700Z] could not use snapshotter devmapper in metadata plugin  error="devmapper not configured"
+INFO[2023-10-29T12:03:35.961591300Z] metadata content store policy set             policy=shared
+INFO[2023-10-29T12:03:35.969917300Z] loading plugin "io.containerd.differ.v1.walking"...  type=io.containerd.differ.v1
+INFO[2023-10-29T12:03:35.969988700Z] loading plugin "io.containerd.event.v1.exchange"...  type=io.containerd.event.v1
+INFO[2023-10-29T12:03:35.970025300Z] loading plugin "io.containerd.gc.v1.scheduler"...  type=io.containerd.gc.v1
+INFO[2023-10-29T12:03:35.970191100Z] loading plugin "io.containerd.service.v1.introspection-service"...  type=io.containerd.service.v1
+INFO[2023-10-29T12:03:35.970244400Z] loading plugin "io.containerd.service.v1.containers-service"...  type=io.containerd.service.v1
+INFO[2023-10-29T12:03:35.970303500Z] loading plugin "io.containerd.service.v1.content-service"...  type=io.containerd.service.v1
+INFO[2023-10-29T12:03:35.970336600Z] loading plugin "io.containerd.service.v1.diff-service"...  type=io.containerd.service.v1
+INFO[2023-10-29T12:03:35.970359200Z] loading plugin "io.containerd.service.v1.images-service"...  type=io.containerd.service.v1
+INFO[2023-10-29T12:03:35.970378400Z] loading plugin "io.containerd.service.v1.leases-service"...  type=io.containerd.service.v1
+INFO[2023-10-29T12:03:35.970408900Z] loading plugin "io.containerd.service.v1.namespaces-service"...  type=io.containerd.service.v1
+INFO[2023-10-29T12:03:35.970467900Z] loading plugin "io.containerd.service.v1.snapshots-service"...  type=io.containerd.service.v1
+INFO[2023-10-29T12:03:35.970492400Z] loading plugin "io.containerd.runtime.v1.linux"...  type=io.containerd.runtime.v1
+INFO[2023-10-29T12:03:35.970834100Z] loading plugin "io.containerd.runtime.v2.task"...  type=io.containerd.runtime.v2
+INFO[2023-10-29T12:03:35.972251400Z] loading plugin "io.containerd.monitor.v1.cgroups"...  type=io.containerd.monitor.v1
+INFO[2023-10-29T12:03:35.972752300Z] loading plugin "io.containerd.service.v1.tasks-service"...  type=io.containerd.service.v1
+INFO[2023-10-29T12:03:35.972825800Z] loading plugin "io.containerd.grpc.v1.introspection"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.972910500Z] loading plugin "io.containerd.internal.v1.restart"...  type=io.containerd.internal.v1
+INFO[2023-10-29T12:03:35.973137600Z] loading plugin "io.containerd.grpc.v1.containers"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.973195400Z] loading plugin "io.containerd.grpc.v1.content"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.973217900Z] loading plugin "io.containerd.grpc.v1.diff"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.973270900Z] loading plugin "io.containerd.grpc.v1.events"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.973307700Z] loading plugin "io.containerd.grpc.v1.healthcheck"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.973339500Z] loading plugin "io.containerd.grpc.v1.images"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.973454500Z] loading plugin "io.containerd.grpc.v1.leases"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.973499100Z] loading plugin "io.containerd.grpc.v1.namespaces"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.973592800Z] loading plugin "io.containerd.internal.v1.opt"...  type=io.containerd.internal.v1
+INFO[2023-10-29T12:03:35.974462500Z] loading plugin "io.containerd.grpc.v1.snapshots"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.974585700Z] loading plugin "io.containerd.grpc.v1.tasks"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.974618800Z] loading plugin "io.containerd.grpc.v1.version"...  type=io.containerd.grpc.v1
+INFO[2023-10-29T12:03:35.974653900Z] loading plugin "io.containerd.tracing.processor.v1.otlp"...  type=io.containerd.tracing.processor.v1
+INFO[2023-10-29T12:03:35.974807500Z] skip loading plugin "io.containerd.tracing.processor.v1.otlp"...  error="no OpenTelemetry endpoint: skip plugin" type=io.containerd.tracing.processor.v1
+INFO[2023-10-29T12:03:35.974837500Z] loading plugin "io.containerd.internal.v1.tracing"...  type=io.containerd.internal.v1
+ERRO[2023-10-29T12:03:35.974936500Z] failed to initialize a tracing processor "otlp"  error="no OpenTelemetry endpoint: skip plugin"
+INFO[2023-10-29T12:03:35.975613300Z] serving...                                    address=/var/run/docker/containerd/containerd-debug.sock
+INFO[2023-10-29T12:03:35.976395100Z] serving...                                    address=/var/run/docker/containerd/containerd.sock.ttrpc
+INFO[2023-10-29T12:03:35.976571700Z] serving...                                    address=/var/run/docker/containerd/containerd.sock
+INFO[2023-10-29T12:03:35.976703100Z] containerd successfully booted in 0.048879s  
+ERRO[2023-10-29T12:03:36.018868500Z] failed to mount overlay: operation not permitted  storage-driver=overlay2
+INFO[2023-10-29T12:03:36.025474000Z] Loading containers: start.                   
+INFO[2023-10-29T12:03:36.028507200Z] unable to detect if iptables supports xlock: 'iptables --wait -L -n': `iptables v1.8.4 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)`  error="exit status 4"
+INFO[2023-10-29T12:03:36.077965600Z] stopping event stream following graceful shutdown  error="<nil>" module=libcontainerd namespace=moby
+INFO[2023-10-29T12:03:36.078547000Z] stopping event stream following graceful shutdown  error="context canceled" module=libcontainerd namespace=plugins.moby
+INFO[2023-10-29T12:03:36.078743300Z] stopping healthcheck following graceful shutdown  module=libcontainerd
+failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to create NAT chain DOCKER: iptables failed: iptables -t nat -N DOCKER: iptables v1.8.4 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+
+ (exit status 4)
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# 
+[root@dd7e5439f28b ubuntu-wsl2-systemd-script]# systemctl start docker
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ ifconfig
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
+	options=1203<RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP>
+	inet 127.0.0.1 netmask 0xff000000 
+	inet6 ::1 prefixlen 128 
+	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1 
+	nd6 options=201<PERFORMNUD,DAD>
+gif0: flags=8010<POINTOPOINT,MULTICAST> mtu 1280
+stf0: flags=0<> mtu 1280
+en6: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether ac:de:48:00:11:22 
+	inet6 fe80::aede:48ff:fe00:1122%en6 prefixlen 64 scopeid 0x4 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect (100baseTX <full-duplex>)
+	status: active
+ap1: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=6463<RXCSUM,TXCSUM,TSO4,TSO6,CHANNEL_IO,PARTIAL_CSUM,ZEROINVERT_CSUM>
+	ether 3e:22:fb:bf:69:4b 
+	inet6 fe80::3c22:fbff:febf:694b%ap1 prefixlen 64 scopeid 0x5 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect (<unknown type>)
+	status: inactive
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether 3c:22:fb:bf:69:4b 
+	inet 192.168.1.4 netmask 0xffffff00 broadcast 192.168.1.255
+	media: autoselect
+	status: active
+awdl0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=6463<RXCSUM,TXCSUM,TSO4,TSO6,CHANNEL_IO,PARTIAL_CSUM,ZEROINVERT_CSUM>
+	ether 02:80:23:c6:dd:30 
+	inet6 fe80::80:23ff:fec6:dd30%awdl0 prefixlen 64 scopeid 0x7 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether 02:80:23:c6:dd:30 
+	inet6 fe80::80:23ff:fec6:dd30%llw0 prefixlen 64 scopeid 0x8 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: inactive
+en2: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=460<TSO4,TSO6,CHANNEL_IO>
+	ether 82:66:f3:08:98:00 
+	media: autoselect <full-duplex>
+	status: inactive
+en3: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=460<TSO4,TSO6,CHANNEL_IO>
+	ether 82:66:f3:08:98:05 
+	media: autoselect <full-duplex>
+	status: inactive
+en4: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=460<TSO4,TSO6,CHANNEL_IO>
+	ether 82:66:f3:08:98:04 
+	media: autoselect <full-duplex>
+	status: inactive
+en1: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=460<TSO4,TSO6,CHANNEL_IO>
+	ether 82:66:f3:08:98:01 
+	media: autoselect <full-duplex>
+	status: inactive
+bridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=63<RXCSUM,TXCSUM,TSO4,TSO6>
+	ether 82:66:f3:08:98:01 
+	Configuration:
+		id 0:0:0:0:0:0 priority 0 hellotime 0 fwddelay 0
+		maxage 0 holdcnt 0 proto stp maxaddr 100 timeout 1200
+		root id 0:0:0:0:0:0 priority 0 ifcost 0 port 0
+		ipfilter disabled flags 0x0
+	member: en1 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 12 priority 0 path cost 0
+	member: en2 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 9 priority 0 path cost 0
+	member: en3 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 10 priority 0 path cost 0
+	member: en4 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 11 priority 0 path cost 0
+	media: <unknown type>
+	status: inactive
+utun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
+	inet6 fe80::7f37:f600:474a:367b%utun0 prefixlen 64 scopeid 0xe 
+	nd6 options=201<PERFORMNUD,DAD>
+utun1: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 2000
+	inet6 fe80::1d42:c972:7545:acc1%utun1 prefixlen 64 scopeid 0xf 
+	nd6 options=201<PERFORMNUD,DAD>
+utun2: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1000
+	inet6 fe80::ce81:b1c:bd2c:69e%utun2 prefixlen 64 scopeid 0x10 
+	nd6 options=201<PERFORMNUD,DAD>
+utun3: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1400
+	inet 100.127.100.1 --> 100.127.100.1 netmask 0xffffffff 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ wget -qO- ifconfig.me
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ docker stop $(docker ps -a -q)
+da3d6d903eaf
+a0003ad294d0
+22c008ae38cc
+12d4925c177f
+13d023b6f036
+14ca475839ee
+f3bf817f68d8
+c59d3c9cb70b
+b67f6baaa647
+dd7e5439f28b
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ docker system prune -a
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+da3d6d903eafacf23f3d69c6eb1f4570a309c19dafbc362e1bafff9e5bf6b0ed
+a0003ad294d0d7ef04c80850df4f61a4c61a53b01ddb0f661954c25a46babe46
+22c008ae38ccd728744fd8cd63ceecd6278965ef0d3bc98c0b126646c8c0b951
+12d4925c177faacd78e85c5bf517d0f6a72519ff14fe1f4d5301a89365ee9134
+13d023b6f0361ea97eac8b7da03a401179bc3730e8e6ade6280f8f46a4771645
+14ca475839ee26089598696049273105131b0cba82cc66d529103928da82b973
+f3bf817f68d8fbe63ce2ae25821a8e36135d951bbccc95d2fa6c84bb4f57335b
+c59d3c9cb70b390efd3006aeef6af0b9b46fb8963e2a85400057bdf682cd766d
+b67f6baaa6475c5d186a8355d5f43ee31b48cc3a2850fa5aaa84dc27d9308ae4
+dd7e5439f28b305962c6f37f0953502e3ff9c51ff74f6eb266a22dd9b82a1122
+
+Deleted Images:
+untagged: aerospike/aerospike-server-enterprise:latest
+untagged: aerospike/aerospike-server-enterprise@sha256:813ef0c74b1200ccc79ea3f44e845470fc2a7d960adefbbbfbf46bb256ff06c4
+deleted: sha256:295c75a3698cde05e88429c48db579a89d99414bb6ea4a84dcbe076bf1cb55ad
+deleted: sha256:02b2aa4f7f3bfe74a3e4f3937251b1c9e583f9538ede1f8eb8f443e5cb2c279a
+deleted: sha256:9e3c11dcda3d8d7a4246c09708e5fa792c298fd54c2c27ccd0ca615ffed325d1
+deleted: sha256:82ed59621b9a6c4dabf4fac61c7f345f7e6acd9c3f285ff2e938e96d55fb48b5
+deleted: sha256:cb4596cc145400fb1f2aa56d41516b39a366ecdee7bf3f9191116444aacd8c90
+untagged: aerospike/aerospike-tools:latest
+untagged: aerospike/aerospike-tools@sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+deleted: sha256:76c8fd9282a62bc8d5e399688dbf50f3346f81e5639010d4dbc58fa1c66f0e91
+deleted: sha256:5a43a1ff73fba55a7c2816a4eea4c76f93c2354ce3a848e6503621765a4c5f76
+deleted: sha256:f3f6371b0818fd9338b2dda530d3b802a481ed8964ada4820bfbdf36b5b8111d
+deleted: sha256:be4c8573c0b2ccb4c342bea3f3e84972e3f6cdd48893cc7568c416fb2815fb46
+deleted: sha256:8ecd9336dbe9b930ef2de49db4b8c2083a566710654adaa915c7637784b0d791
+deleted: sha256:d310e774110ab038b30c6a5f7b7f7dd527dbe527854496bd30194b9ee6ea496e
+untagged: aerospike/aerospike-kafka-outbound:5.1.2
+untagged: aerospike/aerospike-kafka-outbound@sha256:860721708235ff59de3b77fe2bf928820f37f8dfbaaad253cd99261ca9c42145
+deleted: sha256:5616402472721041966f40a26b33ec04355a4212c27d58f5eeb2bd7f37362978
+deleted: sha256:d242bdb2f5fc4f78b46d828f4cc08b1733db9342aa3dbbfc907109f9b4e1d4b0
+deleted: sha256:08b01abb5137080a3fb2e0d6289a6b507129128f0ea1f9b5a6d474674ee444f5
+deleted: sha256:209ba85596126c421684faf481afcd400444444407786c68ab91a19b7a98519f
+deleted: sha256:4c7df23d44dab44aed8dfa2bbdb22d69c0b62fa4b5b9bb16f68787662a56d316
+deleted: sha256:e0bac91f0f1000ac22ac8502ca2282167bed5d8a2185558500eb16ed12885281
+
+Total reclaimed space: 10.86GB
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ 
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ docker stop $(docker ps -a -q)
+8dfc7c71aec2
+07461faefdb2
+970595bb348e
+ab0ef9546226
+883da07576b2
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ docker system prune -a
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+8dfc7c71aec2a11acdf5e7c093fdca45ce8f9fd3c23cce2750c16b41fd8140cc
+07461faefdb26e2f1a89db9fe7d1e52519017ecf505cb3c2ac3d278504a050e4
+970595bb348e6133e210b9c8a68cd3b29ea3f154ca2942eca1e7b1e80dc98666
+ab0ef9546226d3638cfdc691aed35931da1a862a72c9892115e14e8a615dc469
+883da07576b254dda7f74a14a8eba2b94df29e7013b89d85a686608dfb37c6ac
+
+Deleted Images:
+untagged: aerospike/aerospike-server-enterprise:latest
+untagged: aerospike/aerospike-server-enterprise@sha256:813ef0c74b1200ccc79ea3f44e845470fc2a7d960adefbbbfbf46bb256ff06c4
+deleted: sha256:295c75a3698cde05e88429c48db579a89d99414bb6ea4a84dcbe076bf1cb55ad
+deleted: sha256:02b2aa4f7f3bfe74a3e4f3937251b1c9e583f9538ede1f8eb8f443e5cb2c279a
+deleted: sha256:9e3c11dcda3d8d7a4246c09708e5fa792c298fd54c2c27ccd0ca615ffed325d1
+deleted: sha256:82ed59621b9a6c4dabf4fac61c7f345f7e6acd9c3f285ff2e938e96d55fb48b5
+deleted: sha256:cb4596cc145400fb1f2aa56d41516b39a366ecdee7bf3f9191116444aacd8c90
+untagged: aerospike/aerospike-tools:latest
+untagged: aerospike/aerospike-tools@sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+deleted: sha256:76c8fd9282a62bc8d5e399688dbf50f3346f81e5639010d4dbc58fa1c66f0e91
+deleted: sha256:5a43a1ff73fba55a7c2816a4eea4c76f93c2354ce3a848e6503621765a4c5f76
+deleted: sha256:f3f6371b0818fd9338b2dda530d3b802a481ed8964ada4820bfbdf36b5b8111d
+deleted: sha256:be4c8573c0b2ccb4c342bea3f3e84972e3f6cdd48893cc7568c416fb2815fb46
+deleted: sha256:8ecd9336dbe9b930ef2de49db4b8c2083a566710654adaa915c7637784b0d791
+deleted: sha256:d310e774110ab038b30c6a5f7b7f7dd527dbe527854496bd30194b9ee6ea496e
+untagged: aerospike/aerospike-kafka-outbound:5.1.2
+untagged: aerospike/aerospike-kafka-outbound@sha256:860721708235ff59de3b77fe2bf928820f37f8dfbaaad253cd99261ca9c42145
+deleted: sha256:5616402472721041966f40a26b33ec04355a4212c27d58f5eeb2bd7f37362978
+deleted: sha256:d242bdb2f5fc4f78b46d828f4cc08b1733db9342aa3dbbfc907109f9b4e1d4b0
+deleted: sha256:08b01abb5137080a3fb2e0d6289a6b507129128f0ea1f9b5a6d474674ee444f5
+deleted: sha256:209ba85596126c421684faf481afcd400444444407786c68ab91a19b7a98519f
+deleted: sha256:4c7df23d44dab44aed8dfa2bbdb22d69c0b62fa4b5b9bb16f68787662a56d316
+deleted: sha256:e0bac91f0f1000ac22ac8502ca2282167bed5d8a2185558500eb16ed12885281
+
+Total reclaimed space: 5.535GB
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ docker stop $(docker ps -a -q)
+59e62edf871d
+25241ddb21c9
+ae509d03e169
+PP-C02D1513MD6M:aerospike ankush.nakaskar$ docker system prune -a
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+59e62edf871dc357b7a67c5c185ecd5b1ce2c79c6d050a95127708ecae93c27d
+25241ddb21c94efb6ba966f98b19a55ec8353896654a983c7629d939a2815630
+ae509d03e16935048733fdf1e3594186c789d2f88c5c192f8342a1a5ab412a2d
+
+Deleted Images:
+untagged: aerospike/aerospike-kafka-outbound:5.1.2
+untagged: aerospike/aerospike-kafka-outbound@sha256:860721708235ff59de3b77fe2bf928820f37f8dfbaaad253cd99261ca9c42145
+deleted: sha256:5616402472721041966f40a26b33ec04355a4212c27d58f5eeb2bd7f37362978
+deleted: sha256:d242bdb2f5fc4f78b46d828f4cc08b1733db9342aa3dbbfc907109f9b4e1d4b0
+deleted: sha256:08b01abb5137080a3fb2e0d6289a6b507129128f0ea1f9b5a6d474674ee444f5
+deleted: sha256:209ba85596126c421684faf481afcd400444444407786c68ab91a19b7a98519f
+deleted: sha256:4c7df23d44dab44aed8dfa2bbdb22d69c0b62fa4b5b9bb16f68787662a56d316
+deleted: sha256:e0bac91f0f1000ac22ac8502ca2282167bed5d8a2185558500eb16ed12885281
+untagged: aerospike/aerospike-server-enterprise:latest
+untagged: aerospike/aerospike-server-enterprise@sha256:813ef0c74b1200ccc79ea3f44e845470fc2a7d960adefbbbfbf46bb256ff06c4
+deleted: sha256:295c75a3698cde05e88429c48db579a89d99414bb6ea4a84dcbe076bf1cb55ad
+deleted: sha256:02b2aa4f7f3bfe74a3e4f3937251b1c9e583f9538ede1f8eb8f443e5cb2c279a
+deleted: sha256:9e3c11dcda3d8d7a4246c09708e5fa792c298fd54c2c27ccd0ca615ffed325d1
+deleted: sha256:82ed59621b9a6c4dabf4fac61c7f345f7e6acd9c3f285ff2e938e96d55fb48b5
+deleted: sha256:cb4596cc145400fb1f2aa56d41516b39a366ecdee7bf3f9191116444aacd8c90
+untagged: aerospike/aerospike-tools:latest
+untagged: aerospike/aerospike-tools@sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+deleted: sha256:76c8fd9282a62bc8d5e399688dbf50f3346f81e5639010d4dbc58fa1c66f0e91
+deleted: sha256:5a43a1ff73fba55a7c2816a4eea4c76f93c2354ce3a848e6503621765a4c5f76
+deleted: sha256:f3f6371b0818fd9338b2dda530d3b802a481ed8964ada4820bfbdf36b5b8111d
+deleted: sha256:be4c8573c0b2ccb4c342bea3f3e84972e3f6cdd48893cc7568c416fb2815fb46
+deleted: sha256:8ecd9336dbe9b930ef2de49db4b8c2083a566710654adaa915c7637784b0d791
+deleted: sha256:d310e774110ab038b30c6a5f7b7f7dd527dbe527854496bd30194b9ee6ea496e
+
+Total reclaimed space: 5.535GB
+(reverse-i-search)`': 

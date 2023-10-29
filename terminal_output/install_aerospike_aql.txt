@@ -1,0 +1,627 @@
+Last login: Fri Oct 27 17:25:15 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+PP-C02D1513MD6M:tmp ankush.nakaskar$ docker run -it aerospike/aerospike-tools aql -h  $(docker inspect -f '{{.NetworkSettings.IPAddress}}' aerospike)
+Unable to find image 'aerospike/aerospike-tools:latest' locally
+latest: Pulling from aerospike/aerospike-tools
+a803e7c4b030: Pull complete 
+e884ef538d50: Pull complete 
+b07da543b399: Pull complete 
+bbc5bd0790c7: Pull complete 
+b94835d2f00f: Pull complete 
+Digest: sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+Status: Downloaded newer image for aerospike/aerospike-tools:latest
+Seed:         172.17.0.2
+User:         None
+Config File:  /etc/aerospike/astools.conf /root/.aerospike/astools.conf 
+Aerospike Query Client
+Version 8.4.0
+aql> show namespace;
+Unsupported command format with token -  'namespace' 
+Make sure string values are enclosed in quotes.
+Type " aql --help " from console or simply "help" from within the aql-prompt. 
+
+aql> show namespaces
++------------+
+| namespaces |
++------------+
+| "test"     |
+| "torch"    |
++------------+
+[172.17.0.2:3000] 2 rows in set (0.003 secs)
+
+OK
+
+aql> INSERT INTO test.testset (PK, a, b) VALUES (‘xyz’, ‘abc’, 123)
+Syntax error near token -  '(?' 
+Make sure string values are enclosed in quotes.
+Type " aql --help " from console or simply "help" from within the aql-prompt. 
+
+aql> insert into test.demo (PK, tval) values (123, 'test-value')
+
+OK, 1 record affected.
+
+aql> select * from test.demo
+
++-----+--------------+
+| PK  | tval         |
++-----+--------------+
+| 123 | "test-value" |
++-----+--------------+
+1 row in set (0.017 secs)
+
+OK
+
+aql> insert into torch.demo (PK, tval) values (123, 'test-value')
+
+OK, 1 record affected.
+
+aql> select * from torch.demo
+
++-----+--------------+
+| PK  | tval         |
++-----+--------------+
+| 123 | "test-value" |
++-----+--------------+
+1 row in set (0.017 secs)
+
+OK
+
+aql> exit
+
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ docker run -it aerospike/aerospike-tools aql -h  $(docker inspect -f '{{.NetworkSettings.IPAddress}}' aerospike)
+Unable to find image 'aerospike/aerospike-tools:latest' locally
+latest: Pulling from aerospike/aerospike-tools
+a803e7c4b030: Pull complete 
+e884ef538d50: Pull complete 
+b07da543b399: Pull complete 
+bbc5bd0790c7: Pull complete 
+b94835d2f00f: Pull complete 
+Digest: sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+Status: Downloaded newer image for aerospike/aerospike-tools:latest
+Seed:         172.17.0.2
+User:         None
+Config File:  /etc/aerospike/astools.conf /root/.aerospike/astools.conf 
+Aerospike Query Client
+Version 8.4.0
+aql> 
+aql> insert into torch.demo (PK, tval) values (123, 'test-value')
+OK, 1 record affected.
+
+aql> select * from torch.demo
++-----+--------------+
+| PK  | tval         |
++-----+--------------+
+| 123 | "test-value" |
++-----+--------------+
+1 row in set (0.021 secs)
+
+OK
+
+aql> insert into torch.demo (PK, tval) values (1234, 'test-value')
+OK, 1 record affected.
+
+aql> select * from torch.demo
++------+--------------+
+| PK   | tval         |
++------+--------------+
+| 123  | "test-value" |
+| 1234 | "test-value" |
++------+--------------+
+2 rows in set (0.019 secs)
+
+OK
+
+aql> select * from torch
++------+--------------+
+| PK   | tval         |
++------+--------------+
+| 1234 | "test-value" |
+| 123  | "test-value" |
++------+--------------+
+2 rows in set (0.017 secs)
+
+OK
+
+aql> insert into torch (PK, tval) values (12354, 'test5-value')
+OK, 1 record affected.
+
+aql> select * from torch
++-------+---------------+
+| PK    | tval          |
++-------+---------------+
+| 1234  | "test-value"  |
+| 123   | "test-value"  |
+| 12354 | "test5-value" |
++-------+---------------+
+3 rows in set (0.016 secs)
+
+OK
+
+aql> ^C
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ docker run -it aerospike/aerospike-tools aql -h  $(docker inspect -f '{{.NetworkSettings.IPAddress}}' aerospike)
+Unable to find image 'aerospike/aerospike-tools:latest' locally
+latest: Pulling from aerospike/aerospike-tools
+a803e7c4b030: Pull complete 
+e884ef538d50: Pull complete 
+b07da543b399: Pull complete 
+bbc5bd0790c7: Pull complete 
+b94835d2f00f: Pull complete 
+Digest: sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+Status: Downloaded newer image for aerospike/aerospike-tools:latest
+Seed:         172.17.0.3
+User:         None
+Config File:  /etc/aerospike/astools.conf /root/.aerospike/astools.conf 
+Aerospike Query Client
+Version 8.4.0
+aql> select * from test
+0 rows in set (0.018 secs)
+
+OK
+
+aql> insert into test.demo (PK, tval) values (123, 'test-value')
+OK, 1 record affected.
+
+aql> select * from test
++-----+--------------+
+| PK  | tval         |
++-----+--------------+
+| 123 | "test-value" |
++-----+--------------+
+1 row in set (0.015 secs)
+
+OK
+
+aql> insert into test.demo (PK, tval) values (123, 'test-value-ankush')
+OK, 1 record affected.
+
+aql> select * from test
++-----+---------------------+
+| PK  | tval                |
++-----+---------------------+
+| 123 | "test-value-ankush" |
++-----+---------------------+
+1 row in set (0.012 secs)
+
+OK
+
+aql> ^C
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ docker run -it aerospike/aerospike-tools aql -h  $(docker inspect -f '{{.NetworkSettings.IPAddress}}' aerospike)
+Unable to find image 'aerospike/aerospike-tools:latest' locally
+latest: Pulling from aerospike/aerospike-tools
+a803e7c4b030: Pull complete 
+e884ef538d50: Pull complete 
+b07da543b399: Pull complete 
+bbc5bd0790c7: Pull complete 
+b94835d2f00f: Pull complete 
+Digest: sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+Status: Downloaded newer image for aerospike/aerospike-tools:latest
+Seed:         172.17.0.2
+User:         None
+Config File:  /etc/aerospike/astools.conf /root/.aerospike/astools.conf 
+Aerospike Query Client
+Version 8.4.0
+aql> 
+aql> 
+aql> 
+aql> 
+aql> 
+aql> insert into test.demo (PK, tval) values (123, 'test-value-ankush')
+OK, 1 record affected.
+
+aql> select * from test
++-----+---------------------+
+| PK  | tval                |
++-----+---------------------+
+| 123 | "test-value-ankush" |
++-----+---------------------+
+1 row in set (0.020 secs)
+
+OK
+
+aql> insert into test.demo (PK, tval) values (123, 'test-value-ankush-tst1')
+OK, 1 record affected.
+
+aql> select * from test
++-----+--------------------------+
+| PK  | tval                     |
++-----+--------------------------+
+| 123 | "test-value-ankush-tst1" |
++-----+--------------------------+
+1 row in set (0.016 secs)
+
+OK
+
+aql> ^C
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ docker run -it aerospike/aerospike-tools aql -h  $(docker inspect -f '{{.NetworkSettings.IPAddress}}' aerospike)
+Error: No such object: aerospike
+Unable to find image 'aerospike/aerospike-tools:latest' locally
+latest: Pulling from aerospike/aerospike-tools
+a803e7c4b030: Pull complete 
+e884ef538d50: Pull complete 
+b07da543b399: Pull complete 
+bbc5bd0790c7: Pull complete 
+b94835d2f00f: Pull complete 
+Digest: sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+Status: Downloaded newer image for aerospike/aerospike-tools:latest
+aql: option requires an argument -- 'h'
+aql: option requires an argument -- 'h'
+aql: option requires an argument -- 'h'
+Aerospike Query Client
+Version 8.4.0
+
+Usage: aql [OPTIONS]
+------------------------------------------------------------------------------
+ -V, --version        Print AQL version information.
+ -O, --options        Print command-line options message.
+ -E, --help           Print command-line options message and AQL commands 
+                      documentation.
+ -c, --command=cmd    Execute the specified command.
+ -f, --file=path      Execute the commands in the specified file.
+ -e, --echo           Enable echoing of commands. Default: disabled
+ -v, --verbose        Enable verbose output. Default: disabled
+
+Configuration File Allowed Options
+----------------------------------
+
+[cluster]
+ -h, --host=HOST
+                      HOST is "<host1>[:<tlsname1>][:<port1>],..." 
+                      Server seed hostnames or IP addresses. The tlsname is 
+                      only used when connecting with a secure TLS enabled 
+                      server. Default: localhost:3000
+                      Examples:
+                        host1
+                        host1:3000,host2:3000
+                        192.168.1.10:cert1:3000,192.168.1.20:cert2:3000
+ --services-alternate
+                      Use to connect to alternate access address when the 
+                      cluster's nodes publish IP addresses through access-address 
+                      which are not accessible over WAN and alternate IP addresses 
+                      accessible over WAN through alternate-access-address. Default: false.
+ -p, --port=PORT Server default port. Default: 3000
+ -U, --user=USER User name used to authenticate with cluster. Default: none
+ -P, --password
+                      Password used to authenticate with cluster. Default: none
+                      User will be prompted on command line if -P specified and no
+      	               password is given.
+ --auth
+                      Set authentication mode when user/password is defined. Modes are
+                      (INTERNAL, EXTERNAL, EXTERNAL_INSECURE, PKI). Default: INTERNAL
+                      This mode must be set EXTERNAL when using LDAP
+ --tls-enable         Enable TLS on connections. By default TLS is disabled.
+ --tls-name=TLS_NAME
+                      Specify host tls name.
+ --tls-cafile=TLS_CAFILE
+                      Path to a trusted CA certificate file.
+ --tls-capath=TLS_CAPATH.
+                      Path to a directory of trusted CA certificates.
+ --tls-protocols=TLS_PROTOCOLS
+                      Set the TLS protocol selection criteria. This format
+                      is the same as Apache's SSLProtocol documented at http
+                      s://httpd.apache.org/docs/current/mod/mod_ssl.html#ssl
+                      protocol . If not specified the asadm will use ' -all
+                      +TLSv1.2' if has support for TLSv1.2,otherwise it will
+                      be ' -all +TLSv1'.
+ --tls-cipher-suite=TLS_CIPHER_SUITE
+                     Set the TLS cipher selection criteria. The format is
+                     the same as Open_sSL's Cipher List Format documented
+                     at https://www.openssl.org/docs/man1.0.1/apps/ciphers.
+                     html
+ --tls-keyfile=TLS_KEYFILE
+                      Path to the key for mutual authentication (if
+                      Aerospike Cluster is supporting it).
+ --tls-keyfile-password=TLS_KEYFILE_PASSWORD
+                      Password to load protected tls-keyfile.
+                      It can be one of the following:
+                      1) Environment varaible: 'env:<VAR>'
+                      2) File: 'file:<PATH>'
+                      3) String: 'PASSWORD'
+                      Default: none
+                      User will be prompted on command line if --tls-keyfile-password
+                      specified and no password is given.
+ --tls-certfile=TLS_CERTFILE <path>
+                      Path to the chain file for mutual authentication (if
+                      Aerospike Cluster is supporting it).
+ --tls-cert-blacklist <path> (DEPRECATED)
+                      Path to a certificate
+ 					   blacklist file. The file should contain one line for
+					   each blacklisted certificate. Each line starts with
+					   the certificate serial number expressed in hex. Each
+					   entry may optionally specify the issuer name of the
+					   certificate (serial numbers are only required to be
+					   unique per issuer).Example: 867EC87482B2
+					   /C=US/ST=CA/O=Acme/OU=Engineering/CN=TestChainCA
+ --tls-crl-check      Enable CRL checking for leaf certificate. An error
+                      occurs if a valid CRL files cannot be found in
+                      tls_capath.
+ --tls-crl-checkall   Enable CRL checking for entire certificate chain. An
+                      error occurs if a valid CRL files cannot be found in
+                      tls_capath.
+[aql]
+ -z, --threadpoolsize=count
+                      Set the number of client threads used to talk to the
+                      server. Default: 16
+ -o, --outputmode=mode
+                      Set the output mode. (json | table | raw | mute)
+                      Default: table
+ -n, --outputtypes    Disable outputting types for values (e.g., GeoJSON, JSON)
+                      to distinguish them from generic strings
+ -T, --timeout=ms     Set the timeout (ms) for commands. Default: 1000
+ --socket-timeout=ms  Set the socket idle timeout (ms) for commands.
+                      Default: same as C client
+                      Default for scan/query: 30000ms
+                      Default for other commands: 0 (no socket idle time limit)
+ -u, --udfuser=path   Path to User managed UDF modules.
+                      Default: /opt/aerospike/usr/udf/lua
+
+
+Default configuration files are read from the following files in the given order:
+/etc/aerospike/astools.conf ~/.aerospike/astools.conf
+The following sections are read: (cluster aql include)
+The following options effect configuration file behavior
+ --no-config-file 
+                      Do not read any config file. Default: disabled
+ --instance=name
+                      Section with these instance is read. e.g in case instance `a` is specified
+                      sections cluster_a, aql_a is read.
+ --config-file=path
+                      Read this file after default configuration file.
+ --only-config-file=path
+                      Read only this configuration file.
+
+
+PP-C02D1513MD6M:tmp ankush.nakaskar$ docker ps
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED         STATUS         PORTS                              NAMES
+22c008ae38cc   aerospike/aerospike-server-enterprise      "/usr/bin/as-tini-st…"   2 minutes ago   Up 2 minutes   0.0.0.0:3000-3002->3000-3002/tcp   tender_buck
+13d023b6f036   aerospike/aerospike-kafka-outbound:5.1.2   "/usr/bin/as-tini-st…"   5 minutes ago   Up 5 minutes   0.0.0.0:8080->8080/tcp, 8443/tcp   stoic_aryabhata
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ clear
+
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ docker run -it aerospike/aerospike-tools aql -h  $(docker inspect -f '{{.NetworkSettings.IPAddress}}' aerospike)
+Error: No such object: aerospike
+aql: option requires an argument -- 'h'
+aql: option requires an argument -- 'h'
+aql: option requires an argument -- 'h'
+Aerospike Query Client
+Version 8.4.0
+
+Usage: aql [OPTIONS]
+------------------------------------------------------------------------------
+ -V, --version        Print AQL version information.
+ -O, --options        Print command-line options message.
+ -E, --help           Print command-line options message and AQL commands 
+                      documentation.
+ -c, --command=cmd    Execute the specified command.
+ -f, --file=path      Execute the commands in the specified file.
+ -e, --echo           Enable echoing of commands. Default: disabled
+ -v, --verbose        Enable verbose output. Default: disabled
+
+Configuration File Allowed Options
+----------------------------------
+
+[cluster]
+ -h, --host=HOST
+                      HOST is "<host1>[:<tlsname1>][:<port1>],..." 
+                      Server seed hostnames or IP addresses. The tlsname is 
+                      only used when connecting with a secure TLS enabled 
+                      server. Default: localhost:3000
+                      Examples:
+                        host1
+                        host1:3000,host2:3000
+                        192.168.1.10:cert1:3000,192.168.1.20:cert2:3000
+ --services-alternate
+                      Use to connect to alternate access address when the 
+                      cluster's nodes publish IP addresses through access-address 
+                      which are not accessible over WAN and alternate IP addresses 
+                      accessible over WAN through alternate-access-address. Default: false.
+ -p, --port=PORT Server default port. Default: 3000
+ -U, --user=USER User name used to authenticate with cluster. Default: none
+ -P, --password
+                      Password used to authenticate with cluster. Default: none
+                      User will be prompted on command line if -P specified and no
+      	               password is given.
+ --auth
+                      Set authentication mode when user/password is defined. Modes are
+                      (INTERNAL, EXTERNAL, EXTERNAL_INSECURE, PKI). Default: INTERNAL
+                      This mode must be set EXTERNAL when using LDAP
+ --tls-enable         Enable TLS on connections. By default TLS is disabled.
+ --tls-name=TLS_NAME
+                      Specify host tls name.
+ --tls-cafile=TLS_CAFILE
+                      Path to a trusted CA certificate file.
+ --tls-capath=TLS_CAPATH.
+                      Path to a directory of trusted CA certificates.
+ --tls-protocols=TLS_PROTOCOLS
+                      Set the TLS protocol selection criteria. This format
+                      is the same as Apache's SSLProtocol documented at http
+                      s://httpd.apache.org/docs/current/mod/mod_ssl.html#ssl
+                      protocol . If not specified the asadm will use ' -all
+                      +TLSv1.2' if has support for TLSv1.2,otherwise it will
+                      be ' -all +TLSv1'.
+ --tls-cipher-suite=TLS_CIPHER_SUITE
+                     Set the TLS cipher selection criteria. The format is
+                     the same as Open_sSL's Cipher List Format documented
+                     at https://www.openssl.org/docs/man1.0.1/apps/ciphers.
+                     html
+ --tls-keyfile=TLS_KEYFILE
+                      Path to the key for mutual authentication (if
+                      Aerospike Cluster is supporting it).
+ --tls-keyfile-password=TLS_KEYFILE_PASSWORD
+                      Password to load protected tls-keyfile.
+                      It can be one of the following:
+                      1) Environment varaible: 'env:<VAR>'
+                      2) File: 'file:<PATH>'
+                      3) String: 'PASSWORD'
+                      Default: none
+                      User will be prompted on command line if --tls-keyfile-password
+                      specified and no password is given.
+ --tls-certfile=TLS_CERTFILE <path>
+                      Path to the chain file for mutual authentication (if
+                      Aerospike Cluster is supporting it).
+ --tls-cert-blacklist <path> (DEPRECATED)
+                      Path to a certificate
+ 					   blacklist file. The file should contain one line for
+					   each blacklisted certificate. Each line starts with
+					   the certificate serial number expressed in hex. Each
+					   entry may optionally specify the issuer name of the
+					   certificate (serial numbers are only required to be
+					   unique per issuer).Example: 867EC87482B2
+					   /C=US/ST=CA/O=Acme/OU=Engineering/CN=TestChainCA
+ --tls-crl-check      Enable CRL checking for leaf certificate. An error
+                      occurs if a valid CRL files cannot be found in
+                      tls_capath.
+ --tls-crl-checkall   Enable CRL checking for entire certificate chain. An
+                      error occurs if a valid CRL files cannot be found in
+                      tls_capath.
+[aql]
+ -z, --threadpoolsize=count
+                      Set the number of client threads used to talk to the
+                      server. Default: 16
+ -o, --outputmode=mode
+                      Set the output mode. (json | table | raw | mute)
+                      Default: table
+ -n, --outputtypes    Disable outputting types for values (e.g., GeoJSON, JSON)
+                      to distinguish them from generic strings
+ -T, --timeout=ms     Set the timeout (ms) for commands. Default: 1000
+ --socket-timeout=ms  Set the socket idle timeout (ms) for commands.
+                      Default: same as C client
+                      Default for scan/query: 30000ms
+                      Default for other commands: 0 (no socket idle time limit)
+ -u, --udfuser=path   Path to User managed UDF modules.
+                      Default: /opt/aerospike/usr/udf/lua
+
+
+Default configuration files are read from the following files in the given order:
+/etc/aerospike/astools.conf ~/.aerospike/astools.conf
+The following sections are read: (cluster aql include)
+The following options effect configuration file behavior
+ --no-config-file 
+                      Do not read any config file. Default: disabled
+ --instance=name
+                      Section with these instance is read. e.g in case instance `a` is specified
+                      sections cluster_a, aql_a is read.
+ --config-file=path
+                      Read this file after default configuration file.
+ --only-config-file=path
+                      Read only this configuration file.
+
+
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ docker run -it aerospike/aerospike-tools aql -h  $(docker inspect -f '{{.NetworkSettings.IPAddress}}' aerospike)
+Unable to find image 'aerospike/aerospike-tools:latest' locally
+latest: Pulling from aerospike/aerospike-tools
+a803e7c4b030: Pull complete 
+e884ef538d50: Pull complete 
+b07da543b399: Pull complete 
+bbc5bd0790c7: Pull complete 
+b94835d2f00f: Pull complete 
+Digest: sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+Status: Downloaded newer image for aerospike/aerospike-tools:latest
+Seed:         172.17.0.3
+User:         None
+Config File:  /etc/aerospike/astools.conf /root/.aerospike/astools.conf 
+Aerospike Query Client
+Version 8.4.0
+aql> 
+aql> 
+aql> 
+aql> 
+aql> insert into test.demo (PK, tval) values (123, 'test-value')
+OK, 1 record affected.
+
+aql> 2023-10-29 13:32:11 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:13 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:15 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:17 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:19 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:21 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:23 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:25 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:27 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:29 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:31 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:33 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:35 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:37 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:39 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:41 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:43 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:45 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:47 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:49 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+2023-10-29 13:32:51 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ 
+PP-C02D1513MD6M:tmp ankush.nakaskar$ docker run -it aerospike/aerospike-tools aql -h  $(docker inspect -f '{{.NetworkSettings.IPAddress}}' aerospike)
+Unable to find image 'aerospike/aerospike-tools:latest' locally
+latest: Pulling from aerospike/aerospike-tools
+a803e7c4b030: Pull complete 
+e884ef538d50: Pull complete 
+b07da543b399: Pull complete 
+bbc5bd0790c7: Pull complete 
+b94835d2f00f: Pull complete 
+Digest: sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+Status: Downloaded newer image for aerospike/aerospike-tools:latest
+Seed:         172.17.0.3
+User:         None
+Config File:  /etc/aerospike/astools.conf /root/.aerospike/astools.conf 
+Aerospike Query Client
+Version 8.4.0
+aql> insert into test.demo (PK, tval) values (123, 'test-value-ankush-first')
+OK, 1 record affected.
+
+aql> 2023-10-29 13:37:25 WARN Tend error: AEROSPIKE_ERR_TIMEOUT Failed to connect
+PP-C02D1513MD6M:tmp ankush.nakaskar$ docker run -it aerospike/aerospike-tools aql -h  $(docker inspect -f '{{.NetworkSettings.IPAddress}}' aerospike)
+Unable to find image 'aerospike/aerospike-tools:latest' locally
+latest: Pulling from aerospike/aerospike-tools
+a803e7c4b030: Pull complete 
+e884ef538d50: Pull complete 
+b07da543b399: Pull complete 
+bbc5bd0790c7: Pull complete 
+b94835d2f00f: Pull complete 
+Digest: sha256:78d8b5f795babbbe07df9cacb5a24e868e554f447959fcf25aa4076f17c42d20
+Status: Downloaded newer image for aerospike/aerospike-tools:latest
+Seed:         172.17.0.3
+User:         None
+Config File:  /etc/aerospike/astools.conf /root/.aerospike/astools.conf 
+Aerospike Query Client
+Version 8.4.0
+aql> insert into test.demo (PK, tval) values (123, 'test-value-ankush-first')
+OK, 1 record affected.
+
+aql> 

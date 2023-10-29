@@ -1,0 +1,415 @@
+Last login: Fri Oct 27 17:28:34 on ttys005
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install zookeeper
+Running `brew update --auto-update`...
+==> Auto-updated Homebrew!
+Updated 3 taps (homebrew/cask-versions, homebrew/core and homebrew/cask).
+==> New Formulae
+abi3audit         bob               dockly            gptline           node@20           pciutils          sigstore          sshportal         xeol
+auditwheel        dcp               eatmemory         haiti             nvimpager         perl-xml-parser   snyk-cli          three-body        zix
+badkeys           diffoci           gotpm             libnghttp3        pan               rekor-cli         ssh-mitm          vulsio-gost
+==> New Casks
+affine                          brickstore                      free-podcast-transcription      simplex                         writerside
+batchoutput-pdf                 commandpost                     nvs                             temurin20                       xsplit-vcam
+
+You have 48 outdated formulae and 2 outdated casks installed.
+
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/manifests/3.9.1
+########################################################################################################################################################### 100.0%
+==> Fetching dependencies for zookeeper: gettext, cairo, harfbuzz, libtiff and openjdk
+==> Downloading https://ghcr.io/v2/homebrew/core/gettext/manifests/0.22.3
+########################################################################################################################################################### 100.0%
+==> Fetching gettext
+==> Downloading https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:6971461fbd5d738e7f5609ced872ff87b88a4425c7ba42450871abe743178574
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/cairo/manifests/1.18.0
+########################################################################################################################################################### 100.0%
+==> Fetching cairo
+==> Downloading https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:53fa7ded83d0f45fd7c8c25fedb970f1084bc4861f10988f36c2f2cfd6064552
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/harfbuzz/manifests/8.2.2
+########################################################################################################################################################### 100.0%
+==> Fetching dependencies for harfbuzz: libx11
+==> Downloading https://ghcr.io/v2/homebrew/core/libx11/manifests/1.8.7
+########################################################################################################################################################### 100.0%
+==> Fetching libx11
+==> Downloading https://ghcr.io/v2/homebrew/core/libx11/blobs/sha256:60a6a9eff38b882a536a124a18216788fdb20f885e65d011129e57b92eecaec9
+########################################################################################################################################################### 100.0%
+==> Fetching harfbuzz
+==> Downloading https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:7bca78a0f0c6737111547eff586b31ea63a35593234ce5093a9129aa9c997b0f
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libtiff/manifests/4.6.0
+########################################################################################################################################################### 100.0%
+==> Fetching libtiff
+==> Downloading https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:7347c37cf98bec3f956296caee0ecee54e7bfcc7b32d6e2e02b9ae04c80e3ca6
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/manifests/21.0.1
+########################################################################################################################################################### 100.0%
+==> Fetching openjdk
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:1b4756f75bd4f3050d72c6edfcc3d67da764526cc66cae6ed021b8cb41c6b1aa
+########################################################################################################################################################### 100.0%
+==> Fetching zookeeper
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/blobs/sha256:9d77376bc4590feb6686cabf22c5f08bb59458c643c7a58884e332b762078a85
+########################################################################################################################################################### 100.0%
+==> Installing dependencies for zookeeper: gettext, cairo, harfbuzz, libtiff and openjdk
+==> Installing zookeeper dependency: gettext
+==> Downloading https://ghcr.io/v2/homebrew/core/gettext/manifests/0.22.3
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/c39063a94fdbad486d1b2e0bb3832dc7d7d7533dd55e07a10322af82dc115e44--gettext-0.22.3.bottle_manifest.json
+==> Pouring gettext--0.22.3.ventura.bottle.tar.gz
+🍺  /usr/local/Cellar/gettext/0.22.3: 2,040 files, 21.4MB
+==> Installing zookeeper dependency: cairo
+==> Downloading https://ghcr.io/v2/homebrew/core/cairo/manifests/1.18.0
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/1b8b7f19e38cb0e029497dfe0ad3f3557f605025c5575bdfe86c17b889c6e6d1--cairo-1.18.0.bottle_manifest.json
+==> Pouring cairo--1.18.0.ventura.bottle.tar.gz
+🍺  /usr/local/Cellar/cairo/1.18.0: 52 files, 2MB
+==> Installing zookeeper dependency: harfbuzz
+==> Downloading https://ghcr.io/v2/homebrew/core/harfbuzz/manifests/8.2.2
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/e00055a5b78c62f4d948b6b77e3847004b6178dfcfcc46f27c72098edf495e3b--harfbuzz-8.2.2.bottle_manifest.json
+==> Installing dependencies for harfbuzz: libx11
+==> Installing harfbuzz dependency: libx11
+==> Downloading https://ghcr.io/v2/homebrew/core/libx11/manifests/1.8.7
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/4d15c929e0532c9a908dcb7d562929ecc5dd3a0a0cd4c19cf50683c06282fd7f--libx11-1.8.7.bottle_manifest.json
+==> Pouring libx11--1.8.7.ventura.bottle.tar.gz
+🍺  /usr/local/Cellar/libx11/1.8.7: 1,042 files, 6.9MB
+==> Installing harfbuzz
+==> Pouring harfbuzz--8.2.2.ventura.bottle.tar.gz
+🍺  /usr/local/Cellar/harfbuzz/8.2.2: 76 files, 9.7MB
+==> Installing zookeeper dependency: libtiff
+==> Downloading https://ghcr.io/v2/homebrew/core/libtiff/manifests/4.6.0
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/9c8455a2f6bcea7bf3e3461218fba309141b0b0553b6e1afc5fe64e63caccff3--libtiff-4.6.0.bottle_manifest.json
+==> Pouring libtiff--4.6.0.ventura.bottle.tar.gz
+🍺  /usr/local/Cellar/libtiff/4.6.0: 414 files, 6.6MB
+==> Installing zookeeper dependency: openjdk
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/manifests/21.0.1
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/bb8a78296beb0d39c64166622e2df1a553bdf78572bac0ce95765a7007a46b8a--openjdk-21.0.1.bottle_manifest.json
+==> Pouring openjdk--21.0.1.ventura.bottle.tar.gz
+🍺  /usr/local/Cellar/openjdk/21.0.1: 600 files, 331.3MB
+==> Installing zookeeper
+==> Pouring zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Downloading https://raw.githubusercontent.com/apache/zookeeper/release-3.9.0/conf/logback.xml
+########################################################################################################################################################### 100.0%
+==> Caveats
+To restart zookeeper after an upgrade:
+  brew services restart zookeeper
+Or, if you don't want/need a background service you can just run:
+  SERVER_JVMFLAGS="-Dapple.awt.UIElement=true" /usr/local/opt/zookeeper/bin/zkServer start-foreground
+==> Summary
+🍺  /usr/local/Cellar/zookeeper/3.9.1: 1,115 files, 62.7MB
+==> Running `brew cleanup zookeeper`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /Users/ankush.nakaskar/Library/Caches/Homebrew/zookeeper--default_logback_xml--3.9.0.xml... (4.5KB)
+==> Upgrading 6 dependents of upgraded formulae:
+Disable this behaviour by setting HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+glib 2.78.0 -> 2.78.1, gnutls 3.8.0 -> 3.8.1, gradle 8.2.1 -> 8.4, openjdk@17 17.0.8 -> 17.0.9, rabbitmq 3.12.4 -> 3.12.7, wxwidgets 3.2.2.1_1 -> 3.2.3
+==> Downloading https://ghcr.io/v2/homebrew/core/glib/manifests/2.78.1
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/17/manifests/17.0.9
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gnutls/manifests/3.8.1
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/6aa6ab211150ac0413509ee48a0b8b969ec36daf5056bc946d8c811bae202db9--gnutls-3.8.1.bottle_manifest.json
+==> Downloading https://ghcr.io/v2/homebrew/core/gradle/manifests/8.4
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/wxwidgets/manifests/3.2.3
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/rabbitmq/manifests/3.12.7
+########################################################################################################################################################### 100.0%
+==> Fetching dependencies for rabbitmq: wxwidgets
+==> Downloading https://ghcr.io/v2/homebrew/core/wxwidgets/manifests/3.2.3
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/33d9d5a26623d878ac87fdd3d4d48b93aa2230e27fa1db1d6440248470e5db77--wxwidgets-3.2.3.bottle_manifest.json
+==> Fetching wxwidgets
+==> Downloading https://ghcr.io/v2/homebrew/core/wxwidgets/blobs/sha256:544c68fe643fe642b24c7c459faa13a40873e2579b30c89dd88e87140c8167d6
+########################################################################################################################################################### 100.0%
+==> Fetching rabbitmq
+==> Downloading https://ghcr.io/v2/homebrew/core/rabbitmq/blobs/sha256:ccc8b07f8e3584707edcb04b2562565c5f5ef966bf1fbed8302c908ffc8e04ee
+########################################################################################################################################################### 100.0%
+==> Upgrading rabbitmq
+  3.12.4 -> 3.12.7 
+
+==> Installing dependencies for rabbitmq: wxwidgets
+==> Installing rabbitmq dependency: wxwidgets
+==> Downloading https://ghcr.io/v2/homebrew/core/wxwidgets/manifests/3.2.3
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/33d9d5a26623d878ac87fdd3d4d48b93aa2230e27fa1db1d6440248470e5db77--wxwidgets-3.2.3.bottle_manifest.json
+==> Pouring wxwidgets--3.2.3.ventura.bottle.tar.gz
+🍺  /usr/local/Cellar/wxwidgets/3.2.3: 834 files, 24.9MB
+==> Installing rabbitmq
+==> Pouring rabbitmq--3.12.7.all.bottle.tar.gz
+==> Caveats
+Management Plugin enabled by default at http://localhost:15672
+
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+To start rabbitmq now and restart at login:
+  brew services start rabbitmq
+Or, if you don't want/need a background service you can just run:
+  CONF_ENV_FILE="/usr/local/etc/rabbitmq/rabbitmq-env.conf" /usr/local/opt/rabbitmq/sbin/rabbitmq-server
+==> Summary
+🍺  /usr/local/Cellar/rabbitmq/3.12.7: 1,442 files, 34.6MB
+==> Running `brew cleanup rabbitmq`...
+Removing: /usr/local/Cellar/rabbitmq/3.12.4... (1,440 files, 34.6MB)
+==> Checking for dependents of upgraded formulae...
+==> No broken dependents found!
+==> Caveats
+==> zookeeper
+To restart zookeeper after an upgrade:
+  brew services restart zookeeper
+Or, if you don't want/need a background service you can just run:
+  SERVER_JVMFLAGS="-Dapple.awt.UIElement=true" /usr/local/opt/zookeeper/bin/zkServer start-foreground
+==> rabbitmq
+Management Plugin enabled by default at http://localhost:15672
+
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+To start rabbitmq now and restart at login:
+  brew services start rabbitmq
+Or, if you don't want/need a background service you can just run:
+  CONF_ENV_FILE="/usr/local/etc/rabbitmq/rabbitmq-env.conf" /usr/local/opt/rabbitmq/sbin/rabbitmq-server
+PP-C02D1513MD6M:~ ankush.nakaskar$ localhost 2181
+-bash: localhost: command not found
+PP-C02D1513MD6M:~ ankush.nakaskar$ telnet localhost 2181
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+srvr
+Zookeeper version: 3.9.1-${mvngit.commit.id}, built on 2023-10-09 15:08 UTC
+Latency min/avg/max: 0/0.0/0
+Received: 1
+Sent: 0
+Connections: 1
+Outstanding: 0
+Zxid: 0xcf9
+Mode: standalone
+Node count: 173
+Connection closed by foreign host.
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ telnet localhost 2181
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+Connection closed by foreign host.
+PP-C02D1513MD6M:~ ankush.nakaskar$ telnet localhost 2181
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+srvr
+Zookeeper version: 3.9.1-${mvngit.commit.id}, built on 2023-10-09 15:08 UTC
+Latency min/avg/max: 0/0.4956/532
+Received: 6405
+Sent: 6411
+Connections: 2
+Outstanding: 0
+Zxid: 0xd2b
+Mode: standalone
+Node count: 185
+Connection closed by foreign host.
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall zookeeper
+Error: Refusing to uninstall /usr/local/Cellar/zookeeper/3.9.1
+because it is required by kafka, which is currently installed.
+You can override this and force removal with:
+  brew uninstall --ignore-dependencies zookeeper
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall zookeeper
+Uninstalling /usr/local/Cellar/zookeeper/3.9.1... (1,115 files, 62.7MB)
+
+Warning: The following zookeeper configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/zookeeper
+  /usr/local/etc/zookeeper/defaults
+  /usr/local/etc/zookeeper/log4j.properties
+  /usr/local/etc/zookeeper/logback.xml
+  /usr/local/etc/zookeeper/zoo.cfg
+  /usr/local/etc/zookeeper/zoo.cfg.default
+  /usr/local/etc/zookeeper/zoo_sample.cfg
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install zookeeper
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+########################################################################################################################################################### 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/manifests/3.9.1
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/171b719967e31448facf6887e8c04144b6feced9c772bedad6b23984a6b16c0a--zookeeper-3.9.1.bottle_manifest.json
+==> Fetching zookeeper
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/blobs/sha256:9d77376bc4590feb6686cabf22c5f08bb59458c643c7a58884e332b762078a85
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/e35339104f1d53fece26e9cd0dd47ef3760590e9a06f0803e71a9424051d7112--zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Pouring zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Downloading https://raw.githubusercontent.com/apache/zookeeper/release-3.9.0/conf/logback.xml
+########################################################################################################################################################### 100.0%
+==> Caveats
+To restart zookeeper after an upgrade:
+  brew services restart zookeeper
+Or, if you don't want/need a background service you can just run:
+  SERVER_JVMFLAGS="-Dapple.awt.UIElement=true" /usr/local/opt/zookeeper/bin/zkServer start-foreground
+==> Summary
+🍺  /usr/local/Cellar/zookeeper/3.9.1: 1,115 files, 62.7MB
+==> Running `brew cleanup zookeeper`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /Users/ankush.nakaskar/Library/Caches/Homebrew/zookeeper--default_logback_xml--3.9.0.xml... (4.5KB)
+PP-C02D1513MD6M:~ ankush.nakaskar$   brew services restart zookeeper
+Stopping `zookeeper`... (might take a while)
+==> Successfully stopped `zookeeper` (label: homebrew.mxcl.zookeeper)
+==> Successfully started `zookeeper` (label: homebrew.mxcl.zookeeper)
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall zookeeper
+Uninstalling /usr/local/Cellar/zookeeper/3.9.1... (1,115 files, 62.7MB)
+
+Warning: The following zookeeper configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/zookeeper
+  /usr/local/etc/zookeeper/defaults
+  /usr/local/etc/zookeeper/log4j.properties
+  /usr/local/etc/zookeeper/logback.xml
+  /usr/local/etc/zookeeper/zoo.cfg
+  /usr/local/etc/zookeeper/zoo.cfg.default
+  /usr/local/etc/zookeeper/zoo_sample.cfg
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install zookeeper
+Running `brew update --auto-update`...
+==> Auto-updated Homebrew!
+Updated 3 taps (homebrew/cask-versions, homebrew/services and homebrew/core).
+==> New Formulae
+crunchy-cli                                                                       uvicorn
+
+You have 42 outdated formulae and 2 outdated casks installed.
+
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/manifests/3.9.1
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/171b719967e31448facf6887e8c04144b6feced9c772bedad6b23984a6b16c0a--zookeeper-3.9.1.bottle_manifest.json
+==> Fetching zookeeper
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/blobs/sha256:9d77376bc4590feb6686cabf22c5f08bb59458c643c7a58884e332b762078a85
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/e35339104f1d53fece26e9cd0dd47ef3760590e9a06f0803e71a9424051d7112--zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Pouring zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Downloading https://raw.githubusercontent.com/apache/zookeeper/release-3.9.0/conf/logback.xml
+########################################################################################################################################################### 100.0%
+==> Caveats
+To restart zookeeper after an upgrade:
+  brew services restart zookeeper
+Or, if you don't want/need a background service you can just run:
+  SERVER_JVMFLAGS="-Dapple.awt.UIElement=true" /usr/local/opt/zookeeper/bin/zkServer start-foreground
+==> Summary
+🍺  /usr/local/Cellar/zookeeper/3.9.1: 1,115 files, 62.7MB
+==> Running `brew cleanup zookeeper`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /Users/ankush.nakaskar/Library/Caches/Homebrew/zookeeper--default_logback_xml--3.9.0.xml... (4.5KB)
+PP-C02D1513MD6M:~ ankush.nakaskar$   brew services restart zookeeper
+Stopping `zookeeper`... (might take a while)
+==> Successfully stopped `zookeeper` (label: homebrew.mxcl.zookeeper)
+==> Successfully started `zookeeper` (label: homebrew.mxcl.zookeeper)
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall zookeeper
+Uninstalling /usr/local/Cellar/zookeeper/3.9.1... (1,115 files, 62.7MB)
+
+Warning: The following zookeeper configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/zookeeper
+  /usr/local/etc/zookeeper/defaults
+  /usr/local/etc/zookeeper/log4j.properties
+  /usr/local/etc/zookeeper/logback.xml
+  /usr/local/etc/zookeeper/zoo.cfg
+  /usr/local/etc/zookeeper/zoo.cfg.default
+  /usr/local/etc/zookeeper/zoo_sample.cfg
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install zookeeper
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+########################################################################################################################################################### 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/manifests/3.9.1
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/171b719967e31448facf6887e8c04144b6feced9c772bedad6b23984a6b16c0a--zookeeper-3.9.1.bottle_manifest.json
+==> Fetching zookeeper
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/blobs/sha256:9d77376bc4590feb6686cabf22c5f08bb59458c643c7a58884e332b762078a85
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/e35339104f1d53fece26e9cd0dd47ef3760590e9a06f0803e71a9424051d7112--zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Pouring zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Downloading https://raw.githubusercontent.com/apache/zookeeper/release-3.9.0/conf/logback.xml
+########################################################################################################################################################### 100.0%
+==> Caveats
+To restart zookeeper after an upgrade:
+  brew services restart zookeeper
+Or, if you don't want/need a background service you can just run:
+  SERVER_JVMFLAGS="-Dapple.awt.UIElement=true" /usr/local/opt/zookeeper/bin/zkServer start-foreground
+==> Summary
+🍺  /usr/local/Cellar/zookeeper/3.9.1: 1,115 files, 62.7MB
+==> Running `brew cleanup zookeeper`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /Users/ankush.nakaskar/Library/Caches/Homebrew/zookeeper--default_logback_xml--3.9.0.xml... (4.5KB)
+PP-C02D1513MD6M:~ ankush.nakaskar$   brew services restart zookeeper
+Stopping `zookeeper`... (might take a while)
+==> Successfully stopped `zookeeper` (label: homebrew.mxcl.zookeeper)
+==> Successfully started `zookeeper` (label: homebrew.mxcl.zookeeper)
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ vi /usr/local/etc/zookeeper/zoo.cfg
+PP-C02D1513MD6M:~ ankush.nakaskar$ vi /usr/local/etc/zookeeper/zoo.cfg
+PP-C02D1513MD6M:~ ankush.nakaskar$   brew services restart zookeeper
+Stopping `zookeeper`... (might take a while)
+==> Successfully stopped `zookeeper` (label: homebrew.mxcl.zookeeper)
+==> Successfully started `zookeeper` (label: homebrew.mxcl.zookeeper)
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall zookeeper
+Uninstalling /usr/local/Cellar/zookeeper/3.9.1... (1,115 files, 62.7MB)
+
+Warning: The following zookeeper configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/zookeeper
+  /usr/local/etc/zookeeper/defaults
+  /usr/local/etc/zookeeper/log4j.properties
+  /usr/local/etc/zookeeper/logback.xml
+  /usr/local/etc/zookeeper/zoo.cfg
+  /usr/local/etc/zookeeper/zoo.cfg.default
+  /usr/local/etc/zookeeper/zoo_sample.cfg
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall zookeeper
+Error: No such keg: /usr/local/Cellar/zookeeper
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ install 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install zookeeper
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+########################################################################################################################################################### 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/manifests/3.9.1
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/171b719967e31448facf6887e8c04144b6feced9c772bedad6b23984a6b16c0a--zookeeper-3.9.1.bottle_manifest.json
+==> Fetching zookeeper
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/blobs/sha256:9d77376bc4590feb6686cabf22c5f08bb59458c643c7a58884e332b762078a85
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/e35339104f1d53fece26e9cd0dd47ef3760590e9a06f0803e71a9424051d7112--zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Pouring zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Downloading https://raw.githubusercontent.com/apache/zookeeper/release-3.9.0/conf/logback.xml
+########################################################################################################################################################### 100.0%
+==> Caveats
+To restart zookeeper after an upgrade:
+  brew services restart zookeeper
+Or, if you don't want/need a background service you can just run:
+  SERVER_JVMFLAGS="-Dapple.awt.UIElement=true" /usr/local/opt/zookeeper/bin/zkServer start-foreground
+==> Summary
+🍺  /usr/local/Cellar/zookeeper/3.9.1: 1,115 files, 62.7MB
+==> Running `brew cleanup zookeeper`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /Users/ankush.nakaskar/Library/Caches/Homebrew/zookeeper--default_logback_xml--3.9.0.xml... (4.5KB)
+PP-C02D1513MD6M:~ ankush.nakaskar$   brew services restart zookeeper
+Stopping `zookeeper`... (might take a while)
+==> Successfully stopped `zookeeper` (label: homebrew.mxcl.zookeeper)
+==> Successfully started `zookeeper` (label: homebrew.mxcl.zookeeper)
+PP-C02D1513MD6M:~ ankush.nakaskar$ 

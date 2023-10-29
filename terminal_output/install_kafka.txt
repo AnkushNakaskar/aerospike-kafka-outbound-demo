@@ -1,0 +1,961 @@
+Last login: Fri Oct 27 17:38:17 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/manifests/3.6.0
+########################################################################################################################################################### 100.0%
+==> Fetching kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:087ff27b7e84531b1b3b755c75a175665dacfbd6e8a23487309c27a085342a4e
+########################################################################################################################################################### 100.0%
+==> Pouring kafka--3.6.0.ventura.bottle.tar.gz
+==> Caveats
+To start kafka now and restart at login:
+  brew services start kafka
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/kafka/bin/kafka-server-start /usr/local/etc/kafka/server.properties
+==> Summary
+🍺  /usr/local/Cellar/kafka/3.6.0: 222 files, 108.7MB
+==> Running `brew cleanup kafka`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-topics --bootstrap-server localhost:9092 --create --replication-factor 1 --partitions 1 --topic mcp-torch-tcf-file-upload-high
+[2023-10-27 17:43:56,845] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:43:56,965] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:43:57,068] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:43:57,371] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:43:57,776] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:43:58,586] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:43:59,594] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:00,606] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:01,720] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:02,730] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:03,841] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:04,751] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:05,659] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+^C^C^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services start kafka
+==> Successfully started `kafka` (label: homebrew.mxcl.kafka)
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-topics --bootstrap-server localhost:9092 --create --replication-factor 1 --partitions 1 --topic mcp-torch-tcf-file-upload-high
+[2023-10-27 17:44:18,127] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:18,244] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:18,447] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:18,650] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:19,157] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:19,964] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:21,073] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:22,184] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:23,089] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:24,095] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:25,104] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:26,311] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:27,318] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:28,326] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:29,531] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:30,436] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:31,446] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:32,556] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:33,563] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:34,468] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:35,475] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:36,683] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:37,588] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:38,596] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:39,405] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:40,513] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:41,425] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:42,533] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:43,440] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:44,448] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:45,556] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+
+[2023-10-27 17:44:46,665] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+
+
+[2023-10-27 17:44:47,875] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:48,920] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:49,825] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:51,034] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:52,040] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:53,049] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:54,160] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:55,369] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:56,477] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:57,683] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:44:58,891] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:45:00,001] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-27 17:45:00,808] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+^C^C^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-server-start /usr/local/etc/kafka/server.properties
+[2023-10-27 17:45:04,579] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+[2023-10-27 17:45:04,843] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+[2023-10-27 17:45:04,924] INFO Registered signal handlers for TERM, INT, HUP (org.apache.kafka.common.utils.LoggingSignalHandler)
+[2023-10-27 17:45:04,926] INFO starting (kafka.server.KafkaServer)
+[2023-10-27 17:45:04,926] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
+[2023-10-27 17:45:04,942] INFO [ZooKeeperClient Kafka server] Initializing a new session to localhost:2181. (kafka.zookeeper.ZooKeeperClient)
+[2023-10-27 17:45:04,950] INFO Client environment:zookeeper.version=3.8.2-139d619b58292d7734b4fc83a0f44be4e7b0c986, built on 2023-07-05 19:24 UTC (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,950] INFO Client environment:host.name=10.152.16.53 (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,950] INFO Client environment:java.version=21.0.1 (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,950] INFO Client environment:java.vendor=Homebrew (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,950] INFO Client environment:java.home=/usr/local/Cellar/openjdk/21.0.1/libexec/openjdk.jdk/Contents/Home (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,950] INFO Client environment:java.class.path=/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/activation-1.1.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/aopalliance-repackaged-2.6.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/argparse4j-0.7.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/audience-annotations-0.12.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/caffeine-2.9.3.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/checker-qual-3.19.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/commons-beanutils-1.9.4.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/commons-cli-1.4.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/commons-collections-3.2.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/commons-digester-2.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/commons-io-2.11.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/commons-lang3-3.8.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/commons-logging-1.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/commons-validator-1.7.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/connect-api-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/connect-basic-auth-extension-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/connect-json-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/connect-mirror-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/connect-mirror-client-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/connect-runtime-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/connect-transforms-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/error_prone_annotations-2.10.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/hk2-api-2.6.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/hk2-locator-2.6.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/hk2-utils-2.6.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jackson-annotations-2.13.5.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jackson-core-2.13.5.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jackson-databind-2.13.5.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jackson-dataformat-csv-2.13.5.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jackson-datatype-jdk8-2.13.5.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jackson-jaxrs-base-2.13.5.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jackson-jaxrs-json-provider-2.13.5.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jackson-module-jaxb-annotations-2.13.5.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jackson-module-scala_2.13-2.13.5.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jakarta.activation-api-1.2.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jakarta.annotation-api-1.3.5.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jakarta.inject-2.6.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jakarta.validation-api-2.0.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jakarta.ws.rs-api-2.1.6.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jakarta.xml.bind-api-2.3.3.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/javassist-3.29.2-GA.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/javax.activation-api-1.2.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/javax.annotation-api-1.3.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/javax.servlet-api-3.1.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/javax.ws.rs-api-2.1.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jaxb-api-2.3.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jersey-client-2.39.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jersey-common-2.39.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jersey-container-servlet-2.39.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jersey-container-servlet-core-2.39.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jersey-hk2-2.39.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jersey-server-2.39.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jetty-client-9.4.52.v20230823.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jetty-continuation-9.4.52.v20230823.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jetty-http-9.4.52.v20230823.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jetty-io-9.4.52.v20230823.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jetty-security-9.4.52.v20230823.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jetty-server-9.4.52.v20230823.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jetty-servlet-9.4.52.v20230823.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jetty-servlets-9.4.52.v20230823.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jetty-util-9.4.52.v20230823.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jetty-util-ajax-9.4.52.v20230823.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jline-3.22.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jopt-simple-5.0.4.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jose4j-0.9.3.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/jsr305-3.0.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-clients-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-group-coordinator-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-log4j-appender-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-metadata-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-raft-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-server-common-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-shell-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-storage-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-storage-api-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-streams-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-streams-examples-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-streams-scala_2.13-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-streams-test-utils-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-tools-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka-tools-api-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/kafka_2.13-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/lz4-java-1.8.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/maven-artifact-3.8.8.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/metrics-core-2.2.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/metrics-core-4.1.12.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/netty-buffer-4.1.94.Final.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/netty-codec-4.1.94.Final.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/netty-common-4.1.94.Final.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/netty-handler-4.1.94.Final.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/netty-resolver-4.1.94.Final.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/netty-transport-4.1.94.Final.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/netty-transport-classes-epoll-4.1.94.Final.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/netty-transport-native-epoll-4.1.94.Final.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/netty-transport-native-unix-common-4.1.94.Final.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/osgi-resource-locator-1.0.3.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/paranamer-2.8.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/pcollections-4.0.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/plexus-utils-3.3.1.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/reflections-0.10.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/reload4j-1.2.25.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/rocksdbjni-7.9.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/scala-collection-compat_2.13-2.10.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/scala-java8-compat_2.13-1.0.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/scala-library-2.13.11.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/scala-logging_2.13-3.9.4.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/scala-reflect-2.13.11.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/slf4j-api-1.7.36.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/slf4j-reload4j-1.7.36.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/snappy-java-1.1.10.4.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/swagger-annotations-2.2.8.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/trogdor-3.6.0.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/zookeeper-3.8.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/zookeeper-jute-3.8.2.jar:/usr/local/Cellar/kafka/3.6.0/libexec/bin/../libs/zstd-jni-1.5.5-1.jar (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,951] INFO Client environment:java.library.path=/Users/ankush.nakaskar/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:. (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:java.io.tmpdir=/var/folders/lv/265_03ts59v1k82wqw868wh0gc8rn8/T/ (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:os.name=Mac OS X (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:os.arch=x86_64 (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:os.version=13.5 (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:user.name=ankush.nakaskar (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:user.home=/Users/ankush.nakaskar (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:user.dir=/Users/ankush.nakaskar (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:os.memory.free=983MB (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:os.memory.max=1024MB (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,952] INFO Client environment:os.memory.total=1024MB (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,955] INFO Initiating client connection, connectString=localhost:2181 sessionTimeout=18000 watcher=kafka.zookeeper.ZooKeeperClient$ZooKeeperClientWatcher$@1c852c0f (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:04,961] INFO jute.maxbuffer value is 4194304 Bytes (org.apache.zookeeper.ClientCnxnSocket)
+[2023-10-27 17:45:04,969] INFO zookeeper.request.timeout value is 0. feature enabled=false (org.apache.zookeeper.ClientCnxn)
+[2023-10-27 17:45:04,971] INFO [ZooKeeperClient Kafka server] Waiting until connected. (kafka.zookeeper.ZooKeeperClient)
+[2023-10-27 17:45:04,972] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2023-10-27 17:45:04,977] INFO Socket connection established, initiating session, client: /127.0.0.1:57023, server: localhost/127.0.0.1:2181 (org.apache.zookeeper.ClientCnxn)
+[2023-10-27 17:45:04,992] INFO Session establishment complete on server localhost/127.0.0.1:2181, session id = 0x1001a9a25780007, negotiated timeout = 18000 (org.apache.zookeeper.ClientCnxn)
+[2023-10-27 17:45:04,995] INFO [ZooKeeperClient Kafka server] Connected. (kafka.zookeeper.ZooKeeperClient)
+[2023-10-27 17:45:05,374] INFO Cluster ID = Ji305a2_QR6YV11G4Gcoyg (kafka.server.KafkaServer)
+[2023-10-27 17:45:05,388] ERROR Fatal error during KafkaServer startup. Prepare to shutdown (kafka.server.KafkaServer)
+kafka.common.InconsistentClusterIdException: The Cluster ID Ji305a2_QR6YV11G4Gcoyg doesn't match stored clusterId Some(8VfiPFt5QIa3qnwxz11JxQ) in meta.properties. The broker is trying to join the wrong cluster. Configured zookeeper.connect may be wrong.
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:243)
+	at kafka.Kafka$.main(Kafka.scala:113)
+	at kafka.Kafka.main(Kafka.scala)
+[2023-10-27 17:45:05,390] INFO shutting down (kafka.server.KafkaServer)
+[2023-10-27 17:45:05,393] INFO [ZooKeeperClient Kafka server] Closing. (kafka.zookeeper.ZooKeeperClient)
+[2023-10-27 17:45:05,512] INFO Session: 0x1001a9a25780007 closed (org.apache.zookeeper.ZooKeeper)
+[2023-10-27 17:45:05,512] INFO EventThread shut down for session: 0x1001a9a25780007 (org.apache.zookeeper.ClientCnxn)
+[2023-10-27 17:45:05,513] INFO [ZooKeeperClient Kafka server] Closed. (kafka.zookeeper.ZooKeeperClient)
+[2023-10-27 17:45:05,517] INFO App info kafka.server for 0 unregistered (org.apache.kafka.common.utils.AppInfoParser)
+[2023-10-27 17:45:05,517] INFO shut down completed (kafka.server.KafkaServer)
+[2023-10-27 17:45:05,517] ERROR Exiting Kafka due to fatal exception during startup. (kafka.Kafka$)
+kafka.common.InconsistentClusterIdException: The Cluster ID Ji305a2_QR6YV11G4Gcoyg doesn't match stored clusterId Some(8VfiPFt5QIa3qnwxz11JxQ) in meta.properties. The broker is trying to join the wrong cluster. Configured zookeeper.connect may be wrong.
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:243)
+	at kafka.Kafka$.main(Kafka.scala:113)
+	at kafka.Kafka.main(Kafka.scala)
+[2023-10-27 17:45:05,518] INFO shutting down (kafka.server.KafkaServer)
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall kafka
+Uninstalling /usr/local/Cellar/kafka/3.6.0... (238 files, 108.8MB)
+
+Warning: The following kafka configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/kafka
+  /usr/local/etc/kafka/connect-console-sink.properties
+  /usr/local/etc/kafka/connect-console-source.properties
+  /usr/local/etc/kafka/connect-distributed.properties
+  /usr/local/etc/kafka/connect-file-sink.properties
+  /usr/local/etc/kafka/connect-file-source.properties
+  /usr/local/etc/kafka/connect-log4j.properties
+  /usr/local/etc/kafka/connect-log4j.properties.default
+  /usr/local/etc/kafka/connect-mirror-maker.properties
+  /usr/local/etc/kafka/connect-standalone.properties
+  /usr/local/etc/kafka/consumer.properties
+  /usr/local/etc/kafka/kraft
+  /usr/local/etc/kafka/kraft/broker.properties
+  /usr/local/etc/kafka/kraft/broker.properties.default
+  /usr/local/etc/kafka/kraft/controller.properties
+  /usr/local/etc/kafka/kraft/controller.properties.default
+  /usr/local/etc/kafka/kraft/server.properties
+  /usr/local/etc/kafka/kraft/server.properties.default
+  /usr/local/etc/kafka/log4j.properties
+  /usr/local/etc/kafka/producer.properties
+  /usr/local/etc/kafka/server.properties
+  /usr/local/etc/kafka/tools-log4j.properties
+  /usr/local/etc/kafka/tools-log4j.properties.default
+  /usr/local/etc/kafka/trogdor.conf
+  /usr/local/etc/kafka/zookeeper.properties
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ clear
+
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall zookeeper
+Uninstalling /usr/local/Cellar/zookeeper/3.9.1... (1,115 files, 62.7MB)
+
+Warning: The following zookeeper configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/zookeeper
+  /usr/local/etc/zookeeper/defaults
+  /usr/local/etc/zookeeper/log4j.properties
+  /usr/local/etc/zookeeper/logback.xml
+  /usr/local/etc/zookeeper/zoo.cfg
+  /usr/local/etc/zookeeper/zoo.cfg.default
+  /usr/local/etc/zookeeper/zoo_sample.cfg
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install zookeeper
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/manifests/3.9.1
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/171b719967e31448facf6887e8c04144b6feced9c772bedad6b23984a6b16c0a--zookeeper-3.9.1.bottle_manifest.json
+==> Fetching zookeeper
+==> Downloading https://ghcr.io/v2/homebrew/core/zookeeper/blobs/sha256:9d77376bc4590feb6686cabf22c5f08bb59458c643c7a58884e332b762078a85
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/e35339104f1d53fece26e9cd0dd47ef3760590e9a06f0803e71a9424051d7112--zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Pouring zookeeper--3.9.1.ventura.bottle.tar.gz
+==> Downloading https://raw.githubusercontent.com/apache/zookeeper/release-3.9.0/conf/logback.xml
+########################################################################################################################################################### 100.0%
+==> Caveats
+To restart zookeeper after an upgrade:
+  brew services restart zookeeper
+Or, if you don't want/need a background service you can just run:
+  SERVER_JVMFLAGS="-Dapple.awt.UIElement=true" /usr/local/opt/zookeeper/bin/zkServer start-foreground
+==> Summary
+🍺  /usr/local/Cellar/zookeeper/3.9.1: 1,115 files, 62.7MB
+==> Running `brew cleanup zookeeper`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /Users/ankush.nakaskar/Library/Caches/Homebrew/zookeeper--default_logback_xml--3.9.0.xml... (4.5KB)
+PP-C02D1513MD6M:~ ankush.nakaskar$  brew services restart zookeeper
+Stopping `zookeeper`... (might take a while)
+==> Successfully stopped `zookeeper` (label: homebrew.mxcl.zookeeper)
+==> Successfully started `zookeeper` (label: homebrew.mxcl.zookeeper)
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install kafka
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+##O=#    #                                                                                                                                                       
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/manifests/3.6.0
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/a683535665c7ca4c8547c07fed0fade14863a1803d809bfffcaacda423a7b274--kafka-3.6.0.bottle_manifest.json
+==> Fetching kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:087ff27b7e84531b1b3b755c75a175665dacfbd6e8a23487309c27a085342a4e
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/51be8b7ddeb6a930162f575b541db1ebebe418366e410d2a9625dea70835fbba--kafka--3.6.0.ventura.bottle.tar.gz
+==> Pouring kafka--3.6.0.ventura.bottle.tar.gz
+==> Caveats
+To restart kafka after an upgrade:
+  brew services restart kafka
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/kafka/bin/kafka-server-start /usr/local/etc/kafka/server.properties
+==> Summary
+🍺  /usr/local/Cellar/kafka/3.6.0: 222 files, 108.7MB
+==> Running `brew cleanup kafka`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services restart kafka
+Stopping `kafka`... (might take a while)
+==> Successfully stopped `kafka` (label: homebrew.mxcl.kafka)
+==> Successfully started `kafka` (label: homebrew.mxcl.kafka)
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-topics --bootstrap-server localhost:9092 --create --replication-factor 1 --partitions 1 --topic test
+Error while executing topic command : Topic 'test' already exists.
+[2023-10-27 17:47:55,296] ERROR org.apache.kafka.common.errors.TopicExistsException: Topic 'test' already exists.
+ (kafka.admin.TopicCommand$)
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-topics --bootstrap-server localhost:9092 --create --replication-factor 1 --partitions 1 --topic mcp-torch-tcf-file-upload-high
+Created topic mcp-torch-tcf-file-upload-high.
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-topics --bootstrap-server localhost:9092 --describe --topic mcp-torch-tcf-file-upload-high
+Topic: mcp-torch-tcf-file-upload-high	TopicId: ODUf_tpiRPGMtj_PdjOp7Q	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+	Topic: mcp-torch-tcf-file-upload-high	Partition: 0	Leader: 0	Replicas: 0	Isr: 0
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-producer --bootstrap-server localhost:9092 --topic mcp-torch-tcf-file-upload-high
+>TestMessage
+>;
+>Value
+>^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic mcp-torch-tcf-file-upload-high  --from-beginning
+TestMessage
+;
+Value
+
+
+
+
+^CProcessed a total of 3 messages
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-topics --bootstrap-server localhost:9092 --create --replication-factor 1 --partitions 1 --topic aerospike
+Created topic aerospike.
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-topics --bootstrap-server localhost:9092 --describe --topic aerospike
+Topic: aerospike	TopicId: I_rLODQpSimbbfffNtAAcg	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+	Topic: aerospike	Partition: 0	Leader: 0	Replicas: 0	Isr: 0
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-producer --bootstrap-server localhost:9092 --topic aerospike
+>TestAerospike
+>Values for tests
+>^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+
+
+
+
+^C^C^C^CProcessed a total of 2 messages
+^CPP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+
+
+
+^CProcessed a total of 2 messages
+
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+
+
+
+^CProcessed a total of 2 messages
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+
+^[
+
+
+^C^C^CProcessed a total of 2 messages
+^C^C^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services restart kafka
+Stopping `kafka`... (might take a while)
+==> Successfully stopped `kafka` (label: homebrew.mxcl.kafka)
+==> Successfully started `kafka` (label: homebrew.mxcl.kafka)
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+[2023-10-28 13:15:23,421] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:23,421] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:23,519] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:23,520] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:23,620] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:23,620] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:23,874] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:23,874] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:24,330] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:24,330] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:25,239] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:25,239] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:26,254] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:26,255] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:27,471] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:27,471] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:28,586] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-28 13:15:28,586] WARN [Consumer clientId=console-consumer, groupId=console-consumer-97012] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+^CProcessed a total of 0 messages
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall kafka
+Uninstalling /usr/local/Cellar/kafka/3.6.0... (254 files, 109.3MB)
+
+Warning: The following kafka configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/kafka
+  /usr/local/etc/kafka/connect-console-sink.properties
+  /usr/local/etc/kafka/connect-console-source.properties
+  /usr/local/etc/kafka/connect-distributed.properties
+  /usr/local/etc/kafka/connect-file-sink.properties
+  /usr/local/etc/kafka/connect-file-source.properties
+  /usr/local/etc/kafka/connect-log4j.properties
+  /usr/local/etc/kafka/connect-log4j.properties.default
+  /usr/local/etc/kafka/connect-mirror-maker.properties
+  /usr/local/etc/kafka/connect-standalone.properties
+  /usr/local/etc/kafka/consumer.properties
+  /usr/local/etc/kafka/kraft
+  /usr/local/etc/kafka/kraft/broker.properties
+  /usr/local/etc/kafka/kraft/broker.properties.default
+  /usr/local/etc/kafka/kraft/controller.properties
+  /usr/local/etc/kafka/kraft/controller.properties.default
+  /usr/local/etc/kafka/kraft/server.properties
+  /usr/local/etc/kafka/kraft/server.properties.default
+  /usr/local/etc/kafka/log4j.properties
+  /usr/local/etc/kafka/producer.properties
+  /usr/local/etc/kafka/server.properties
+  /usr/local/etc/kafka/tools-log4j.properties
+  /usr/local/etc/kafka/tools-log4j.properties.default
+  /usr/local/etc/kafka/trogdor.conf
+  /usr/local/etc/kafka/zookeeper.properties
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/manifests/3.6.0
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/a683535665c7ca4c8547c07fed0fade14863a1803d809bfffcaacda423a7b274--kafka-3.6.0.bottle_manifest.json
+==> Fetching kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:087ff27b7e84531b1b3b755c75a175665dacfbd6e8a23487309c27a085342a4e
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/51be8b7ddeb6a930162f575b541db1ebebe418366e410d2a9625dea70835fbba--kafka--3.6.0.ventura.bottle.tar.gz
+==> Pouring kafka--3.6.0.ventura.bottle.tar.gz
+==> Caveats
+To restart kafka after an upgrade:
+  brew services restart kafka
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/kafka/bin/kafka-server-start /usr/local/etc/kafka/server.properties
+==> Summary
+🍺  /usr/local/Cellar/kafka/3.6.0: 222 files, 108.7MB
+==> Running `brew cleanup kafka`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services restart kafka
+Stopping `kafka`... (might take a while)
+==> Successfully stopped `kafka` (label: homebrew.mxcl.kafka)
+==> Successfully started `kafka` (label: homebrew.mxcl.kafka)
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-producer --bootstrap-server localhost:9092 --topic aerospike
+>values
+>tests
+>^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+values
+tests
+
+
+
+
+^C^CProcessed a total of 4 messages
+^C^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+values
+tests
+
+
+
+
+^C^CProcessed a total of 4 messages
+^C^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+values
+tests
+
+
+
+^C^C^C^CProcessed a total of 4 messages
+^C^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+values
+tests
+^C^C^CProcessed a total of 4 messages
+^C^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ bre
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall kafka
+Uninstalling /usr/local/Cellar/kafka/3.6.0... (249 files, 108.9MB)
+
+Warning: The following kafka configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/kafka
+  /usr/local/etc/kafka/connect-console-sink.properties
+  /usr/local/etc/kafka/connect-console-source.properties
+  /usr/local/etc/kafka/connect-distributed.properties
+  /usr/local/etc/kafka/connect-file-sink.properties
+  /usr/local/etc/kafka/connect-file-source.properties
+  /usr/local/etc/kafka/connect-log4j.properties
+  /usr/local/etc/kafka/connect-log4j.properties.default
+  /usr/local/etc/kafka/connect-mirror-maker.properties
+  /usr/local/etc/kafka/connect-standalone.properties
+  /usr/local/etc/kafka/consumer.properties
+  /usr/local/etc/kafka/kraft
+  /usr/local/etc/kafka/kraft/broker.properties
+  /usr/local/etc/kafka/kraft/broker.properties.default
+  /usr/local/etc/kafka/kraft/controller.properties
+  /usr/local/etc/kafka/kraft/controller.properties.default
+  /usr/local/etc/kafka/kraft/server.properties
+  /usr/local/etc/kafka/kraft/server.properties.default
+  /usr/local/etc/kafka/log4j.properties
+  /usr/local/etc/kafka/producer.properties
+  /usr/local/etc/kafka/server.properties
+  /usr/local/etc/kafka/tools-log4j.properties
+  /usr/local/etc/kafka/tools-log4j.properties.default
+  /usr/local/etc/kafka/trogdor.conf
+  /usr/local/etc/kafka/zookeeper.properties
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/manifests/3.6.0
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/a683535665c7ca4c8547c07fed0fade14863a1803d809bfffcaacda423a7b274--kafka-3.6.0.bottle_manifest.json
+==> Fetching kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:087ff27b7e84531b1b3b755c75a175665dacfbd6e8a23487309c27a085342a4e
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/51be8b7ddeb6a930162f575b541db1ebebe418366e410d2a9625dea70835fbba--kafka--3.6.0.ventura.bottle.tar.gz
+==> Pouring kafka--3.6.0.ventura.bottle.tar.gz
+==> Caveats
+To restart kafka after an upgrade:
+  brew services restart kafka
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/kafka/bin/kafka-server-start /usr/local/etc/kafka/server.properties
+==> Summary
+🍺  /usr/local/Cellar/kafka/3.6.0: 222 files, 108.7MB
+==> Running `brew cleanup kafka`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services restart kafka
+Stopping `kafka`... (might take a while)
+==> Successfully stopped `kafka` (label: homebrew.mxcl.kafka)
+==> Successfully started `kafka` (label: homebrew.mxcl.kafka)
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-producer --bootstrap-server localhost:9092 --topic aerospike
+>[2023-10-29 14:31:40,563] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:40,563] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:40,670] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:40,670] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:40,772] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:40,772] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:41,031] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:41,031] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:41,441] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:41,441] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:42,106] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:42,106] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:43,279] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:43,279] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:44,350] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:44,350] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:45,269] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:45,269] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:46,292] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:46,292] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:47,406] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:47,406] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:48,314] WARN [Producer clientId=console-producer] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 14:31:48,314] WARN [Producer clientId=console-producer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services restart kafka
+Stopping `kafka`... (might take a while)
+==> Successfully stopped `kafka` (label: homebrew.mxcl.kafka)
+==> Successfully started `kafka` (label: homebrew.mxcl.kafka)
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-producer --bootstrap-server localhost:9092 --topic aerospike
+>tests-ankush-1234
+>^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+values
+tests
+tests-ankush-1234
+^C^C^C^CProcessed a total of 5 messages
+^C^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall kafka
+Uninstalling /usr/local/Cellar/kafka/3.6.0... (232 files, 108.9MB)
+
+Warning: The following kafka configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/kafka
+  /usr/local/etc/kafka/connect-console-sink.properties
+  /usr/local/etc/kafka/connect-console-source.properties
+  /usr/local/etc/kafka/connect-distributed.properties
+  /usr/local/etc/kafka/connect-file-sink.properties
+  /usr/local/etc/kafka/connect-file-source.properties
+  /usr/local/etc/kafka/connect-log4j.properties
+  /usr/local/etc/kafka/connect-log4j.properties.default
+  /usr/local/etc/kafka/connect-mirror-maker.properties
+  /usr/local/etc/kafka/connect-standalone.properties
+  /usr/local/etc/kafka/consumer.properties
+  /usr/local/etc/kafka/kraft
+  /usr/local/etc/kafka/kraft/broker.properties
+  /usr/local/etc/kafka/kraft/broker.properties.default
+  /usr/local/etc/kafka/kraft/controller.properties
+  /usr/local/etc/kafka/kraft/controller.properties.default
+  /usr/local/etc/kafka/kraft/server.properties
+  /usr/local/etc/kafka/kraft/server.properties.default
+  /usr/local/etc/kafka/log4j.properties
+  /usr/local/etc/kafka/producer.properties
+  /usr/local/etc/kafka/server.properties
+  /usr/local/etc/kafka/tools-log4j.properties
+  /usr/local/etc/kafka/tools-log4j.properties.default
+  /usr/local/etc/kafka/trogdor.conf
+  /usr/local/etc/kafka/zookeeper.properties
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install kafka
+Warning: kafka 3.6.0 is already installed, it's just not linked.
+To link this version, run:
+  brew link kafka
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services restart kafka
+Stopping `kafka`... (might take a while)
+==> Successfully stopped `kafka` (label: homebrew.mxcl.kafka)
+Error: Formula `kafka` is not installed.
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install kafka
+Warning: kafka 3.6.0 is already installed, it's just not linked.
+To link this version, run:
+  brew link kafka
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew link kafka
+Linking /usr/local/Cellar/kafka/3.6.0... 0 symlinks created.
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services restart kafka
+Error: Formula `kafka` is not installed.
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+-bash: /usr/local/opt/kafka/bin/kafka-console-consumer: No such file or directory
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall kafka
+Uninstalling /usr/local/Cellar/kafka/3.6.0... (256B)
+
+Warning: The following kafka configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/kafka
+  /usr/local/etc/kafka/connect-console-sink.properties
+  /usr/local/etc/kafka/connect-console-source.properties
+  /usr/local/etc/kafka/connect-distributed.properties
+  /usr/local/etc/kafka/connect-file-sink.properties
+  /usr/local/etc/kafka/connect-file-source.properties
+  /usr/local/etc/kafka/connect-log4j.properties
+  /usr/local/etc/kafka/connect-log4j.properties.default
+  /usr/local/etc/kafka/connect-mirror-maker.properties
+  /usr/local/etc/kafka/connect-standalone.properties
+  /usr/local/etc/kafka/consumer.properties
+  /usr/local/etc/kafka/kraft
+  /usr/local/etc/kafka/kraft/broker.properties
+  /usr/local/etc/kafka/kraft/broker.properties.default
+  /usr/local/etc/kafka/kraft/controller.properties
+  /usr/local/etc/kafka/kraft/controller.properties.default
+  /usr/local/etc/kafka/kraft/server.properties
+  /usr/local/etc/kafka/kraft/server.properties.default
+  /usr/local/etc/kafka/log4j.properties
+  /usr/local/etc/kafka/producer.properties
+  /usr/local/etc/kafka/server.properties
+  /usr/local/etc/kafka/tools-log4j.properties
+  /usr/local/etc/kafka/tools-log4j.properties.default
+  /usr/local/etc/kafka/trogdor.conf
+  /usr/local/etc/kafka/zookeeper.properties
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/manifests/3.6.0
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/a683535665c7ca4c8547c07fed0fade14863a1803d809bfffcaacda423a7b274--kafka-3.6.0.bottle_manifest.json
+==> Fetching kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:087ff27b7e84531b1b3b755c75a175665dacfbd6e8a23487309c27a085342a4e
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/51be8b7ddeb6a930162f575b541db1ebebe418366e410d2a9625dea70835fbba--kafka--3.6.0.ventura.bottle.tar.gz
+==> Pouring kafka--3.6.0.ventura.bottle.tar.gz
+==> Caveats
+To start kafka now and restart at login:
+  brew services start kafka
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/kafka/bin/kafka-server-start /usr/local/etc/kafka/server.properties
+==> Summary
+🍺  /usr/local/Cellar/kafka/3.6.0: 222 files, 108.7MB
+==> Running `brew cleanup kafka`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services start kafka
+==> Successfully started `kafka` (label: homebrew.mxcl.kafka)
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+[2023-10-29 15:05:03,028] WARN [Consumer clientId=console-consumer, groupId=console-consumer-73686] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:03,028] WARN [Consumer clientId=console-consumer, groupId=console-consumer-73686] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:03,127] WARN [Consumer clientId=console-consumer, groupId=console-consumer-73686] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:03,128] WARN [Consumer clientId=console-consumer, groupId=console-consumer-73686] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:03,229] WARN [Consumer clientId=console-consumer, groupId=console-consumer-73686] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:03,229] WARN [Consumer clientId=console-consumer, groupId=console-consumer-73686] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:03,432] WARN [Consumer clientId=console-consumer, groupId=console-consumer-73686] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:03,433] WARN [Consumer clientId=console-consumer, groupId=console-consumer-73686] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:03,887] WARN [Consumer clientId=console-consumer, groupId=console-consumer-73686] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:03,887] WARN [Consumer clientId=console-consumer, groupId=console-consumer-73686] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+^CProcessed a total of 0 messages
+^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+[2023-10-29 15:05:13,344] WARN [Consumer clientId=console-consumer, groupId=console-consumer-89955] Error while fetching metadata with correlation id 2 : {aerospike=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:13,450] WARN [Consumer clientId=console-consumer, groupId=console-consumer-89955] Error while fetching metadata with correlation id 4 : {aerospike=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:13,556] WARN [Consumer clientId=console-consumer, groupId=console-consumer-89955] Error while fetching metadata with correlation id 6 : {aerospike=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:13,660] WARN [Consumer clientId=console-consumer, groupId=console-consumer-89955] Error while fetching metadata with correlation id 8 : {aerospike=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:13,766] WARN [Consumer clientId=console-consumer, groupId=console-consumer-89955] Error while fetching metadata with correlation id 10 : {aerospike=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:13,871] WARN [Consumer clientId=console-consumer, groupId=console-consumer-89955] Error while fetching metadata with correlation id 12 : {aerospike=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:13,974] WARN [Consumer clientId=console-consumer, groupId=console-consumer-89955] Error while fetching metadata with correlation id 14 : {aerospike=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:14,079] WARN [Consumer clientId=console-consumer, groupId=console-consumer-89955] Error while fetching metadata with correlation id 16 : {aerospike=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 15:05:14,183] WARN [Consumer clientId=console-consumer, groupId=console-consumer-89955] Error while fetching metadata with correlation id 18 : {aerospike=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+TestAerospike
+Values for tests
+values
+tests
+tests-ankush-1234
+
+
+
+
+
+^C^C^CProcessed a total of 5 messages
+^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall kafka
+Uninstalling /usr/local/Cellar/kafka/3.6.0... (230 files, 108.9MB)
+
+Warning: The following kafka configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/kafka
+  /usr/local/etc/kafka/connect-console-sink.properties
+  /usr/local/etc/kafka/connect-console-source.properties
+  /usr/local/etc/kafka/connect-distributed.properties
+  /usr/local/etc/kafka/connect-file-sink.properties
+  /usr/local/etc/kafka/connect-file-source.properties
+  /usr/local/etc/kafka/connect-log4j.properties
+  /usr/local/etc/kafka/connect-log4j.properties.default
+  /usr/local/etc/kafka/connect-mirror-maker.properties
+  /usr/local/etc/kafka/connect-standalone.properties
+  /usr/local/etc/kafka/consumer.properties
+  /usr/local/etc/kafka/kraft
+  /usr/local/etc/kafka/kraft/broker.properties
+  /usr/local/etc/kafka/kraft/broker.properties.default
+  /usr/local/etc/kafka/kraft/controller.properties
+  /usr/local/etc/kafka/kraft/controller.properties.default
+  /usr/local/etc/kafka/kraft/server.properties
+  /usr/local/etc/kafka/kraft/server.properties.default
+  /usr/local/etc/kafka/log4j.properties
+  /usr/local/etc/kafka/producer.properties
+  /usr/local/etc/kafka/server.properties
+  /usr/local/etc/kafka/tools-log4j.properties
+  /usr/local/etc/kafka/tools-log4j.properties.default
+  /usr/local/etc/kafka/trogdor.conf
+  /usr/local/etc/kafka/zookeeper.properties
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install kafka
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+########################################################################################################################################################### 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+########################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/manifests/3.6.0
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/a683535665c7ca4c8547c07fed0fade14863a1803d809bfffcaacda423a7b274--kafka-3.6.0.bottle_manifest.json
+==> Fetching kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:087ff27b7e84531b1b3b755c75a175665dacfbd6e8a23487309c27a085342a4e
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/51be8b7ddeb6a930162f575b541db1ebebe418366e410d2a9625dea70835fbba--kafka--3.6.0.ventura.bottle.tar.gz
+==> Pouring kafka--3.6.0.ventura.bottle.tar.gz
+==> Caveats
+To restart kafka after an upgrade:
+  brew services restart kafka
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/kafka/bin/kafka-server-start /usr/local/etc/kafka/server.properties
+==> Summary
+🍺  /usr/local/Cellar/kafka/3.6.0: 222 files, 108.7MB
+==> Running `brew cleanup kafka`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+values
+tests
+tests-ankush-1234
+
+
+
+^C^C^C^C^C^C^CProcessed a total of 5 messages
+^CPP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+values
+tests
+tests-ankush-1234
+
+
+
+
+^CProcessed a total of 5 messages
+^C^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+values
+tests
+tests-ankush-1234
+^C^C^CProcessed a total of 5 messages
+^C^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew uninstall kafka
+Uninstalling /usr/local/Cellar/kafka/3.6.0... (226 files, 108.7MB)
+
+Warning: The following kafka configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/kafka
+  /usr/local/etc/kafka/connect-console-sink.properties
+  /usr/local/etc/kafka/connect-console-source.properties
+  /usr/local/etc/kafka/connect-distributed.properties
+  /usr/local/etc/kafka/connect-file-sink.properties
+  /usr/local/etc/kafka/connect-file-source.properties
+  /usr/local/etc/kafka/connect-log4j.properties
+  /usr/local/etc/kafka/connect-log4j.properties.default
+  /usr/local/etc/kafka/connect-mirror-maker.properties
+  /usr/local/etc/kafka/connect-standalone.properties
+  /usr/local/etc/kafka/consumer.properties
+  /usr/local/etc/kafka/kraft
+  /usr/local/etc/kafka/kraft/broker.properties
+  /usr/local/etc/kafka/kraft/broker.properties.default
+  /usr/local/etc/kafka/kraft/controller.properties
+  /usr/local/etc/kafka/kraft/controller.properties.default
+  /usr/local/etc/kafka/kraft/server.properties
+  /usr/local/etc/kafka/kraft/server.properties.default
+  /usr/local/etc/kafka/log4j.properties
+  /usr/local/etc/kafka/producer.properties
+  /usr/local/etc/kafka/server.properties
+  /usr/local/etc/kafka/tools-log4j.properties
+  /usr/local/etc/kafka/tools-log4j.properties.default
+  /usr/local/etc/kafka/trogdor.conf
+  /usr/local/etc/kafka/zookeeper.properties
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install kafka
+Warning: kafka 3.6.0 is already installed, it's just not linked.
+To link this version, run:
+  brew link kafka
+PP-C02D1513MD6M:~ ankush.nakaskar$   brew link kafka
+Linking /usr/local/Cellar/kafka/3.6.0... 0 symlinks created.
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services restart kafka
+Stopping `kafka`... (might take a while)
+==> Successfully stopped `kafka` (label: homebrew.mxcl.kafka)
+Error: Formula `kafka` is not installed.
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew install kafka
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+########################################################################################################################################################### 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+########################################################################################################################################################### 100.0%
+Warning: kafka 3.6.0 is already installed and up-to-date.
+To reinstall 3.6.0, run:
+  brew reinstall kafka
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services restart kafka
+Error: Formula `kafka` has not implemented #plist, #service or installed a locatable service file
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew services start kafka
+Error: Formula `kafka` has not implemented #plist, #service or installed a locatable service file
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+-bash: /usr/local/opt/kafka/bin/kafka-console-consumer: No such file or directory
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ brew reinstall kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/manifests/3.6.0
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/a683535665c7ca4c8547c07fed0fade14863a1803d809bfffcaacda423a7b274--kafka-3.6.0.bottle_manifest.json
+==> Fetching kafka
+==> Downloading https://ghcr.io/v2/homebrew/core/kafka/blobs/sha256:087ff27b7e84531b1b3b755c75a175665dacfbd6e8a23487309c27a085342a4e
+Already downloaded: /Users/ankush.nakaskar/Library/Caches/Homebrew/downloads/51be8b7ddeb6a930162f575b541db1ebebe418366e410d2a9625dea70835fbba--kafka--3.6.0.ventura.bottle.tar.gz
+==> Reinstalling kafka 
+==> Pouring kafka--3.6.0.ventura.bottle.tar.gz
+==> Caveats
+To start kafka now and restart at login:
+  brew services start kafka
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/kafka/bin/kafka-server-start /usr/local/etc/kafka/server.properties
+==> Summary
+🍺  /usr/local/Cellar/kafka/3.6.0: 222 files, 108.7MB
+==> Running `brew cleanup kafka`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+PP-C02D1513MD6M:~ ankush.nakaskar$   brew services start kafka
+
+==> Successfully started `kafka` (label: homebrew.mxcl.kafka)
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+[2023-10-29 19:01:17,558] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:17,558] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:17,657] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:17,657] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:17,759] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:17,759] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:17,962] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:17,962] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:18,367] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:18,368] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:19,230] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:19,230] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:20,398] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:20,398] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:21,307] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2023-10-29 19:01:21,307] WARN [Consumer clientId=console-consumer, groupId=console-consumer-46003] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected (org.apache.kafka.clients.NetworkClient)
+^CProcessed a total of 0 messages
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-producer --bootstrap-server localhost:9092 --topic aerospike
+>Test-For-begining
+>^CPP-C02D1513MD6M:~ ankush.nakaskar$ 
+PP-C02D1513MD6M:~ ankush.nakaskar$ /usr/local/opt/kafka/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aerospike  --from-beginning
+TestAerospike
+Values for tests
+values
+tests
+tests-ankush-1234
+Test-For-begining
+{"metadata":{"namespace":"test","set":"demo","userKey":123,"digest":"WVp7Y+sYXb69hCVTpEgCsaMOwVk=","msg":"write","gen":1,"lut":1698586936461,"exp":1701178936},"tval":"test-value-ankush-first"}
+
