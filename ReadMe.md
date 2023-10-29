@@ -1,9 +1,9 @@
 ### Aerospike kafka connector
 * This project explain Change listener demo like below
-* Aerospike changes like , insert, update delete -> kafka
+* Aerospike changes like , insert, update, delete -> kafka
 * Pre-requesite for this are : 
   * Need to install zookeeper, kafka, you can refer this : https://github.com/AnkushNakaskar/Apache_Kafka_Understanding/tree/main/installation
-* Now we wil focus on Aerospike
+* Now we will focus on Aerospike
   * We need three components mainly listed below.
   * Aerospike DB install
   * Aerospike <> Kafka connector
