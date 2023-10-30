@@ -46,3 +46,39 @@
     * ``` 
        {"metadata":{"namespace":"test","set":"demo","userKey":123,"digest":"WVp7Y+sYXb69hCVTpEgCsaMOwVk=","msg":"write","gen":1,"lut":1698586936461,"exp":1701178936},"tval":"test-value-ankush-first"}  
       ```
+      
+#### Change notification on TTL on namespace in aerospike
+* Since TTL is calculated by Namespace supervisor : read about it here :
+  * Link : https://docs.aerospike.com/server/operations/configure/namespace/retention
+  * Refer config file for TTL notification : 
+    * aerospike_change_notification_on_ttl.conf
+    * Here you can see the below param in xdr
+      * ```
+        xdr {
+             dc kafkaDC {
+                   connector true
+                   node-address-port 10.152.16.53 8080
+                   namespace test {
+                        ship-only-specified-sets true
+                        ship-set kafka_message_id
+                        ship-nsup-deletes true
+                   }
+              }
+          }
+        ```
+      * Flag details are below :
+        * ship-only-specified-sets -> send change notification only for specified sets
+        * ship-set -> send notification of this set
+        * ship-nsup-deletes -> send notification also for set which are expired by nsup (namespace supervisor)
+* Example of TTL expire are below :
+  * When you insert record for first time.
+  * ``` 
+    insert into test.demo (PK, tval) values (123, 'test-value-ankush-first-ttl-60-sec-3')
+    ```
+  * Since TTL is 60 Sec on namespace test. You can see the below output in kafka topic .
+  * ```
+    {"metadata":{"namespace":"test","set":"demo","userKey":123,"digest":"WVp7Y+sYXb69hCVTpEgCsaMOwVk=","msg":"write","gen":1,"lut":1698643762073,"exp":1698643822},"tval":"test-value-ankush-first-ttl-60-sec-3"}
+
+    {"metadata":{"namespace":"test","set":"demo","userKey":123,"digest":"WVp7Y+sYXb69hCVTpEgCsaMOwVk=","msg":"delete","gen":2,"lut":1698643829757}}
+    ```
+    * Second message is of TTL eviction, where you can see the key only, not the value.   
