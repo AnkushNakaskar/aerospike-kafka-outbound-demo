@@ -31,7 +31,7 @@
              docker run -p 8080:8080 -v /var/tmp/aerospike/kafka-connect/aerospike-kafka-outbound.yml:/etc/aerospike-kafka-outbound/aerospike-kafka-outbound.yml aerospike/aerospike-kafka-outbound:5.1.2  
         * install aerospike DB
           * ```
-            docker run --name aerospike  -v /var/tmp/aerospike/etc/:/opt/aerospike/etc/  -p 3000-3002:3000-3002 aerospike/aerospike-server-enterprise --config-file /opt/aerospike/etc/aerospike.conf
+            docker run --name aerospike  -v /var/tmp/aerospike/etc/aerospike.conf:/opt/aerospike/etc/aerospike.conf  -p 3000-3002:3000-3002 aerospike/aerospike-server-enterprise:6.1.0.17 --config-file /opt/aerospike/etc/aerospike.conf
             ```
         * install aerospike AQL
           * ``` 
